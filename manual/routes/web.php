@@ -13,9 +13,17 @@ use App\Http\Controllers\ProductsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+#Route for Homepage
+Route::get('/homepage', function () {
+    return view('homepage');
+});
+#Route for Contact Us page
+Route::get('/contactus', function() {
+    return view('contactus');
+});
+#Route for About Us page
+Route::get('/aboutus', function () {
+    return view('aboutus');
 });
 
 Route::get('/products', [ProductsController::class, 'products']);
