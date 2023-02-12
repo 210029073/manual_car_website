@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,24 @@ use App\Http\Controllers\PageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+#Route for Homepage
+//Set the root page '/'
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/', [PageController::class, 'Home']);
 
 Route::get('/layouts', [PageController::class, 'Layouts']);
+
+Route::get('/homepage', function () {
+    return view('homepage');
+});
+#Route for Contact Us page
+Route::get('/contactus', function() {
+    return view('contactus');
+});
+#Route for About Us page
+Route::get('/aboutus', function () {
+    return view('aboutus');
+});
 
 Route::get('/products', [ProductsController::class, 'products']);
