@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,9 @@ use App\Http\Controllers\ProductsController;
 |
 */
 #Route for Homepage
+//Set the root page '/'
+Route::get('/', [HomeController::class, 'index']);
+
 Route::get('/homepage', function () {
     return view('homepage');
 });
