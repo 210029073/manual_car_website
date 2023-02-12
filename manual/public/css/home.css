@@ -1,6 +1,9 @@
+/* The whole page */
 .body {
     background: #F4D504;
 }
+
+/* Nav bar */
 .rectangle {
     position: center;
     width: 100%;
@@ -10,7 +13,8 @@
     border: 5px solid #F4D504;
 }
 
-.rectangle p{
+/* Nav bar values */
+.rectangle a{
     display: inline-block;
     justify-content: space-around;
     text-align: center;
@@ -27,17 +31,20 @@
     font-size: 36px;
     line-height: 44px;
     color: #F4D504;
+    text-decoration: none;
 }
 
+/* Banner */
 .head-box {
     width: 90%;
-    height: 200px;
+    height: 150px;
     background-color: #F4D504;
     border: 1px solid black;
     padding: 20px;
     margin: auto;
   }
 
+/* Banner logo */
 .head-box img{
     position: absolute;
     width: 371px;
@@ -46,13 +53,49 @@
     /* background: url(image.png);
     border-radius: 127.5px;*/
   }
-
-  .head-box input{
+/* Search bar */
+.head-box input{
     position: relative; /* or absolute */
     width: 176px;
     height: 32px;
     display: inline-block;
     background: #D9D9D9;
-    left: 1158px;
+    left: 1178px;
     top: 100px;
+}
+
+/* User button */
+.head-box button{
+    position: relative; /* or absolute */
+    /* width: 176px; */
+    height: 32px;
+    display: inline-block;
+    left: 890px;
+    top: 110px;
+    background-color: #F4D504;
+    border: none;
+}
+
+/* Basket icon */
+.head-box .basket{
+    text-decoration: none;
+    padding: 15px 26px;
+    position: relative;
+    border-radius: 2px;
+    height: 32px;
+    display: inline-block;
+    left: 875px;
+    top: 110px;
+    color: #000000;
+}
+
+/* Basket number */
+.head-box .basket .badge{
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    padding: 3px 7px;
+    border-radius: 50%;
+    background: red;
+    color: white;
 }
