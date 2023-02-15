@@ -6,13 +6,32 @@
 <body>
 <form method="post" action="{{route("login")}}">
     @csrf
+    <label>First name</label>
+    <br/>
     <input type="text" name="firstName" placeholder="Enter your first name"/>
+    <br/>
+    <label>Last name</label>
+    <br/>
     <input type="text" name="lastName" placeholder="Enter your last name"/>
+    <br/>
+    <label>Email:</label>
+    <br>
     <input type="text" name="email" placeholder="Enter your email"/>
+    <br/>
+    <label>Password</label>
+    <br/>
     <input type="password" name="password" placeholder="Enter your password"/>
+    <br/>
+    <label>Address</label>
+    <br/>
     <input type="text" name="address" placeholder="Enter your address"/>
+    <br/>
+    <label>Mobile Number</label>
+    <br/>
     <input type="text" name="mobile" placeholder="Enter your mobile number"/>
-    <input type="submit" name="btnSubmit" value="Login">
+    <br/>
+    <br/>
+    <input type="submit" name="btnSubmit" value="Register">
 </form>
 </body>
 </html>

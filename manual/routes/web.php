@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\auth\LoginController;
+use App\Http\Controllers\auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,5 +40,7 @@ Route::get('/aboutus', function () {
 Route::get('/products', [ProductsController::class, 'products']);
 
 Route::get("/login", [LoginController::class, 'login']);
+
+Route::get('/register', [RegisterController::class, 'signupPage']);
 
 Route::get('/login/authenticate', [LoginController::class, 'authenticate'])->name("login");
