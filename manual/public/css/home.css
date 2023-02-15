@@ -67,7 +67,7 @@
 }
 
 /* User button */
-.head-box button{
+.head-box .user{
     position: relative; /* or absolute */
     /* width: 176px; */
     height: 32px;
@@ -81,12 +81,12 @@
 /* Basket icon */
 .head-box .basket{
     text-decoration: none;
-    padding: 15px 26px;
+    padding: 10px 15px;
     position: relative;
     border-radius: 2px;
     height: 32px;
     display: inline-block;
-    left: 875px;
+    left: 885px;
     top: 110px;
     color: #000000;
 }

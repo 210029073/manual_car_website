@@ -23,6 +23,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/', [PageController::class, 'Home'])->name('home');
 
+Route::get('/home', [PageController::class, 'Home']);
+
 Route::get('/layouts', [PageController::class, 'Layouts']);
 
 Route::get('/homepage', function () {

@@ -15,7 +15,7 @@
     <!-- Search bar -->
     <input id = search type="text" placeholder="Search..." name="search">
     <!-- User icon -->
-    <button><i class="fa-regular fa-user"></i></button>
+    <a href='/login' class='user' ><i class="fa-regular fa-user"></i></a>
     <!-- Basket -->
     <a href="/checkout" class="basket">
       <!-- If basket is greater than 0 show badge -->
