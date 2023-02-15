@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table){
             $table->bigIncrements('ordersId');
             $table->unsignedBigInteger('userId');
-            $table->foreign('userId')->references('userId')->on('user')->onDelete('cascade');
+            $table->foreign('userId')->references('id')->on('user')->onDelete('cascade');
             $table->unsignedBigInteger('productsId');
             $table->foreign('productsId')->references('productsId')->on('products')->onDelete('cascade');
             $table->float('price');
