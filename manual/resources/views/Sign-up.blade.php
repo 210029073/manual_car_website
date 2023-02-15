@@ -4,7 +4,7 @@
 </head>
 
 <body>
-<form method="post" action="{{route("login")}}">
+<form method="post" action="{{route("register")}}">
     @csrf
     <label>First name</label>
     <br/>

@@ -42,5 +42,6 @@ Route::get('/products', [ProductsController::class, 'products']);
 Route::get("/login", [LoginController::class, 'login']);
 
 Route::get('/register', [RegisterController::class, 'signupPage']);
+Route::post('/register/user', [RegisterController::class, 'register'])->name("register");
 
 Route::get('/login/authenticate', [LoginController::class, 'authenticate'])->name("login");

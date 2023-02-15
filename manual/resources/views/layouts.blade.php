@@ -13,9 +13,9 @@
     <!-- Logo -->
     <a href="/"><img src="images/Manual-logo.jpg" alt="top left"></img></a>
     <!-- Search bar -->
-    <input id = search type="text" placeholder="Search..." name="search"> 
-    <!-- User icon --> 
-    <button><i class="fa-regular fa-user"></i></button> 
+    <input id = search type="text" placeholder="Search..." name="search">
+    <!-- User icon -->
+    <button><i class="fa-regular fa-user"></i></button>
     <!-- Basket -->
     <a href="/checkout" class="basket">
       <!-- If basket is greater than 0 show badge -->
@@ -31,7 +31,7 @@
     <a href="/aboutus">About</a>
   </div>
 <!-- The front page stock count -->
-  <marquee>                
+  <marquee>
     <ul>
       @foreach($products as $i)
       <li><a >{{$i->model}}: {{$i->stock}}</a></li>
