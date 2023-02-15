@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use App\Http\Controllers\HomeController;
 */
 #Route for Homepage
 //Set the root page '/'
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/', [PageController::class, 'Home']);
 
@@ -36,3 +37,7 @@ Route::get('/aboutus', function () {
 });
 
 Route::get('/products', [ProductsController::class, 'products']);
+
+Route::get("/login", [LoginController::class, 'login']);
+
+Route::get('/login/authenticate', [LoginController::class, 'authenticate'])->name("login");
