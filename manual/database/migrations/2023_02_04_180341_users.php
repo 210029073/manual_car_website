@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('firstName',256);
             $table->string('lastName',256);
             $table->string('email',256)->unique();
+            $table->string('password');
             $table->string('address',256);
             $table->string('mobile',13);
             $table->timestamp('email_verified_at')->nullable();
