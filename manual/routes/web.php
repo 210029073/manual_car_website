@@ -21,7 +21,7 @@ use App\Http\Controllers\auth\RegisterController;
 //Set the root page '/'
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/', [PageController::class, 'Home']);
+Route::get('/', [PageController::class, 'Home'])->name('home');
 
 Route::get('/layouts', [PageController::class, 'Layouts']);
 
