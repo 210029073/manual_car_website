@@ -140,12 +140,14 @@
     <div>
         @foreach($products as $product)
             <div>
-                {{-- This should enumerate all product details here... --}}
                 {{-- Try not to remove the following lines below, holds backend (Ibrahim)--}}
+                {{-- Will attach to a HTML Form --}}
+                {{-- This should enumerate all product details here... --}}
                 <h2>{{$product->brand}} {{$product->model}}</h2>
                 <img src="{{$product->image}}" alt="Car Image of {{$product->brand}} {{$product->model}}">
                 <p><i>{{ $product->description }}</i></p>
-                <p>Price: {{ $product->price }}</p>
+                {{-- Parse price --}}
+                <p>Price: £{{ number_format($product->price, 2, '.') }}</p>
                 <p>Currently available: {{ $product->stock }}</p>
                 <p>Popularity: {{$product-> likes}}</p>
             </div>
