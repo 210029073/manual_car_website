@@ -137,6 +137,20 @@
         </div>
         <button>Add to Cart</button>
     </div>
+    <div>
+        @foreach($products as $product)
+            <div>
+                {{-- This should enumerate all product details here... --}}
+                {{-- Try not to remove the following lines below, holds backend (Ibrahim)--}}
+                <h2>{{$product->brand}} {{$product->model}}</h2>
+                <img src="{{$product->image}}" alt="Car Image of {{$product->brand}} {{$product->model}}">
+                <p><i>{{ $product->description }}</i></p>
+                <p>Price: {{ $product->price }}</p>
+                <p>Currently available: {{ $product->stock }}</p>
+                <p>Popularity: {{$product-> likes}}</p>
+            </div>
+        @endforeach
+    </div>
 </div>
 </body>
 </html>
