@@ -101,3 +101,19 @@
     background: red;
     color: white;
 }
+
+.login-container{
+    text-align: center;
+    position: absolute;
+    width: 386px;
+    height: 277px;
+    left: 600px;
+    top: 324px;
+}
+
+.login-container input{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal; 
+    margin-bottom: 16px;
+}

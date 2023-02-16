@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <script src="https://kit.fontawesome.com/de8d7543d7.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="images/Logo.ico">
+    <title> Manual Do It Yourself - @yield('title')</title>
 </head>
 <body style="background-color: #F4D504;">
 <!-- Boarder -->
@@ -41,6 +42,10 @@
 {{--      @endforeach--}}
 {{--    </ul>--}}
 {{--  </marquee>--}}
+
+  <div class='content-container'>
+    @yield('content')
+  </div>
 
 </body>
 </html>
