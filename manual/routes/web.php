@@ -43,6 +43,11 @@ Route::get('/products', [ProductsController::class, 'products']);
 
 Route::get("/login", [LoginController::class, 'login']);
 
+Route::get("logout", function () {
+    \Illuminate\Support\Facades\Auth::logout();
+    return view('layouts');
+})->name('logout');
+
 Route::get('/register', [RegisterController::class, 'signupPage']);
 Route::post('/register/user', [RegisterController::class, 'register'])->name("register");
 

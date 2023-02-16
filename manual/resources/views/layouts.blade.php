@@ -16,6 +16,9 @@
     <input id = search type="text" placeholder="Search..." name="search">
     <!-- User icon -->
     <a href='/login' class='user' ><i class="fa-regular fa-user"></i></a>
+      @if(\Illuminate\Support\Facades\Auth::check())
+          <a href="{{route('logout')}}">Logout</a>
+      @endif
     <!-- Basket -->
     <a href="/checkout" class="basket">
       <!-- If basket is greater than 0 show badge -->
