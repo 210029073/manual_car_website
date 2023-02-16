@@ -1,0 +1,124 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin: 0;
+}
+
+.product-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.product-card {
+    background-color: #cabc82;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.product-card img{
+    border-radius: 10px;
+    height: 200px;
+    width: 300px;
+}
+
+.product-card h3{
+    margin: 10px 0;
+}
+
+.product-card p{
+    margin: 10px 0;
+}
+
+.product-details ul {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.product-details li{
+    margin: 5px 0;
+}
+
+.product-details li strong {
+    margin-right: 10px;
+}
+
+.product-reviews h4{
+    margin: 10px 0;
+}
+
+.product-reviews ul{
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+    text-align: left;
+}
+
+.product-reviews li{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.review-rating {
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    color: beige;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.Fantastic{
+    background-color: blue;
+}
+
+.good{
+    background-color: green;
+}
+
+.alright{
+    background-color: orange;
+}
+
+.poor{
+    background-color: red;
+}
+
+button{
+    background-color: #7a7835;
+    border: none;
+    border-radius: 10px;
+    color: beige;
+    font-size: 16px;
+    margin: 20px 0;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #010320;
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+    }
+}
