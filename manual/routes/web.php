@@ -27,6 +27,12 @@ Route::get('/home', [PageController::class, 'Home']);
 
 Route::get('/layouts', [PageController::class, 'Layouts']);
 
+Route::get('/car', function(){
+    return view('Newproduct');
+});
+
+Route::post('/store', [ProductsController::class, 'store']);
+
 Route::get('/homepage', function () {
     return view('homepage');
 });
@@ -45,7 +51,7 @@ Route::get("/login", [LoginController::class, 'login']);
 
 Route::get("logout", function () {
     \Illuminate\Support\Facades\Auth::logout();
-    return view('layouts');
+    return view('Home');
 })->name('logout');
 
 Route::get('/register', [RegisterController::class, 'signupPage']);

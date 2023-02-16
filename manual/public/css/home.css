@@ -8,7 +8,7 @@
 /* Nav bar */
 .rectangle {
     position: center;
-    width: 100%;
+    width: auto;
     height: 50px;
     top: 208px;
     background: #000000;
@@ -38,6 +38,7 @@
 
 /* Banner */
 .head-box {
+    position: relative;
     width: 90%;
     height: 150px;
     background-color: #F4D504;
@@ -102,7 +103,8 @@
     color: white;
 }
 
-.login-container{
+
+.login-container, .new-car{
     text-align: center;
     position: absolute;
     width: 386px;
@@ -117,3 +119,18 @@
     line-height: normal; 
     margin-bottom: 16px;
 }
+
+.form-control {
+    display: block;
+    width: 200px;
+    height: auto;
+    transition: width 2s;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-control:focus {
+    width: 300px;
+    text-align: center;
+  }

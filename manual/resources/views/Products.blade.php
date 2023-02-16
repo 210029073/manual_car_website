@@ -47,6 +47,7 @@
                 </ul>
             </div>
             <button>Add to Cart</button>
+            <a><button>Add review</button></a>
         </div>
         <div class="product-card">
             <img
@@ -89,6 +90,7 @@
                 </ul>
             </div>
             <button>Add to Cart</button>
+            <a><button>Add review</button></a>
         </div>
         <div class="product-card">
             <img
@@ -132,6 +134,7 @@
                 </ul>
             </div>
             <button>Add to Cart</button>
+            <a><button>Add review</button></a>
         </div>
         <div>
             @foreach($products as $product)
