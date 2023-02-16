@@ -4,6 +4,7 @@ namespace App\Http\Controllers\auth;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
@@ -27,6 +28,9 @@ class RegisterController extends Controller
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
     */
     public function signupPage() {
+        if(Auth::check()) {
+            return redirect()->back();
+        }
         return view('Sign-up');
     }
 

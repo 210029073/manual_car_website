@@ -31,13 +31,13 @@
     <a href="/aboutus">About</a>
   </div>
 <!-- The front page stock count -->
-  <marquee>
-    <ul>
-      @foreach($products as $i)
-      <li><a >{{$i->model}}: {{$i->stock}}</a></li>
-      @endforeach
-    </ul>
-  </marquee>
+{{--  <marquee>--}}
+{{--    <ul>--}}
+{{--      @foreach($products as $i)--}}
+{{--      <li><a >{{$i->model}}: {{$i->stock}}</a></li>--}}
+{{--      @endforeach--}}
+{{--    </ul>--}}
+{{--  </marquee>--}}
 
 </body>
 </html>

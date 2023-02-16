@@ -18,7 +18,11 @@
          * @author Ibrahim Ahmad <210029073@aston.ac.uk>
         */
         public function login() {
-            return view('login');
+            if(Auth::check()) {
+                return redirect()->back();
+            }
+
+            else return view('login');
         }
 
         /**
