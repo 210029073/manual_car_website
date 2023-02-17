@@ -2,7 +2,7 @@ body{
   background-image: url('/images/WPGif1.gif');
   margin:0;
   background-size: cover;
-  
+
 }
 
 .WelcomeandBrowse{
@@ -19,10 +19,12 @@ body{
 
 .Navigation {
   font-family: "Goudy Bookletter 1911", sans-serif;
-  font-weight:700;
-  }
-  
-  .Navigation a {
+  font-weight:550;
+  margin:-50px;
+  border:50px solid rgb(0, 0, 0);
+}
+
+.Navigation a {
     text-align: center;
     color: white;
     padding: 16px 19px;
@@ -33,8 +35,8 @@ body{
   }
   
   .Navigation a:hover {
-    background-color: #000000;
-    color: rgb(255,255,255);
+    /* background-color: #c7c7c7; */
+    color: rgb(169, 169, 169);
     transition: all 2.5s;
   }
   
@@ -47,7 +49,7 @@ body{
   
   .navpadding{
     position:relative;
-    left:31.5%;
+    left:30.9%;
   }
   .browseCars {
     width: 165px;
