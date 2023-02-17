@@ -1,8 +1,8 @@
 body{
-    /* background-image: url('/images/WPGif1.gif'); */
+
     margin:0;
     background-size: cover;
-  
+    overflow-x:hidden;
   }
   
   

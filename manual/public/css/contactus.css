@@ -1,0 +1,54 @@
+body{
+    /* background-image: url('/images/contactus.gif'); */
+    margin:0;
+    background-size: cover;
+    overflow-x:hidden;
+  
+} 
+    
+  .Navigation {
+    margin:0;
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-weight:500;
+    margin:-50px;
+    border:50px solid rgb(0, 0, 0);
+}
+
+.Navigation a {
+    text-align: center;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 5px;
+    float: left;
+    font-size: 20px;
+    text-decoration: none;
+}
+    
+.Navigation a:hover {
+    color: rgb(169, 169, 169);
+    transition: all 2.5s;
+}
+
+
+
+
+.navpadding{
+    position:relative;
+    left:30.9%;
+}
+.signup{
+    position:relative;
+    float:right;
+}
+.boxpush{
+  position:absolute;
+  top:5.87%;
+}
+.imagebox{
+  /* top:15%; */
+  width: 1700px;
+  height:460px;
+  background-image: url('/images/contactus.jpg');
+  /* margin:0; */
+  background-size: cover;
+}
