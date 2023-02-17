@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    height: 80vh;
+    background-color: #fffcfc;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.Sign-up{
+    
+}
+
