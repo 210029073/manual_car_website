@@ -30,7 +30,7 @@
 </div>
        
 <div class="AboutUs1">
-      <div class="boxer1"><h1>Refunds</h1><h2>In order to buy from Manual, you will have to create an Account. After creating the Account, you will then log into that Account and browse Cars that we have available for you to buy.</h2></div>
+      <div class="boxer1"><h1>How to Buy</h1><h2>In order to buy from Manual, you will have to create an Account. After creating the Account, you will then log into that Account and browse Cars that we have available for you to buy.</h2></div>
  </div>  
 </div>
     </body>
