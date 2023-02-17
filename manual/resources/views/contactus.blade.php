@@ -17,4 +17,20 @@
 </div>
 <div class="boxpush">
     <div class="imagebox"></div></div>
+
+    <div class="contactContainer"><h1>E-Mail:
+
+    </h1>
+        <h3>200070104@aston.ac.uk</h3></div>
+</div>
+
+<div class="contactContainer1"><h1>Github:</h1>
+
+<h3>https://github.com/210029073/manual_car_website</h3>
+</div>
+
+<div class="contactContainer2"><h1>Location:</h1>
+<h3>Aston St, Birmingham B4 7ET</h3>
+</div>
+
     
