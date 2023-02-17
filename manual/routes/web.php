@@ -47,14 +47,14 @@ Route::get('/aboutus', function () {
 
 Route::get('/products', [ProductsController::class, 'products']);
 
-Route::get("/login", [LoginController::class, 'login']);
+Route::get("/login", [LoginController::class, 'login'])->name('loginPage');
 
 Route::get("logout", function () {
     \Illuminate\Support\Facades\Auth::logout();
     return view('Home');
 })->name('logout');
 
-Route::get('/register', [RegisterController::class, 'signupPage']);
+Route::get('/register', [RegisterController::class, 'signupPage'])->name('signup');
 Route::post('/register/user', [RegisterController::class, 'register'])->name("register");
 
 Route::get('/login/authenticate', [LoginController::class, 'authenticate'])->name("login");
