@@ -19,7 +19,7 @@ body{
 
 .Navigation {
   font-family: "Goudy Bookletter 1911", sans-serif;
-  font-weight:550;
+  font-weight:500;
   margin:-50px;
   border:50px solid rgb(0, 0, 0);
 }
@@ -27,10 +27,10 @@ body{
 .Navigation a {
     text-align: center;
     color: white;
-    padding: 16px 19px;
+    padding: 16px 30px;
     border-radius: 5px;
     float: left;
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;
   }
   
