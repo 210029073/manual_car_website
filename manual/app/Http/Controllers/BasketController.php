@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
-use Ds\Vector;
+use Ds\Map;
 
 /**
  * This will therefore handle the basket in terms of creating a new basket, destroying the basket when
@@ -14,17 +14,20 @@ use Ds\Vector;
 */
 class BasketController extends Controller
 {
-    private Vector $basket;
+    private Map $basket;
     private $json;
+
+    private $size;
     public function __construct() {
-        $this->basket = new Vector();
+        $this->basket = new Map();
         if(isset($_COOKIE['manualBasket'])) {
             $previousData = $_COOKIE['manualBasket'];
             $previousData = unserialize($previousData);
             foreach ($previousData as $item) {
-                $this->basket->push($item);
+                $this->basket->put($item->getModel(),$item);
             }
         }
+        $size = 0;
     }
 
     /**
@@ -50,27 +53,10 @@ class BasketController extends Controller
      *
      * @since 19-02-2023
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
-     * @version 1.1
+     * @version 1.2
     */
     public function addProductToBasket(Product $product) {
-
-        //remember previous added items
-        //then updates the basket appropriately
-        if(isset($_COOKIE['manualBasket'])) {
-            $previousData = $_COOKIE['manualBasket'];
-            $previousData = unserialize($previousData);
-            foreach ($previousData as $item) {
-                $this->basket->push($item);
-            }
-        }
-
-        //using eloquent ORM to retrieve an item
-        //constructs product object
-        //then pushes it to the basket
-        //then creates a new cookies to hold the new data along
-        //with the previous data
-        $this->basket->push($product);
-        $this->createBasket();
+        $this->basket->put($product->getModel(), $product);
     }
 
     public function test() {
@@ -135,12 +121,8 @@ class BasketController extends Controller
         $description = $_GET['description'];
         $price = floatval($_GET['price']);
         $targetIndex = 0;
-        for($i = 0; $i < sizeof($this->basket); $i++) {
-            if($this->basket[$i]->getModel() == $model) {
-                break;
-            }
-        }
-        $this->basket->remove($targetIndex);
+
+        $this->basket->remove($model);
         setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
 
         return redirect()->intended('/basket')->with('deleteItemFromBasket', "Successfully deleted an item from basket");
