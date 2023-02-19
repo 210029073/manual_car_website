@@ -102,8 +102,12 @@ class BasketController extends Controller
             $this->createBasket();
             return view('homepage');
         }
+
         session_start();
-        $data = $_SESSION['basket'];
+        if(isset($_SESSION['basket'])) {
+            $_COOKIE['manualBasket'] = $_SESSION['basket'];
+        }
+        $data = $_COOKIE['manualBasket'];
         $data = unserialize($data); //unserialising string from cookie to vector
         dd($data); //FOR DEBUGGING PURPOSES! DO NOT REMOVE!!
     }
