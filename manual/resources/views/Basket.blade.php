@@ -1,8 +1,8 @@
-@extends('layouts')
+{{--@extends('layouts')--}}
 
 <body>
     <h1> Basket </h1>
-    
+
 
 
 
