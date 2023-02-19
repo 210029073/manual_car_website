@@ -10,7 +10,7 @@ use Ds\Map;
  * required, and used when processing the customer's orders.
  * It will automatically empty the customer's products.
  * @author Ibrahim Ahmad <210029073@aston.ac.uk>
- * @version 1.2
+ * @version 1.2.2
 */
 class BasketController extends Controller
 {
