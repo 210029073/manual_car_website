@@ -36,16 +36,6 @@ class BasketController extends Controller
      * @since 18-02-2023
      * @version 1.0
      */
-    public function createBasket() {
-        //dummy products
-//        $product = new Product("550d", "BMW", "2015 BMW 5 Series 550d M Sport Diesel 5.0 litre engine",12565.34);
-//        $product1 = new Product("320d", "BMW", "2012 BMW 3 Series 320d Normal Diesel 3.0 litre engine",12565.34);
-
-//        $this->basket->push($product, $product1);
-
-        //creates a new cookie that will expire in 30 days.
-        setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
-    }
 
     /**
      * This will simply add an item to basket, as well as remembering
