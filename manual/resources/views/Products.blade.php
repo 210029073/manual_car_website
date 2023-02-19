@@ -1,7 +1,6 @@
-{{--@extends('layouts')--}}
-{{--@section('title','Products')--}}
-{{--@section('content')--}}
-<body>
+@extends('layouts')
+@section('title','Products')
+@section('content')
     <div class="product-container">
         <div class="product-card">
             <img
@@ -150,19 +149,18 @@
                         {{-- Will attach to a HTML Form --}}
                         {{-- This should enumerate all product details here... --}}
                         <h2>{{$product->brand}} {{$product->model}}</h2>
-                        <img src="{{$product->image}}" alt="Car Image of {{$product->brand}} {{$product->model}}">
+                        <img src="images/{{$product->image}}" alt="Car Image of {{$product->brand}} {{$product->model}}">
                         <p><i>{{ $product->description }}</i></p>
                         {{-- Parse price --}}
                         <p>Price: £{{ number_format($product->price, 2, '.') }}</p>
                         <p>Currently available: {{ $product->stock }}</p>
                         <p>Popularity: {{$product-> likes}}</p>
                         <button type="submit">Add to cart</button>
+                        <a><button>Add review</button></a>
                     </div>
                 </form>
 
             @endforeach
         </div>
     </div>
-    </body>
-{{--@endsection--}}
-{{--@stop--}}
+@stop
