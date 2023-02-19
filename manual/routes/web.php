@@ -56,6 +56,7 @@ Route::get("logout", function () {
     return view('Home');
 })->name('logout');
 
+#basket page
 Route::get("/basket", [BasketController::class, 'viewBasket']);
 Route::get("/basket/delete", [BasketController::class, 'deleteItemFromBasket']);
 
