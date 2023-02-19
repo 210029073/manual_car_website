@@ -61,8 +61,8 @@ class BasketController extends Controller
         //then pushes it to the basket
         //then creates a new cookies to hold the new data along
         //with the previous data
-        $data = Products::where("productsId", 16)->get()[0];
-        $product = new Product($data->model, $data->brand, $data->description,
+        $data = Products::where("productsId", 18)->get()[0];
+        $product = new Product($data->productsId, $data->model, $data->brand, $data->description,
         $data->price);
 
         $this->basket->push($product);

@@ -1,8 +1,7 @@
-@extends('layouts')
-@section('title','Products')
-@section('content')
-    <body>
-    <h1> Car Products</h1>
+{{--@extends('layouts')--}}
+{{--@section('title','Products')--}}
+{{--@section('content')--}}
+<body>
     <div class="product-container">
         <div class="product-card">
             <img
@@ -154,4 +153,5 @@
         </div>
     </div>
     </body>
-@stop
+{{--@endsection--}}
+{{--@stop--}}

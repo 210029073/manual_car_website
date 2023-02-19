@@ -6,10 +6,12 @@ namespace App\Http\Controllers;
  * Models a product entity for the basket
  * @author Ibrahim Ahmad <210029073@aston.ac.uk>
  * @since 18-02-2023
- * @version 1.0
+ * @version 1.1.0
  */
 class Product
 {
+    private int $id;
+
     private string $model;
 
     private string $brand;
@@ -18,7 +20,8 @@ class Product
 
     private float $price;
 
-    function __construct(string $model, string $brand, string $description, float $price){
+    function __construct(int $id, string $model, string $brand, string $description, float $price){
+        $this->id = $id;
         $this->model = $model;
         $this->brand = $brand;
         $this->description = $description;
@@ -63,5 +66,15 @@ class Product
     public function getDescription(): string
     {
         return $this->description;
+    }
+
+    /**
+     * This will return the id of the product.
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
     }
 }
