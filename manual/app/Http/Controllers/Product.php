@@ -2,6 +2,12 @@
 
 namespace App\Http\Controllers;
 
+/**
+ * Models a product entity for the basket
+ * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+ * @since 18-02-2023
+ * @version 1.0
+ */
 class Product
 {
     private string $model;
@@ -20,6 +26,8 @@ class Product
     }
 
     /**
+     * This will return the price tag.
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
      * @return float
      */
     public function getPrice(): float
@@ -28,6 +36,8 @@ class Product
     }
 
     /**
+     * This will return the model of the product
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
      * @return string
      */
     public function getModel(): string
@@ -36,6 +46,8 @@ class Product
     }
 
     /**
+     * This will return the brand of the product.
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
      * @return string
      */
     public function getBrand(): string
@@ -44,6 +56,8 @@ class Product
     }
 
     /**
+     * This will return the description of the product
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
      * @return string
      */
     public function getDescription(): string

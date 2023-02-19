@@ -6,7 +6,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
-
+use App\Http\Controllers\BasketController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,6 +55,8 @@ Route::get("logout", function () {
     \Illuminate\Support\Facades\Auth::logout();
     return view('Home');
 })->name('logout');
+
+Route::get("/basket", [BasketController::class, 'viewBasket']);
 
 Route::get('/register', [RegisterController::class, 'signupPage'])->name('signup');
 Route::post('/register/user', [RegisterController::class, 'register'])->name("register");
