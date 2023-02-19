@@ -42,11 +42,19 @@ class BasketController extends Controller
      *
      * @since 19-02-2023
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
-     * @version 1.0
+     * @version 1.1
     */
     public function addProductToBasket() {
 
-
+        //remember previous added items
+        //then updates the basket appropriately
+        if(isset($_COOKIE['manualBasket'])) {
+            $previousData = $_COOKIE['manualBasket'];
+            $previousData = unserialize($previousData);
+            foreach ($previousData as $product) {
+                $this->basket->push($product);
+            }
+        }
 
         //using eloquent ORM to retrieve an item
         //constructs product object
