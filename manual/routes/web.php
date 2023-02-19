@@ -57,6 +57,8 @@ Route::get("logout", function () {
 })->name('logout');
 
 Route::get("/basket", [BasketController::class, 'viewBasket']);
+Route::get("/basket/delete", [BasketController::class, 'deleteItemFromBasket']);
+
 Route::post("/products/add", [BasketController::class, 'test']);
 Route::get('/register', [RegisterController::class, 'signupPage'])->name('signup');
 Route::post('/register/user', [RegisterController::class, 'register'])->name("register");

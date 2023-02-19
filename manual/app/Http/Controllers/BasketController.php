@@ -17,6 +17,13 @@ class BasketController extends Controller
     private $json;
     public function __construct() {
         $this->basket = new Vector();
+        if(isset($_COOKIE['manualBasket'])) {
+            $previousData = $_COOKIE['manualBasket'];
+            $previousData = unserialize($previousData);
+            foreach ($previousData as $item) {
+                $this->basket->push($item);
+            }
+        }
     }
 
     /**
@@ -99,8 +106,9 @@ class BasketController extends Controller
         }
 
         $data = $_COOKIE['manualBasket'];
+
         $data = unserialize($data); //unserialising string from cookie to vector
-        dd($data); //FOR DEBUGGING PURPOSES! DO NOT REMOVE!!
+//        dd($data); //FOR DEBUGGING PURPOSES! DO NOT REMOVE!!
         return view("Basket");
     }
 
@@ -113,6 +121,28 @@ class BasketController extends Controller
     public function destroyCookie() {
         //destroys cookie such that it will point to the last 6 seconds.
         unset($_COOKIE['manualBasket']);
+    }
+
+    public function basket() {
+        return $this->basket;
+    }
+
+    public function deleteItemFromBasket() {
+        $id = intval($_GET['id']);
+        $brand = $_GET['brand'];
+        $model = $_GET['model'];
+        $description = $_GET['description'];
+        $price = floatval($_GET['price']);
+        $targetIndex = 0;
+        for($i = 0; $i < sizeof($this->basket); $i++) {
+            if($this->basket[$i]->getModel() == $model) {
+                break;
+            }
+        }
+        $this->basket->remove($targetIndex);
+        setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
+
+        return redirect()->intended('/basket')->with('deleteItemFromBasket', "Successfully deleted an item from basket");
     }
 
 //learn how to use cookies
