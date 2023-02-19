@@ -14,7 +14,6 @@ use Ds\Vector;
 class BasketController extends Controller
 {
     private Vector $basket;
-
     public function __construct() {
         $this->basket = new Vector();
     }
@@ -44,7 +43,7 @@ class BasketController extends Controller
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
      * @version 1.1
     */
-    public function addProductToBasket() {
+    public function addProductToBasket(Product $product) {
 
         //remember previous added items
         //then updates the basket appropriately
@@ -61,15 +60,30 @@ class BasketController extends Controller
         //then pushes it to the basket
         //then creates a new cookies to hold the new data along
         //with the previous data
-        $data = Products::where("productsId", 18)->get()[0];
-        $product = new Product($data->productsId, $data->model, $data->brand, $data->description,
-        $data->price);
-
         $this->basket->push($product);
-
         $this->createBasket();
 
 //        dd($this->basket->find($product));
+    }
+
+    public function test() {
+        $brand = $_POST['brand'];
+        $model = $_POST['model'];
+        $description = $_POST['description'];
+        $price = floatval($_POST['price']);
+        $stock = intval($_POST['stock']);
+        $likes = intval($_POST['likes']);
+        $product = Products::where('model', $model)->where('brand', $brand)->get();
+        $id = $product[0]->productsId;
+
+        //construct product object
+        $createdProduct = new Product($id, $model, $brand, $description, $price);
+
+        //add to basket
+        $this->addProductToBasket($createdProduct);
+        $this->viewBasket();
+
+        return redirect()->intended('/products')->with('successAddProduct', "Successfully added product to basket!");
     }
 
     /**
@@ -84,10 +98,9 @@ class BasketController extends Controller
             $this->createBasket();
             return view('homepage');
         }
-
         $data = $_COOKIE['manualBasket'];
         $data = unserialize($data); //unserialising string from cookie to vector
-        dd($data); //FOR DEBUGGING PURPOSES! DO NOT REMOVE!!
+        dd($this->basket); //FOR DEBUGGING PURPOSES! DO NOT REMOVE!!
     }
 
     /**
@@ -96,9 +109,9 @@ class BasketController extends Controller
      * @since 18-02-2023
      * @version 1.0
     */
-    private function destroyCookie() {
+    public function destroyCookie() {
         //destroys cookie such that it will point to the last 6 seconds.
-        setcookie("manualBasket", "", time() - 6);
+        setcookie("manualBasket", serialize($this->basket), time()-3600);
     }
 
 //learn how to use cookies

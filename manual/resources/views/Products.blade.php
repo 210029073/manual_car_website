@@ -137,18 +137,29 @@
         </div>
         <div>
             @foreach($products as $product)
-                <div>
-                    {{-- Try not to remove the following lines below, holds backend (Ibrahim)--}}
-                    {{-- Will attach to a HTML Form --}}
-                    {{-- This should enumerate all product details here... --}}
-                    <h2>{{$product->brand}} {{$product->model}}</h2>
-                    <img src="{{$product->image}}" alt="Car Image of {{$product->brand}} {{$product->model}}">
-                    <p><i>{{ $product->description }}</i></p>
-                    {{-- Parse price --}}
-                    <p>Price: £{{ number_format($product->price, 2, '.') }}</p>
-                    <p>Currently available: {{ $product->stock }}</p>
-                    <p>Popularity: {{$product-> likes}}</p>
-                </div>
+                <form action="/products/add" method="post">
+                    @csrf
+                    <input type="hidden" name="brand" value="{{$product->brand}}"/>
+                    <input type="hidden" name="model" value="{{$product->model}}"/>
+                    <input type="hidden" name="description" value="{{$product->description}}"/>
+                    <input type="hidden" name="price" value="{{$product->price}}"/>
+                    <input type="hidden" name="stock" value="{{$product->stock}}"/>
+                    <input type="hidden" name="likes" value="{{$product->likes}}"/>
+                    <div>
+                        {{-- Try not to remove the following lines below, holds backend (Ibrahim)--}}
+                        {{-- Will attach to a HTML Form --}}
+                        {{-- This should enumerate all product details here... --}}
+                        <h2>{{$product->brand}} {{$product->model}}</h2>
+                        <img src="{{$product->image}}" alt="Car Image of {{$product->brand}} {{$product->model}}">
+                        <p><i>{{ $product->description }}</i></p>
+                        {{-- Parse price --}}
+                        <p>Price: £{{ number_format($product->price, 2, '.') }}</p>
+                        <p>Currently available: {{ $product->stock }}</p>
+                        <p>Popularity: {{$product-> likes}}</p>
+                        <button type="submit">Add to cart</button>
+                    </div>
+                </form>
+
             @endforeach
         </div>
     </div>
