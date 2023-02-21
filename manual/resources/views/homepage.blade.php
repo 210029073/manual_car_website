@@ -30,7 +30,7 @@
         <h1>Welcome to Manual</h1>
     </div>
 </div>
-<div class="browseCars"><h3>Browse Cars</h3></div>
+<div class="browseCars"><h3><a href="{{route("products")}}">Browse Cars</a></h3></div>
 </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
-{{--@extends('layouts')--}}
-
+@extends('layouts')
+@section('content')
 <body>
     <h1> Basket </h1>
     <?php
@@ -29,5 +29,5 @@
             <br/>
         </form>
     @endforeach
-
 </body>
+@endsection

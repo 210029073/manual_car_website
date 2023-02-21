@@ -47,7 +47,7 @@ Route::get('/aboutus', function () {
     return view('aboutus');
 });
 
-Route::get('/products', [ProductsController::class, 'products']);
+Route::get('/products', [ProductsController::class, 'products'])->name("products");
 
 Route::get("/login", [LoginController::class, 'login'])->name('loginPage');
 
