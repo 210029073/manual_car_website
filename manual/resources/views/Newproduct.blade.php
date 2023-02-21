@@ -20,6 +20,7 @@
         <input type='float' class='form-control' placeholder='Price' name='price'>
         <label>Image</label>
         <input type='text' class='form-control' placeholder='image name' name='img'>
+        <input type="submit" value="Submit">
     </form>
 </div>
 @stop

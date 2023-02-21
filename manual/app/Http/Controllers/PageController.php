@@ -14,7 +14,7 @@ class PageController extends Controller
 {
 
     public function Home(){
-        return view('Home', ['products'=>Products::all()]);
+        return view('homepage', ['products'=>Products::all()]);
     }
 
     public function Layouts(){

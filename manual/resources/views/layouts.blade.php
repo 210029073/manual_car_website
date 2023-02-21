@@ -7,45 +7,31 @@
     <script src="https://kit.fontawesome.com/de8d7543d7.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="images/Logo.ico">
     <title> Manual Do It Yourself - @yield('title')</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="background-color: #F4D504;">
-<!-- Boarder -->
-  <div class="head-box">
-    <!-- Logo -->
-    <a href="/"><img src="images/Manual-logo.jpg" alt="top left"></img></a>
-    <!-- Search bar -->
-    <input id = search type="text" placeholder="Search..." name="search">
-    <!-- User icon -->
-    <a href='/login' class='user' ><i class="fa-regular fa-user"></i></a>
+  <body>
+    <div class="Navigation">
+      <a class="current" href="/homepage">Home</a>
+      <div class="navpadding" ><a href="/products">Cars</a></div>
+      <div class="navpadding"><a href="/aboutus">About Us</a></div>
+      <div class="navpadding"> <a href="/contactus">Contact Us</a></div>
       @if(\Illuminate\Support\Facades\Auth::check())
-          <a href="{{route('logout')}}">Logout</a>
-      @endif
-    <!-- Basket -->
-    <a href="/checkout" class="basket">
-      <!-- If basket is greater than 0 show badge -->
-      <span><i class="fa-solid fa-basket-shopping"></i></span>
-      <span class="badge" id="b"></span>
-    </a>
-  </div>
+            <div class="signup"><a href="{{route('logout')}}">Logout</a></div>
+      @else
+          <div class="signup"> <a href="{{route('signup')}}">Sign Up</a>
+              <a href="{{route('loginPage')}}">Login</a>
+          </div>
+    @endif
 
-<!-- Nav bar -->
-  <div class="rectangle">
-    <a href="/products">Products</a>
-    <a href="/">Home</a>
-    <a href="/aboutus">About</a>
-  </div>
-<!-- The front page stock count -->
-{{--  <marquee>--}}
-{{--    <ul>--}}
-{{--      @foreach($products as $i)--}}
-{{--      <li><a >{{$i->model}}: {{$i->stock}}</a></li>--}}
-{{--      @endforeach--}}
-{{--    </ul>--}}
-{{--  </marquee>--}}
+    </div>
+    <div class="header">
 
-  <div class='content-container'>
-    @yield('content')
-  </div>
+    </div>
+    <div class='content-container'>
+      @yield('content')
+    </div>
 
 </body>
 </html>

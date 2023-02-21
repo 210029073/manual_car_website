@@ -24,13 +24,17 @@ class ProductsController extends Controller
         $brand = $request->input('brand');
         $price = $request->input('price');
         $img = $request->input('img');
+        $stock = 0;
+        $likes = 0;
         $data=array(
             'model'=>$model,
             'description'=>$descrip,
             'brand'=>$brand,
             'price'=>$price,
-            'image'=>$img);
-        // $DB = new 
+            'stock'=>$stock,
+            'image'=>$img,
+            'likes'=>$likes);
+        // $DB = new
         Products::insert($data);
         return view('Home');
     }
