@@ -36,12 +36,11 @@ Click the **new** button and then type the php directory as follows: `c:\xampp\p
 
 ![Image](https://user-images.githubusercontent.com/93045145/199503715-19eb4b0f-298f-4fd0-93cf-c217aa0b98b0.png)
 
-6. Once you have set the environment variables, Run the command `git checkout develop` in the working directory of **TresorLDN_E-Commerce-**.
+6. Once you have set the environment variables, Run the command `git checkout develop` in the working directory of **manual_car_website/manual**.
 7. Then install the dependencies using `php composer.phar install` to install the dependencies.
 **Once you have followed the instructions on installing the dependencies required for laravel using Composer then follow Step 8.**
-8. Inside the working directory of **TresorLDN_E-Commerce-** run `php artisan migrate`.
-9. Then run `php artisan db:seed --class=ProductsSeeder` to seed the products table. Feel free to add more in **database/seeders/ProductsSeeders.php**, just follow the structure as provided in the file.
-10. For accessing the pages via the web browser simply access it via `localhost/TresorLDN_E-Commerce-/public/the_page`. Where the **the_page** is the page you wish to visit.
+8. Inside the working directory of **manual_car_website/manual** run `php artisan migrate`.
+11. For accessing the pages via the web browser simply access it via either running on terminal in the websites working directory `php artisan serve` or `localhost/manual_car_website/public/` when running XAMPP. Where the **the_page** is the page you wish to visit.
 
 ## FAQs
 ### *I am having trouble retrieving git repository*
