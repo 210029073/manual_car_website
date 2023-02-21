@@ -43,9 +43,12 @@ Click the **new** button and then type the php directory as follows: `c:\xampp\p
 ## FAQs
 ### *I am having trouble retrieving git repository*
 If you get this error message whilst cloning the respository.
+
 ![image](https://user-images.githubusercontent.com/93045145/201076089-9e87bcdb-e723-4049-850f-99710c82458c.png)
+
 Then follow the instructions provided by tutorials sheet provided by workshop session, or via the links below:
 For generating ssh key:
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
 For adding ssh key to github repository:
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
