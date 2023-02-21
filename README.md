@@ -1,6 +1,7 @@
 # Team 21 - Manual E-Commerce Website
 Car FrontEnd website using Laravel (A PHP Framework)
 <hr/>
+
 ## Setup
 Once you cloned the repository for the Laravel project, it does not provide all the libraries and dependencies as it involves you preparing your system before making changes to the code.
 
