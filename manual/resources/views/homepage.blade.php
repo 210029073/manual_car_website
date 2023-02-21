@@ -8,6 +8,7 @@
     </head>
     <body>
     <div class="Navigation">
+        
     <a class="current" href="/homepage">Home</a>
     <div class="navpadding" ><a href="/products">Cars</a></div>
     <div class="navpadding"><a href="/aboutus">About Us</a></div>
