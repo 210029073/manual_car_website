@@ -45,13 +45,13 @@ Click the **new** button and then type the php directory as follows: `c:\xampp\p
 11. For accessing the pages via the web browser simply access it via either running on terminal in the websites working directory `php artisan serve` or `localhost/manual_car_website/public/` when running XAMPP. Where the **the_page** is the page you wish to visit.
 
 ## **Contributors**
-#### Ibrahim Ahmad 
-#### <img src="https://avatars.githubusercontent.com/u/108061867?v=4" width="20" height="30" style="border-radius: 50%"> Ahsaan Kumar
-#### Victory Mpokosa
-#### Mohammed Ali
-#### Jacques Winmill
-#### Amir Khan
-#### Sydul Bari
+#### <img src="https://avatars.githubusercontent.com/u/108061867?v=4" width="55" height="50" style="border-radius: 50%"> Ibrahim Ahmad 
+#### <img src="https://avatars.githubusercontent.com/u/108061867?v=4" width="55" height="50" style="border-radius: 50%"> Ahsaan Kumar
+#### <img src="https://avatars.githubusercontent.com/u/44678273?v=4" width="55" height="50" style="border-radius: 50%"> Victory Mpokosa
+#### <img src="https://avatars.githubusercontent.com/u/108061867?v=4" width="55" height="50" style="border-radius: 50%"> Mohammed Ali
+#### <img src="https://avatars.githubusercontent.com/u/108061867?v=4" width="55" height="50" style="border-radius: 50%"> Jacques Winmill
+#### <img src="https://avatars.githubusercontent.com/u/108061867?v=4" width="55" height="50" style="border-radius: 50%"> Amir Khan
+#### <img src="https://avatars.githubusercontent.com/u/108061867?v=4" width="55" height="50" style="border-radius: 50%"> Sydul Bari
 
 ## FAQs
 ### *I am having trouble retrieving git repository*
