@@ -46,7 +46,7 @@ Click the **new** button and then type the php directory as follows: `c:\xampp\p
 
 ## **Contributors**
 #### Ibrahim Ahmad 
-#### [https://avatars.githubusercontent.com/u/108061867?v=4](https://avatars.githubusercontent.com/u/108061867?v=4) Ahsaan Kumar
+#### [!image](https://avatars.githubusercontent.com/u/108061867?v=4) Ahsaan Kumar
 #### Victory Mpokosa
 #### Mohammed Ali
 #### Jacques Winmill
