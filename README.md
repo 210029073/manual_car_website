@@ -1,4 +1,6 @@
 # Team 21 - Manual E-Commerce Website
+This E-Commerce platform has been created for as part of a team project.
+
 Car FrontEnd website using Laravel (A PHP Framework)
 <hr/>
 
@@ -41,6 +43,15 @@ Click the **new** button and then type the php directory as follows: `c:\xampp\p
 **Once you have followed the instructions on installing the dependencies required for laravel using Composer then follow Step 8.**
 8. Inside the working directory of **manual_car_website/manual** run `php artisan migrate`.
 11. For accessing the pages via the web browser simply access it via either running on terminal in the websites working directory `php artisan serve` or `localhost/manual_car_website/public/` when running XAMPP. Where the **the_page** is the page you wish to visit.
+
+## **Contributors**
+#### Ibrahim Ahmad 
+#### Ahsaan Kumar
+#### Victory Mpokosa
+#### Mohammed Ali
+#### Jacques Winmill
+#### Amir Khan
+#### Sydul Bari
 
 ## FAQs
 ### *I am having trouble retrieving git repository*
