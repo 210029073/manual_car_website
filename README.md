@@ -11,8 +11,8 @@ Please follow the steps before proceeding the actual manipulation to the code:
 
 1. Please make sure that you have downloaded and installed Xampp. Here is the link: https://www.apachefriends.org/download.html
 2. Open Git bash, if you have not installed Git bash then here is the link to download and install git bash: https://gitforwindows.org/
-3. Then clone the repository using the git command: `git clone git@github.com:210029073/TresorLDN_E-Commerce-.git`
-4. Move the folder that was created by GitHub when cloning repository to the `c:\xampp\htdocs\`. That will be the folder **TresorLDN_E-Commerce-**.
+3. Then clone the repository using the git command: `git clone git@github.com:210029073/manual_car_website.git`
+4. Move the folder that was created by GitHub when cloning repository to the `c:\xampp\htdocs\`. That will be the folder **manual_car_website**.
 5. If you are using Windows, please set the php directory in xampp from `c:\xampp\php` to the user environment variable.
 
 Select **This PC** and Right click to select **Properties**
