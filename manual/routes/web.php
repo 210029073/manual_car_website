@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\BasketController;
+use App\Http\Controllers\OrderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,3 +66,5 @@ Route::get('/register', [RegisterController::class, 'signupPage'])->name('signup
 Route::post('/register/user', [RegisterController::class, 'register'])->name("register");
 
 Route::get('/login/authenticate', [LoginController::class, 'authenticate'])->name("login");
+
+Route::get("/basket/checkout", [OrderController::class, 'proceedCheckout'])->name("checkout");
