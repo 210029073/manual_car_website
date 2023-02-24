@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    height: 80vh;
+    background-color: #0b0a0a;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.Sign-up{
+    max-width: 800px;
+    width: 100%;
+    background-color: #fffcfc;
+    border-radius: 20px;
+    padding: 20px 25px;
+    border-radius: 8px;
+}
+
+.Sign-up .Title{
+    font-size: 30px;
+    font-weight: 600px;
+}
+
+.signupForm input {
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 5px;
+    text-align: center;
+}
+
