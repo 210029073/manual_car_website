@@ -9,10 +9,13 @@ use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
+    /**
+     * This will therefore proceed the orders into checkout.
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+    */
     public function proceedCheckout() {
         $basket = new BasketController();
         $basketCollection = $basket->basket();
-//        dd(Auth::id());
         foreach ($basketCollection as $basket) {
             $product = [
                 'userID' => Auth::id(),
