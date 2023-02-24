@@ -5,6 +5,7 @@
         <title>Register</title>
         <!-- mobile view -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/Sign-up.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
@@ -15,6 +16,7 @@
                         <form method="post" action="{{route("register")}}">
                             @csrf
                             <div class="signupForm">
+                            <div class="Title">Sign-up</div>
                             <div>
                             <label>First name</label>
                             <br/>
