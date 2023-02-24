@@ -3,6 +3,14 @@
 @section('content')
     <body>
     <h1> Car Products</h1>
+
+    <div class="filter-container">
+      <button id="filter-all" class="filter-button active">All Products</button>
+      <button id="filter-sedan" class="filter-button">Sedans</button>
+      <button id="filter-suv" class="filter-button">SUVs</button>
+      <button id="filter-truck" class="filter-button">Trucks</button>
+    </div>
+    
     <div class="product-container">
         <div class="product-card">
             <img
@@ -136,6 +144,10 @@
             <button>Add to Cart</button>
             <a><button>Add review</button></a>
         </div>
+
+        <script src="product.js"></script>
+</body>
+</html>
         <div>
             @foreach($products as $product)
                 <div>
