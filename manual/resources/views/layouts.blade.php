@@ -2,10 +2,10 @@
 <html>
 <!-- The dependencies for the website -->
 <head>
-    <script defer src='js/app.js'></script>
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script defer src='/js/app.js'></script>
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
     <script src="https://kit.fontawesome.com/de8d7543d7.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-icon" href="images/Logo.ico">
+    <link rel="icon" type="image/x-icon" href="/images/Logo.ico">
     <title> Manual Do It Yourself - @yield('title')</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

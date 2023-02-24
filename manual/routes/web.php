@@ -68,3 +68,4 @@ Route::post('/register/user', [RegisterController::class, 'register'])->name("re
 Route::get('/login/authenticate', [LoginController::class, 'authenticate'])->name("login");
 
 Route::get("/basket/checkout", [OrderController::class, 'proceedCheckout'])->name("checkout");
+Route::get("/order/past", [OrderController::class, 'viewPastOrders'])->name("pastOrder");

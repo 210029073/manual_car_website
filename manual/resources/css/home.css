@@ -1,0 +1,164 @@
+/* The whole page */
+body{
+    background-color: #000000;
+    margin:0;
+    background-size: cover;
+    overflow:hidden;
+    color: white;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.header{
+    background-image: url('/images/WPGif2.gif');
+    background-size:cover;
+    position: absolute;
+    height: 351px;
+    top: 49px;
+    width: 100%;
+}
+
+
+.WelcomeandBrowse{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    color:white;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+.Navigation {
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-weight:500;
+    /*margin:-50px;*/
+    /*border:50px solid rgb(0, 0, 0);*/
+    display: flex;
+    flex-direction: row;
+    background: black;
+}
+
+.Navigation .Navigation-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 25%;
+}
+
+.Navigation .Navigation-center {
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Navigation .Navigation-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 25%;
+
+}
+
+.Navigation a {
+    text-align: center;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 5px;
+    float: left;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.Navigation a:hover {
+/* background-color: #c7c7c7; */
+    color: rgb(169, 169, 169);
+    transition: all 2.5s;
+}
+
+
+/* .Navigation a.current {
+background-color: #828282;
+color: white;
+} */
+
+
+.navpadding{
+
+}
+.browseCars {
+    width: 165px;
+    transition: all 2.5s;
+    background-color: white;
+    color:black;
+    border:0;
+    border-radius: 50px;
+    top: 55%;
+    left: 45.5%;
+    position: absolute;
+    text-align: center;
+    cursor:pointer;
+    font-family:  "Gill Sans Extrabold", sans-serif ;
+}
+
+.browseCars:hover{
+    background-color: black;
+    color: rgb(255,255,255);
+}
+.signup{
+    position:relative;
+    float:right;
+}
+
+.content-container {
+    padding: 2.5%;
+}
+
+.product-list .product-item {
+    flex-direction: row;
+    width: 100%;
+}
+
+.ui-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.ui-prompt-box {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    color: black;
+}
+
+.ui-prompt-box .login-container {
+    padding: 10% 2.5%;
+    background-color: white;
+    border-radius: 0.75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    justify-content: center;
+}
+
+.signupForm div {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5%;
+    justify-content: space-evenly;
+}

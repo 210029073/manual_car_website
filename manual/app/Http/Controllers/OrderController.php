@@ -28,4 +28,23 @@ class OrderController extends Controller
         }
         return redirect()->intended("homepage")->with('successCheckout', "Successfully processed item in checkout");
     }
+
+    public function viewPastOrders() {
+        $result = Order::where('userId', Auth::id())->get();
+        $orderResult = array();
+        for ($i = 0; $i < sizeof($result); $i++) {
+            array_push($orderResult, new \App\Http\Controllers\Order(
+                $result[$i]->ordersId,
+                $result[$i]->userId,
+                $result[$i]->productsId,
+                $result[$i]->price,
+                $result[$i]->deliveryDate,
+                $result[$i]->orderDate
+            ));
+//            array_push($orderResult, $order);
+//            dd($order);
+        }
+        dd($orderResult);
+        return view('past_orders', ['customerOrders' => $result]);
+    }
 }
