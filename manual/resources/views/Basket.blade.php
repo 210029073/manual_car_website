@@ -29,5 +29,10 @@
             <br/>
         </form>
     @endforeach
+    <div>
+        <form action="/basket/checkout" method="get">
+            <button type="submit">Checkout</button>
+        </form>
+    </div>
 </body>
 @endsection
