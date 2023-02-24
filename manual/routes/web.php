@@ -6,7 +6,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
-
+use App\Http\Controllers\BasketController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,7 +21,7 @@ use App\Http\Controllers\auth\RegisterController;
 //Set the root page '/'
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/', [PageController::class, 'Home'])->name('home');
+//Route::get('/', [PageController::class, 'Home'])->name('home');
 
 Route::get('/home', function(){
     return view('Home');
@@ -47,7 +47,7 @@ Route::get('/aboutus', function () {
     return view('aboutus');
 });
 
-Route::get('/products', [ProductsController::class, 'products']);
+Route::get('/products', [ProductsController::class, 'products'])->name("products");
 
 Route::get("/login", [LoginController::class, 'login'])->name('loginPage');
 
@@ -56,6 +56,11 @@ Route::get("logout", function () {
     return view('Home');
 })->name('logout');
 
+#basket page
+Route::get("/basket", [BasketController::class, 'viewBasket']);
+Route::get("/basket/delete", [BasketController::class, 'deleteItemFromBasket']);
+
+Route::post("/products/add", [BasketController::class, 'test']);
 Route::get('/register', [RegisterController::class, 'signupPage'])->name('signup');
 Route::post('/register/user', [RegisterController::class, 'register'])->name("register");
 

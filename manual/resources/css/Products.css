@@ -13,16 +13,16 @@ h1{
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    max-width: 1200px;
+    width: 100%;
 }
 
 .product-card {
     background-color: #cabc82;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    margin: 20px;
-    padding: 20px;
-    width: 300px;
+    /*margin: 20px;*/
+    padding: 2.5%;
+    width: 50%;
     text-align: center;
 }
 

@@ -1,139 +1,166 @@
-body{
+body {
 
-    margin:0;
+    margin: 0;
     background-size: cover;
-    overflow-x:hidden;
-    height:100vh;
-  }
-  
-  
-  
-  
-  .Navigation {
-      font-family: "Goudy Bookletter 1911", sans-serif;
-      font-weight:500;
-      margin:-50px;
-      border:50px solid rgb(0, 0, 0);
-    }
-    
-    .Navigation a {
-        text-align: center;
-        color: white;
-        padding: 16px 30px;
-        border-radius: 5px;
-        float: left;
-        font-size: 20px;
-        text-decoration: none;
-      }
-    
-    .Navigation a:hover {
-        color: rgb(169, 169, 169);
-        transition: all 2.5s;
-    }
-    
-    
-    
-    
-    .navpadding{
-      position:relative;
-      left:30.9%;
-    }
-    .signup{
-        position:relative;
-        float:right;
-    }
-    
-    .AboutUsText{
-        text-align:center;
-        text-decoration: none;
-        font-size:1.2em;
-        position:absolute;
-        top: 90%;
-        left: 45.5%;
-        color:gray;
-        /* font-family: cursive; */
-    }
-    .AboutUs{
-            
-            position: absolute;
-            top: 124.65%;
-            text-align: center;
-            left: 25%;
-            color:rgb(0, 0, 0);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-family:  "Gill Sans Extrabold", sans-serif ;
-            }
-    .boxer {
-        text-decoration: none;
-        width: 500px;
-        height: 200px;
-        border: 15px solid rgb(58, 58, 58);
-        background-color: rgb(120,120,120);
-        /* color: #ffffff38; */
-        color: rgb(215, 215, 215);
-        padding: 50px;
-        /* margin: 20px; */
-      }
-
-      .boxer1 {
-        text-decoration: none;
-        width: 500px;
-        height: 200px;
-        border: 15px solid rgb(58, 58, 58);
-        background-color: rgb(120,120,120);
-        /* color: #ffffff38; */
-        color: rgb(215, 215, 215);
-        padding: 50px;
-      }
-
-      .AboutUs1{
-          
-        position: absolute;
-        top: 124.65%;
-        text-align: center;
-        left: 75%;
-        color:rgb(0, 0, 0);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        font-family:  "Gill Sans Extrabold", sans-serif ;
-        }
-
-        .boxer1 {
-            text-decoration: none;
-            width: 500px;
-            height: 200px;
-            border: 15px solid rgb(58, 58, 58);
-            background-color: rgb(120,120,120);
-            /* color: #ffffff38; */
-            color: rgb(215, 215, 215);
-            padding: 50px;
-            /* margin: 20px; */
-          }
+    overflow-x: hidden;
+    height: 100vh;
+}
 
 
-          .AboutUs2{
-            left:50%;
-            position: absolute;
-            top: 50%;
-            text-align: center;
-            color:rgb(0, 0, 0);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            font-family:  "Gill Sans Extrabold", sans-serif ;
-            }
-          .boxer2 {
-            text-decoration: none;
-            background-image: url('/images/Office.jpg');
-            background-size: cover;
-                box-sizing: border-box;
-                width: 100vw;
-                height: 70vh;
-                margin: 0;
-            padding: 50px;
-            /* margin: 20px; */
-          }
-    
-    .bothBoxes{
+.Navigation {
 
-    }
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    background: black;
+}
+
+.Navigation .Navigation-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 25%;
+}
+
+.Navigation .Navigation-center {
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Navigation .Navigation-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 25%;
+
+}
+
+.Navigation a {
+    text-align: center;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 5px;
+    float: left;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.Navigation a:hover {
+    color: rgb(169, 169, 169);
+    transition: all 2.5s;
+}
+
+
+.navpadding {
+    /*position: relative;*/
+    /*left: 30.9%;*/
+}
+
+.signup {
+    position: relative;
+    float: right;
+}
+
+.AboutUsText {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    position: absolute;
+    top: 90%;
+    left: 45.5%;
+    color: gray;
+    /* font-family: cursive; */
+}
+
+.AboutUs {
+
+    position: absolute;
+    top: 124.65%;
+    text-align: center;
+    left: 25%;
+    color: rgb(0, 0, 0);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: "Gill Sans Extrabold", sans-serif;
+}
+
+.boxer {
+    text-decoration: none;
+    width: 500px;
+    height: 200px;
+    border: 15px solid rgb(58, 58, 58);
+    background-color: rgb(120, 120, 120);
+    /* color: #ffffff38; */
+    color: rgb(215, 215, 215);
+    padding: 50px;
+    /* margin: 20px; */
+}
+
+.boxer1 {
+    text-decoration: none;
+    width: 500px;
+    height: 200px;
+    border: 15px solid rgb(58, 58, 58);
+    background-color: rgb(120, 120, 120);
+    /* color: #ffffff38; */
+    color: rgb(215, 215, 215);
+    padding: 50px;
+}
+
+.AboutUs1 {
+
+    position: absolute;
+    top: 124.65%;
+    text-align: center;
+    left: 75%;
+    color: rgb(0, 0, 0);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: "Gill Sans Extrabold", sans-serif;
+}
+
+.boxer1 {
+    text-decoration: none;
+    width: 500px;
+    height: 200px;
+    border: 15px solid rgb(58, 58, 58);
+    background-color: rgb(120, 120, 120);
+    /* color: #ffffff38; */
+    color: rgb(215, 215, 215);
+    padding: 50px;
+    /* margin: 20px; */
+}
+
+
+.AboutUs2 {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: "Gill Sans Extrabold", sans-serif;
+}
+
+.boxer2 {
+    text-decoration: none;
+    background-image: url('/images/Office.jpg');
+    background-size: cover;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 70vh;
+    margin: 0;
+    padding: 50px;
+    /* margin: 20px; */
+}
+
+.bothBoxes {
+
+}

@@ -1,136 +1,164 @@
-
-
 /* The whole page */
-.body {
-    background: #F4D504;
-}
-
-/* Nav bar */
-.rectangle {
-    position: center;
-    width: auto;
-    height: 50px;
-    top: 208px;
-    background: #000000;
-    border: 5px solid #F4D504;
-}
-
-/* Nav bar values */
-.rectangle a{
-    display: inline-block;
-    justify-content: space-around;
-    text-align: center;
-    line-height: 200px;
-    margin-left: 300px;
-    margin-top: auto;
-    width: 115px;
-    height: 42px;
-    left: 139px;
-    top: 218px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 44px;
-    color: #F4D504;
-    text-decoration: none;
-}
-
-/* Banner */
-.head-box {
-    position: relative;
-    width: 90%;
-    height: 150px;
-    background-color: #F4D504;
-    border: 1px solid black;
-    padding: 20px;
-    margin: auto;
-  }
-
-/* Banner logo */
-.head-box img{
-    position: absolute;
-    width: 371px;
-    height: 121px;
-    top: 49px;
-    /* background: url(image.png);
-    border-radius: 127.5px;*/
-  }
-/* Search bar */
-.head-box input{
-    position: relative; /* or absolute */
-    width: 176px;
-    height: 32px;
-    display: inline-block;
-    background: #D9D9D9;
-    left: 1178px;
-    top: 100px;
-}
-
-/* User button */
-.head-box .user{
-    position: relative; /* or absolute */
-    /* width: 176px; */
-    height: 32px;
-    display: inline-block;
-    left: 890px;
-    top: 110px;
-    background-color: #F4D504;
-    border: none;
-}
-
-/* Basket icon */
-.head-box .basket{
-    text-decoration: none;
-    padding: 10px 15px;
-    position: relative;
-    border-radius: 2px;
-    height: 32px;
-    display: inline-block;
-    left: 885px;
-    top: 110px;
-    color: #000000;
-}
-
-/* Basket number */
-.head-box .basket .badge{
-    position: absolute;
-    top: -10px;
-    right: -5px;
-    padding: 3px 7px;
-    border-radius: 50%;
-    background: red;
+body{
+    background-color: #000000;
+    margin:0;
+    background-size: cover;
+    overflow:hidden;
     color: white;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
-
-.login-container, .new-car{
-    text-align: center;
+.header{
+    background-image: url('/images/WPGif2.gif');
+    background-size:cover;
     position: absolute;
-    width: 386px;
-    height: 277px;
-    left: 600px;
-    top: 324px;
+    height: 351px;
+    top: 49px;
+    width: 100%;
 }
 
-.login-container input{
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal; 
-    margin-bottom: 16px;
-}
 
-.form-control {
-    display: block;
-    width: 200px;
-    height: auto;
-    transition: width 2s;
+.WelcomeandBrowse{
+    position: absolute;
+    top: 50%;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+    left: 50%;
+    color:white;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
-.form-control:focus {
-    width: 300px;
+
+
+.Navigation {
+    font-family: "Goudy Bookletter 1911", sans-serif;
+    font-weight:500;
+    /*margin:-50px;*/
+    /*border:50px solid rgb(0, 0, 0);*/
+    display: flex;
+    flex-direction: row;
+    background: black;
+}
+
+.Navigation .Navigation-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 25%;
+}
+
+.Navigation .Navigation-center {
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Navigation .Navigation-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 25%;
+
+}
+
+.Navigation a {
     text-align: center;
-  }
+    color: white;
+    padding: 16px 30px;
+    border-radius: 5px;
+    float: left;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.Navigation a:hover {
+/* background-color: #c7c7c7; */
+    color: rgb(169, 169, 169);
+    transition: all 2.5s;
+}
+
+
+/* .Navigation a.current {
+background-color: #828282;
+color: white;
+} */
+
+
+.navpadding{
+
+}
+.browseCars {
+    width: 165px;
+    transition: all 2.5s;
+    background-color: white;
+    color:black;
+    border:0;
+    border-radius: 50px;
+    top: 55%;
+    left: 45.5%;
+    position: absolute;
+    text-align: center;
+    cursor:pointer;
+    font-family:  "Gill Sans Extrabold", sans-serif ;
+}
+
+.browseCars:hover{
+    background-color: black;
+    color: rgb(255,255,255);
+}
+.signup{
+    position:relative;
+    float:right;
+}
+
+.content-container {
+    padding: 2.5%;
+}
+
+.product-list .product-item {
+    flex-direction: row;
+    width: 100%;
+}
+
+.ui-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.ui-prompt-box {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    color: black;
+}
+
+.ui-prompt-box .login-container {
+    padding: 10% 2.5%;
+    background-color: white;
+    border-radius: 0.75%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    justify-content: center;
+}
+
+.signupForm div {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5%;
+    justify-content: space-evenly;
+}

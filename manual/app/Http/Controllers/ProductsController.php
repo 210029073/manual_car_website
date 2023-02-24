@@ -34,7 +34,7 @@ class ProductsController extends Controller
             'stock'=>$stock,
             'image'=>$img,
             'likes'=>$likes);
-        // $DB = new 
+        // $DB = new
         Products::insert($data);
         return view('Home');
     }
