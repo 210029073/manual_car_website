@@ -60,7 +60,7 @@ class BasketController extends Controller
         $id = $product[0]->productsId;
 
         //construct product object
-        $createdProduct = new Product($id, $model, $brand, $description, $price);
+        $createdProduct = new Product($id, $model, $brand, $description, $price, $stock);
 
         //add to basket
         $this->addProductToBasket($createdProduct);
@@ -98,6 +98,17 @@ class BasketController extends Controller
     public function destroyCookie() {
         //destroys cookie such that it will point to the last 6 seconds.
         unset($_COOKIE['manualBasket']);
+    }
+
+    public function emptyBasket() {
+        if(isset($_COOKIE['manualBasket'])) {
+            //clear all items in basket
+            $this->basket->clear();
+            setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
+            return redirect()->intended('/basket')->with('successRemoveAllItemsInBasket', "Successfully added product to basket!");
+        }
+
+        return redirect()->back();
     }
 
     public function basket() {
