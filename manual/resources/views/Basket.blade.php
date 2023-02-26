@@ -17,6 +17,8 @@
             <input type="hidden" name="model" value="{{$item->getModel()}}"/>
             <input type="hidden" name="description" value="{{$item->getDescription()}}"/>
             <input type="hidden" name="price" value="{{$item->getPrice()}}"/>
+            <input type="hidden" name="transmission" value="{{$item->getTransmission()}}"/>
+            <input type="hidden" name="engineCapacity" value="{{$item->getEngineCapacity()}}"/>
             <input type="hidden" name="quantity" value="{{$item->getQuantity()}}"/>
 
             <div>
@@ -25,6 +27,8 @@
                 <p>Car Model: {{$item->getModel()}}</p>
                 <p>Description: {{$item->getDescription()}}</p>
                 <p>Price: £{{number_format($item->getPrice(), 2)}}</p>
+                <p>Engine Capacity: {{number_format($item->getEngineCapacity(), 1)}}</p>
+                <p>Transmission Type: {{$item->getTransmission()}}</p>
                 <p>Stock remaining: {{$item->getQuantity()}}</p>
                 <button type="submit">Remove</button>
             </div>

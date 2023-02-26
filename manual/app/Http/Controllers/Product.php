@@ -116,4 +116,14 @@ class Product
     {
         return $this->transmission;
     }
+
+    /**
+     * This will return the engine capacity of the vehicle
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @return float
+     */
+    public function getEngineCapacity(): float
+    {
+        return $this->engineCapacity;
+    }
 }
