@@ -24,8 +24,13 @@ class OrderController extends Controller
                 'deliveryDate' => date("d/m/y H:i:s"),
                 'orderDate' => date("d/m/y H:i:s")
             ];
+            DB::update('UPDATE products SET stock = ? WHERE productsId = ?', [$basket->getQuantity()-1, $basket->getId()]);
             DB::table('orders')->insert($product);
         }
+        //empty the basket!
+        $cart = new BasketController();
+        $cart->emptyBasket();
+
         return redirect()->intended("homepage")->with('successCheckout', "Successfully processed item in checkout");
     }
 
