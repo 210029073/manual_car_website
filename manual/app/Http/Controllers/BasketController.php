@@ -56,11 +56,13 @@ class BasketController extends Controller
         $price = floatval($_POST['price']);
         $stock = intval($_POST['stock']);
         $likes = intval($_POST['likes']);
+        $engine_capacity = floatval($_POST['engineCapacity']);
+        $transmission = $_POST['transmission'];
         $product = Products::where('model', $model)->where('brand', $brand)->get();
         $id = $product[0]->productsId;
 
         //construct product object
-        $createdProduct = new Product($id, $model, $brand, $description, $price, $stock);
+        $createdProduct = new Product($id, $model, $brand, $description, $price, $engine_capacity, $transmission, $stock);
 
         //add to basket
         $this->addProductToBasket($createdProduct);

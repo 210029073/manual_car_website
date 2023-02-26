@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('model',256);
             $table->text('description');
             $table->string('brand',100);
-            $table->float('engine_capacity');
-            $table->string('transmission');
+            $table->float('engine_capacity')->default(0);
+            $table->string('transmission', 256)->nullable(true);
             $table->float('price');
             $table->integer('stock');
             $table->text('image');

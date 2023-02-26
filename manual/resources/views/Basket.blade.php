@@ -17,8 +17,8 @@
             <input type="hidden" name="model" value="{{$item->getModel()}}"/>
             <input type="hidden" name="description" value="{{$item->getDescription()}}"/>
             <input type="hidden" name="price" value="{{$item->getPrice()}}"/>
-            <input type="hidden" name="transmission" value="{{$item->getTransmission()}}"/>
             <input type="hidden" name="engineCapacity" value="{{$item->getEngineCapacity()}}"/>
+            <input type="hidden" name="transmission" value="{{$item->getTransmission()}}"/>
             <input type="hidden" name="quantity" value="{{$item->getQuantity()}}"/>
 
             <div>
