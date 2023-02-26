@@ -21,7 +21,7 @@ return new class extends Migration
             $table->unsignedBigInteger('productsId');
             $table->foreign('productsId')->references('productsId')->on('products')->onDelete('cascade');
             $table->float('price');
-            $table->boolean('isProcessed');
+            $table->boolean('isProcessed')->default(false);
             $table->datetime('deliveryDate');
             $table->datetime('orderDate');
         });
