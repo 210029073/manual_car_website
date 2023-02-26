@@ -10,7 +10,7 @@
       <button id="filter-suv" class="filter-button">SUVs</button>
       <button id="filter-truck" class="filter-button">Trucks</button>
     </div>
-    
+
     <div class="product-container">
         <div class="product-card">
             <img
@@ -156,6 +156,8 @@
                     <input type="hidden" name="brand" value="{{$product->brand}}"/>
                     <input type="hidden" name="model" value="{{$product->model}}"/>
                     <input type="hidden" name="description" value="{{$product->description}}"/>
+                    <input type="hidden" name="engineCapacity" value="{{$product->engine_capacity}}"/>
+                    <input type="hidden" name="transmission" value="{{$product->transmission}}" />
                     <input type="hidden" name="price" value="{{$product->price}}"/>
                     <input type="hidden" name="stock" value="{{$product->stock}}"/>
                     <input type="hidden" name="likes" value="{{$product->likes}}"/>
@@ -166,6 +168,8 @@
                         <h2>{{$product->brand}} {{$product->model}}</h2>
                         <img src="images/{{$product->image}}" alt="Car Image of {{$product->brand}} {{$product->model}}">
                         <p><i>{{ $product->description }}</i></p>
+                        <p>Engine Capacity: {{$product->engine_capacity}}</p>
+                        <p>Transmission: {{$product->transmission}}</p>
                         {{-- Parse price --}}
                         <p>Price: £{{ number_format($product->price, 2, '.') }}</p>
                         <p>Currently available: {{ $product->stock }}</p>
