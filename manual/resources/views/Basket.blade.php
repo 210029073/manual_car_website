@@ -17,6 +17,7 @@
             <input type="hidden" name="model" value="{{$item->getModel()}}"/>
             <input type="hidden" name="description" value="{{$item->getDescription()}}"/>
             <input type="hidden" name="price" value="{{$item->getPrice()}}"/>
+            <input type="hidden" name="quantity" value="{{$item->getQuantity()}}"/>
 
             <div>
                 <p>Product No. {{$item->getId()}}</p>
@@ -24,6 +25,7 @@
                 <p>Car Model: {{$item->getModel()}}</p>
                 <p>Description: {{$item->getDescription()}}</p>
                 <p>Price: £{{number_format($item->getPrice(), 2)}}</p>
+                <p>Stock remaining: {{$item->getQuantity()}}</p>
                 <button type="submit">Remove</button>
             </div>
             <br/>
