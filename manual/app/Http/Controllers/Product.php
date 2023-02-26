@@ -20,12 +20,15 @@ class Product
 
     private float $price;
 
-    function __construct(int $id, string $model, string $brand, string $description, float $price){
+    private int $quantity;
+
+    function __construct(int $id, string $model, string $brand, string $description, float $price, int $quantity){
         $this->id = $id;
         $this->model = $model;
         $this->brand = $brand;
         $this->description = $description;
         $this->price = $price;
+        $this->quantity = $quantity;
     }
 
     /**
@@ -76,5 +79,21 @@ class Product
     public function getId(): int
     {
         return $this->id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getQuantity(): int
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * @param int $quantity
+     */
+    public function setQuantity(int $quantity): void
+    {
+        $this->quantity = $quantity;
     }
 }
