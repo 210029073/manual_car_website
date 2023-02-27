@@ -1,7 +1,12 @@
 @extends('layouts')
 @section('title','Login')
 @section('content')
+    <head>
+        <link href="/css/Sign-up.css" rel="stylesheet" type="text/css"/>
+    </head>
+    </head>
     <body>
+    <div class="login-ui">
         <div class="ui-container">
             <div class="ui-prompt-box">
                 <div class="login-container">
@@ -12,26 +17,27 @@
                                 <div>
                                     <i class="fa-regular fa-user" style="font-size:50px;margin-bottom:25px;"></i>
                                 </div>
-                            <div>
-                            <p>Username: </p>
-                            <input type="text" name="username" placeholder="Enter your username"/></br>
-                            </div>
-                            <div>
-                                <p>Password: </p>
-                            <input type="password" name="password" placeholder="Enter your password"/></br>
-                            </div>
-                            <br/>
-                            <div>
-                                <input type="submit" name="btnSubmit" value="Login">
-                            </div>
-                            <div>
-                                <p>Dont have an account ? <a href='/register'>CLICK HERE! </a></p>
-                            </div>
+                                <div>
+                                    <p>Username: </p>
+                                    <input type="text" name="username" placeholder="Enter your username"/></br>
+                                </div>
+                                <div>
+                                    <p>Password: </p>
+                                    <input type="password" name="password" placeholder="Enter your password"/></br>
+                                </div>
+                                <br/>
+                                <div>
+                                    <input type="submit" name="btnSubmit" value="Login">
+                                </div>
+                                <div>
+                                    <p>Dont have an account ? <a href='/register'>CLICK HERE! </a></p>
+                                </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </body>
 @stop

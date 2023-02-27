@@ -162,3 +162,7 @@ color: white;
     padding: 2.5%;
     justify-content: space-evenly;
 }
+
+.login-ui {
+    width: 30%;
+}
