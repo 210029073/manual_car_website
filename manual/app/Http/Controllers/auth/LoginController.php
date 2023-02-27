@@ -9,7 +9,7 @@
      * Controller responsible for handling the login page and requests.
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
      * @since 15/02/2023
-     * @version 1.0
+     * @version 1.1
     */
     class LoginController extends Controller {
 
@@ -32,6 +32,11 @@
          * @author Ibrahim Ahmad <210029073@aston.ac.uk>
         */
         public function authenticate(Request $request) {
+            //validate login credentials
+            $check = $request->validate([
+                'username' => 'required|email',
+                'password' => 'required'
+            ]);
             $loginDetails = array(
 
                     'email' => ['required', $request->get('username')],

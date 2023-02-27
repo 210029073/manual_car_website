@@ -135,7 +135,7 @@ color: white;
 .ui-prompt-box {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 100%;
     color: black;
 }
 
@@ -161,4 +161,8 @@ color: white;
     flex-direction: column;
     padding: 2.5%;
     justify-content: space-evenly;
+}
+
+.login-ui {
+    width: 30%;
 }

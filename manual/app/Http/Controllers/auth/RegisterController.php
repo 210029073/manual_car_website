@@ -42,6 +42,20 @@ class RegisterController extends Controller
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
     */
     public function register(Request $request) {
+        //add validations
+        $check = $request->validate(
+            [
+                'firstName' => 'required|min:1|max:33',
+                'lastName' => 'required|min:1|max:33',
+                'email' => 'required|email',
+                'password' => 'required|min:8',
+                'address' => 'required',
+                'mobile' => 'required'
+            ]
+        );
+
+//        dd($check);
+
         User::create(
             [
                 'firstName' => $request->post('firstName'),
@@ -53,7 +67,14 @@ class RegisterController extends Controller
             ]
         );
 
+        $credentials =
+            [
+            "email" => ['required',$request->post('email')],
+            "password" => $request->post('password'),
+        ];
+        Auth::attempt($credentials);
+
         //should redirect to the homepage.
-        return redirect()->intended($this->redirectTo);
+        return redirect()->intended('homepage');
     }
 }
