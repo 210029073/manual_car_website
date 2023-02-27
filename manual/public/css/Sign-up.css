@@ -1,8 +1,14 @@
 body {
+    font-family: "Gill Sans Extrabold", sans-serif;
     background-color: #0b0a0a;
     justify-content: center;
     align-items: center;
     padding: 15px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
 }
 
 .Sign-up{
@@ -35,4 +41,23 @@ body {
     margin: 5px;
     text-align: center;
 }
+
+.signupForm input[type=submit] {
+    height: 20%;
+}
+
+.signupForm input[type=text] {
+    padding: 1.25%;
+    border-radius: 2.5px;
+    border: 1px solid silver;
+    text-align: left;
+}
+
+.signupForm input[type=password] {
+    padding: 1.25%;
+    border-radius: 2.5px;
+    border: 1px solid silver;
+    text-align: left;
+}
+
 
