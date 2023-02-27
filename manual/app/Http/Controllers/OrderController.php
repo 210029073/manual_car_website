@@ -49,7 +49,7 @@ class OrderController extends Controller
 //            array_push($orderResult, $order);
 //            dd($order);
         }
-        dd($orderResult);
+//        dd($orderResult);
         return view('past_orders', ['customerOrders' => $result]);
     }
 }
