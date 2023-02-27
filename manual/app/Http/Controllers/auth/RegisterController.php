@@ -53,7 +53,14 @@ class RegisterController extends Controller
             ]
         );
 
+        $credentials =
+            [
+            "email" => ['required',$request->post('email')],
+            "password" => $request->post('password'),
+        ];
+        Auth::attempt($credentials);
+
         //should redirect to the homepage.
-        return redirect()->intended($this->redirectTo);
+        return redirect()->intended('homepage');
     }
 }
