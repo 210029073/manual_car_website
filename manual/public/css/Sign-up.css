@@ -60,4 +60,15 @@ body {
     text-align: left;
 }
 
+.errors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2.5px;
+    width: 100%;
+    background-color: lightpink;
+    color: red;
+    margin-bottom: 1.25%;
+}
+
 
