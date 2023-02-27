@@ -7,6 +7,18 @@
     </head>
     <body>
     <div class="login-ui">
+        @if($errors->any())
+            <div class="errors">
+                <h2>Could not register</h2>
+                <p>One or two fields have not been filled correctly.
+                    Please amend the following:</p>
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div class="ui-container">
             <div class="ui-prompt-box">
                 <div class="login-container">

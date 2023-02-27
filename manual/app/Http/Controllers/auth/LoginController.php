@@ -32,6 +32,11 @@
          * @author Ibrahim Ahmad <210029073@aston.ac.uk>
         */
         public function authenticate(Request $request) {
+            //validate login credentials
+            $check = $request->validate([
+                'username' => 'required|email',
+                'password' => 'required'
+            ]);
             $loginDetails = array(
 
                     'email' => ['required', $request->get('username')],
