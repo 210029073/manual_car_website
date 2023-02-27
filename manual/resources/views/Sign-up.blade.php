@@ -9,14 +9,13 @@
     </head>
 
     <body>
-        <div class="Sign-up">
             <div class="ui-container">
                 <div class="ui-prompt-box">
                     <div class="login-container">
                         <form method="post" action="{{route("register")}}">
                             @csrf
                             <div class="signupForm">
-                            <div class="Title">Sign-up</div>
+                           
                             <div>
                             <label>First name</label>
                             <br/>
@@ -61,12 +60,11 @@
                             <div>
                             <input type="submit" name="btnSubmit" value="Register">
                             </div>
+
                             </div>
                         </form>
                     </div>
                 </div>
-            </div>
-
         </div>
     </body>
 </html>

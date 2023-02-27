@@ -1,24 +1,21 @@
 body {
     display: flex;
-    height: 80vh;
-    background-color: #0b0a0a;
+    height: 100vh;
+    background-color: #eee5e5;
     justify-content: center;
     align-items: center;
     padding: 15px;
+   
 }
 
-.Sign-up{
+
+.ui-prompt-box{
+    align-content: center;
     max-width: 800px;
     width: 100%;
-    background-color: #fffcfc;
-    border-radius: 20px;
-    padding: 20px 25px;
-    border-radius: 8px;
-}
-
-.Sign-up .Title{
-    font-size: 30px;
-    font-weight: 600px;
+    padding: 25px 25px;
+    border-radius: 5px;
+    background-color: #ffffff;
 }
 
 .signupForm input {
@@ -33,4 +30,9 @@ body {
     margin: 5px;
     text-align: center;
 }
+
+
+
+
+
 
