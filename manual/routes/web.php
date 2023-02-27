@@ -54,7 +54,7 @@ Route::get("/login", [LoginController::class, 'login'])->name('loginPage');
 
 Route::get("logout", function () {
     \Illuminate\Support\Facades\Auth::logout();
-    return view('Home');
+    return view('homepage');
 })->name('logout');
 
 #basket page
