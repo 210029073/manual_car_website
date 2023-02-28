@@ -20,9 +20,11 @@
             <div class="navpadding" ><a href="/products">Cars</a></div>
             <div class="navpadding"><a href="/aboutus">About Us</a></div>
             <div class="navpadding"> <a href="/contactus">Contact Us</a></div>
+            <div class="signup"><a href="{{route('basket')}}">Basket</a></div>
         </div>
         <div class="Navigation Navigation-right">
             @if(\Illuminate\Support\Facades\Auth::check())
+                <div class="signup"><a href="{{route('pastOrder')}}">Past Order</a></div>
                 <div class="signup"><a href="{{route('logout')}}">Logout</a></div>
             @else
                 <div class="signup"> <a href="{{route('signup')}}">Sign Up</a>

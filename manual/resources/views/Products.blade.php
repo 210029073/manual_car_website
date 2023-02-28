@@ -167,7 +167,7 @@
                         {{-- Will attach to a HTML Form --}}
                         {{-- This should enumerate all product details here... --}}
                         <h2>{{$product->brand}} {{$product->model}}</h2>
-                        <img src="images/{{$product->image}}" alt="Car Image of {{$product->brand}} {{$product->model}}">
+                        <img width="640" height="426" src="{{asset("/images/cars/")}}/{{$product->image}}" alt="Car Image of {{$product->brand}} {{$product->model}}">
                         <p><i>{{ $product->description }}</i></p>
                         <p>Engine Capacity: {{$product->engine_capacity}}</p>
                         <p>Transmission: {{$product->transmission}}</p>
@@ -175,7 +175,11 @@
                         <p>Price: £{{ number_format($product->price, 2, '.') }}</p>
                         <p>Currently available: {{ $product->stock }}</p>
                         <p>Popularity: {{$product-> likes}}</p>
-                        <button type="submit">Add to cart</button>
+                        @if($product->stock > 0)
+                            <button type="submit">Add to cart</button>
+                        @else
+                            <p>Out-of-stock!</p>
+                        @endif
                         <a><button>Add review</button></a>
                     </div>
                 </form>
