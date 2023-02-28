@@ -166,3 +166,7 @@ color: white;
 .login-ui {
     width: 30%;
 }
+
+.product-item {
+    display: flex;
+}
