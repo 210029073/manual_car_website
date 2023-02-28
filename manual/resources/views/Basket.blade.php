@@ -35,10 +35,12 @@
             <br/>
         </form>
     @endforeach
-    <div>
-        <form action="/basket/checkout" method="get">
-            <button type="submit">Checkout</button>
-        </form>
-    </div>
+    @if(\Illuminate\Support\Facades\Auth::check())
+        <div>
+            <form action="/basket/checkout" method="get">
+                <button type="submit">Checkout</button>
+            </form>
+        </div>
+    @endif
 </body>
 @endsection
