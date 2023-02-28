@@ -106,6 +106,10 @@ body{
       text-decoration: none;
       color: black;
   }
+  .browseCars h3 a:hover {
+    text-decoration: none;
+    color: white;
+  }
   .browseCars:hover{
     background-color: black;
     color: rgb(255,255,255);

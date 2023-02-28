@@ -23,7 +23,7 @@ class OrderController extends Controller
                 'price' => $basket->getPrice(),
                 'deliveryDate' => date("d/m/y H:i:s"),
                 'orderDate' => date("d/m/y H:i:s"),
-                'status' => false
+                'isProcessed' => false
             ];
             DB::update('UPDATE products SET stock = ? WHERE productsId = ?', [$basket->getQuantity()-1, $basket->getId()]);
             DB::table('orders')->insert($product);
@@ -36,24 +36,29 @@ class OrderController extends Controller
     }
 
     public function viewPastOrders() {
-        $result = Order::where('userId', Auth::id())->get();
-        $orderResult = array();
-        for ($i = 0; $i < sizeof($result); $i++) {
-            //parse isProcessed to boolean
-            $isStatus = boolval($result[$i]->isProcessed);
-            array_push($orderResult, new \App\Http\Controllers\Order(
-                $result[$i]->ordersId,
-                $result[$i]->userId,
-                $result[$i]->productsId,
-                $result[$i]->price,
-                $result[$i]->deliveryDate,
-                $result[$i]->orderDate,
-                $isStatus
-            ));
+        if(Auth::check()) {
+            $result = Order::where('userId', Auth::id())->get();
+            $orderResult = array();
+            for ($i = 0; $i < sizeof($result); $i++) {
+                //parse isProcessed to boolean
+                $isStatus = boolval($result[$i]->isProcessed);
+                array_push($orderResult, new \App\Http\Controllers\Order(
+                    $result[$i]->ordersId,
+                    $result[$i]->userId,
+                    $result[$i]->productsId,
+                    $result[$i]->price,
+                    $result[$i]->deliveryDate,
+                    $result[$i]->orderDate,
+                    $isStatus
+                ));
 //            array_push($orderResult, $order);
 //            dd($order);
-        }
+            }
 //        dd($orderResult);
-        return view('past_orders', ['customerOrders' => $result]);
+            return view('past_orders', ['customerOrders' => $result]);
+        }
+        else {
+            return redirect()->back();
+        }
     }
 }

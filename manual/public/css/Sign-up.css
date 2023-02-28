@@ -3,8 +3,6 @@ body {
     background-color: #0b0a0a;
     justify-content: center;
     align-items: center;
-    padding: 15px;
-   
 }
 
 .content-container {
@@ -16,7 +14,7 @@ body {
     width: 30%;
     /*background-color: #fffcfc;*/
     /*border-radius: 20px;*/
-    padding: 20px 25px;
+    /*padding: 20px 25px;*/
     border-radius: 8px;
 }
 

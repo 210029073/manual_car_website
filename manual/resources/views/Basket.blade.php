@@ -6,6 +6,7 @@
         use App\Http\Controllers\BasketController;
         $controller = new BasketController();
         $basket = $controller->basket();
+        $total = 0;
     ?>
     @if($basket->count() == 0)
         <p>No items to show.</p>
@@ -30,15 +31,19 @@
                 <p>Engine Capacity: {{number_format($item->getEngineCapacity(), 1)}}</p>
                 <p>Transmission Type: {{$item->getTransmission()}}</p>
                 <p>Stock remaining: {{$item->getQuantity()}}</p>
+                <?php $total += $item->getPrice() ?>
                 <button type="submit">Remove</button>
             </div>
             <br/>
         </form>
     @endforeach
-    <div>
-        <form action="/basket/checkout" method="get">
-            <button type="submit">Checkout</button>
-        </form>
-    </div>
+    @if(\Illuminate\Support\Facades\Auth::check())
+        <div>
+            <p>Total: £{{number_format($total, 2)}}</p>
+            <form action="/basket/checkout" method="get">
+                <button type="submit">Checkout</button>
+            </form>
+        </div>
+    @endif
 </body>
 @endsection

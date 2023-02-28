@@ -58,7 +58,7 @@ Route::get("logout", function () {
 })->name('logout');
 
 #basket page
-Route::get("/basket", [BasketController::class, 'viewBasket']);
+Route::get("/basket", [BasketController::class, 'viewBasket'])->name("basket");
 Route::get("/basket/delete", [BasketController::class, 'deleteItemFromBasket']);
 
 Route::post("/products/add", [BasketController::class, 'test']);

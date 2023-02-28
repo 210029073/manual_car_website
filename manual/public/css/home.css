@@ -163,6 +163,10 @@ color: white;
     width: 30%;
 }
 
+.product-item {
+    display: flex;
+}
+
 .form-control {
     display: flex;
     flex-direction: column;
@@ -179,4 +183,3 @@ color: white;
 .new-car {
     justify-content: center;
 }
-
