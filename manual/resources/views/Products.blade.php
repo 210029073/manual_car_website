@@ -161,6 +161,7 @@
                     <input type="hidden" name="price" value="{{$product->price}}"/>
                     <input type="hidden" name="stock" value="{{$product->stock}}"/>
                     <input type="hidden" name="likes" value="{{$product->likes}}"/>
+                    <input type="hidden" name="image" value="{{$product->image}}"/>
                     <div>
                         {{-- Try not to remove the following lines below, holds backend (Ibrahim)--}}
                         {{-- Will attach to a HTML Form --}}

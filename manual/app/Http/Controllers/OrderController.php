@@ -23,7 +23,7 @@ class OrderController extends Controller
                 'price' => $basket->getPrice(),
                 'deliveryDate' => date("d/m/y H:i:s"),
                 'orderDate' => date("d/m/y H:i:s"),
-                'status' => false
+                'isProcessed' => false
             ];
             DB::update('UPDATE products SET stock = ? WHERE productsId = ?', [$basket->getQuantity()-1, $basket->getId()]);
             DB::table('orders')->insert($product);

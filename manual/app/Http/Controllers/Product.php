@@ -26,6 +26,8 @@ class Product
 
     private int $quantity;
 
+    private string $imagePath;
+
     function __construct(int $id, string $model, string $brand, string $description, float $price, float $engineCapacity, string $transmission, int $quantity){
         $this->id = $id;
         $this->model = $model;
@@ -125,5 +127,13 @@ class Product
     public function getEngineCapacity(): float
     {
         return $this->engineCapacity;
+    }
+
+    /**
+     * @param string $imagePath
+     */
+    public function setImagePath(string $imagePath): void
+    {
+        $this->imagePath = $imagePath;
     }
 }

@@ -63,7 +63,7 @@ class BasketController extends Controller
 
         //construct product object
         $createdProduct = new Product($id, $model, $brand, $description, $price, $engine_capacity, $transmission, $stock);
-
+        $createdProduct->setImagePath($_POST['image']);
         //add to basket
         $this->addProductToBasket($createdProduct);
         setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
@@ -83,7 +83,6 @@ class BasketController extends Controller
             setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
             return view('homepage');
         }
-
         $data = $_COOKIE['manualBasket'];
 
         $data = unserialize($data); //unserialising string from cookie to vector
