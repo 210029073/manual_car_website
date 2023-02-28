@@ -88,10 +88,6 @@ background-color: #828282;
 color: white;
 } */
 
-
-.navpadding{
-
-}
 .browseCars {
     width: 165px;
     transition: all 2.5s;
@@ -166,3 +162,21 @@ color: white;
 .login-ui {
     width: 30%;
 }
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.form-control input{
+    text-align: center;
+}
+
+.new-car {
+    justify-content: center;
+}
+
