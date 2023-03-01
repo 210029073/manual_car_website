@@ -17,6 +17,11 @@ class ProductsController extends Controller
         return view('Products', ['products'=>Products::all()]);
     }
 
+    public function singleProduct(int $id) {
+        $product = Products::where('productsId', $id)->get();
+        return view('singleProduct', ['products' => $product]);
+    }
+
     public function store(Request $request){
         $model = $request->input('model');
         $descrip = $request->input('description');

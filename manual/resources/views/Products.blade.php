@@ -174,8 +174,6 @@
         </div>
 
         <script src="product.js"></script>
-    </body>
-    </html>
     <div>
         @foreach($products as $product)
             <div class="product-item">
@@ -194,7 +192,7 @@
                         {{-- Try not to remove the following lines below, holds backend (Ibrahim)--}}
                         {{-- Will attach to a HTML Form --}}
                         {{-- This should enumerate all product details here... --}}
-                        <h2>{{$product->brand}} {{$product->model}}</h2>
+                        <h2 class="productTitle"><a href="{{route('product',$product->productsId)}}">{{$product->brand}} {{$product->model}}</a></h2>
                         <img width="640" height="426" src="{{asset("/images/cars/")}}/{{$product->image}}"
                              alt="Car Image of {{$product->brand}} {{$product->model}}">
                         <p><i>{{ $product->description }}</i></p>
@@ -218,4 +216,7 @@
         @endforeach
     </div>
     </div>
+    </body>
+    </html>
+
 @stop

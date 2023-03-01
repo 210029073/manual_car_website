@@ -50,6 +50,8 @@ Route::get('/aboutus', function () {
 
 Route::get('/products', [ProductsController::class, 'products'])->name("products");
 
+Route::get('/product/{id}', [ProductsController::class, 'singleProduct'])->name("product");
+
 Route::get("/login", [LoginController::class, 'login'])->name('loginPage');
 
 Route::get("logout", function () {

@@ -151,3 +151,8 @@ button:hover {
     flex-direction: column;
     width: 75%;
 }
+
+.productTitle a {
+    text-decoration-line: none;
+    color: white;
+}
