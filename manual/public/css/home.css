@@ -183,3 +183,24 @@ color: white;
 .new-car {
     justify-content: center;
 }
+
+.page-errors {
+    width: 100%;
+}
+
+.page-errors .unauthorised-error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    padding-left: 2.5%;
+    padding-right: 25%;
+}
+
+.unauthorised-error-container {
+    color: black;
+    background-color: white;
+    border-radius: 1.2px;
+}
