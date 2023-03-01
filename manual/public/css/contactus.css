@@ -68,17 +68,18 @@ body {
 }
 
 .boxpush {
-    position: absolute;
-    top: 5.87%;
+    /*position: absolute;*/
+    /*top: 5.87%;*/
+    width: 100%;
 }
 
 .imagebox {
     /* top:15%; */
-    width: 1700px;
     height: 460px;
     background-image: url('/images/contactus.jpg');
     /* margin:0; */
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .contactContainer {

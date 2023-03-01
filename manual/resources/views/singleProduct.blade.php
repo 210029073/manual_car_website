@@ -4,6 +4,7 @@
     @foreach($products as $product)
     <div>
 {{--        title --}}
+        <a class="singleProductBack" href="{{$_SESSION['prevLinkProductPage']}}">&larr; Go Back</a>
         <div>
             <h1>{{$product->brand}} {{$product->model}}</h1>
         </div>

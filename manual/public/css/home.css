@@ -205,6 +205,12 @@ color: white;
     border-radius: 1.2px;
 }
 
+.singleProductBack {
+    text-decoration-line: none;
+    color: white;
+    font-weight: bold;
+}
+
 footer {
     /*position: absolute;*/
     color: #edf2f7;
