@@ -27,17 +27,17 @@
                     {{-- Try not to remove the following lines below, holds backend (Ibrahim)--}}
                     {{-- Will attach to a HTML Form --}}
                     {{-- This should enumerate all product details here... --}}
-                    <p><i>{{ $product->description }}</i></p>
-                    <p>Engine Capacity: {{$product->engine_capacity}}</p>
-                    <p>Transmission: {{$product->transmission}}</p>
+                    <h2>{{ $product->description }}</h2>
+                    <p><strong>Engine Capacity:</strong> {{$product->engine_capacity}} litres</p>
+                    <p><strong>Transmission:</strong> {{$product->transmission}}</p>
                     {{-- Parse price --}}
-                    <p>Price: £{{ number_format($product->price, 2, '.') }}</p>
-                    <p>Currently available: {{ $product->stock }}</p>
-                    <p>Popularity: {{$product-> likes}}</p>
+                    <p><strong>Price:</strong> £{{ number_format($product->price, 2, '.') }}</p>
+                    <p><strong>Currently available:</strong> {{ $product->stock }}</p>
+                    <p><strong>Popularity:</strong> {{$product-> likes}}</p>
                     @if($product->stock > 0)
                         <button type="submit">Add to cart</button>
                     @else
-                        <p>Out-of-stock!</p>
+                        <p>Out of stock!</p>
                     @endif
                     <a>
                         <button>Add review</button>

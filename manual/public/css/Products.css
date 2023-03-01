@@ -5,7 +5,7 @@ body{
 }
 
 h1{
-    text-align: center;
+    text-align: left;
     margin: 0;
 }
 
@@ -13,24 +13,24 @@ h1{
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
+    background-color: white;
     width: 100%;
 }
 
 .product-card {
-    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     /*margin: 20px;*/
     padding: 2.5%;
     width: 50%;
-    text-align: center;
+    text-align: left;
     color: black;
 }
 
 .product-card img{
     border-radius: 10px;
-    height: 200px;
-    width: 300px;
+    /*height: 200px;*/
+    /*width: 300px;*/
 }
 
 .product-card h3{
@@ -139,7 +139,7 @@ button:hover {
 }
 
 .product-card .product-card-img {
-    width: 25%;
+    width: 30%;
 }
 
 .product-card .product-card-img img {
@@ -149,10 +149,10 @@ button:hover {
 .product-card .product-card-desc {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 60%;
 }
 
 .productTitle a {
     text-decoration-line: none;
-    color: white;
+    color: black;
 }

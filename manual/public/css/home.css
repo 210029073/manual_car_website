@@ -7,6 +7,7 @@ body{
     color: white;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    font-family: "Gill Sans Extrabold", sans-serif;
 }
 
 .header{
@@ -194,9 +195,9 @@ color: white;
     justify-content: center;
     width: 75%;
     padding-top: 2.5%;
-    padding-bottom: 2.5%;
+    padding-bottom: 5%;
     padding-left: 2.5%;
-    padding-right: 25%;
+    padding-right: 2.5%;
 }
 
 .unauthorised-error-container {
