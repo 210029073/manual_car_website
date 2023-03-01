@@ -12,8 +12,9 @@
                 <h2>What can I do?</h2>
                 <p>Try the following links below: </p>
                 <ul>
+                    <li>Redirect to the previous page <a href="{{$_SESSION['manualPrevPage']}}">Click here</a></li>
                     <li>To login <a href="{{route('loginPage')}}">Click here.</a></li>
-                    <li>To return to the homepage <a href="{{route('home')}}">Click here</a></>
+                    <li>To return to the homepage <a href="{{route('home')}}">Click here</a></li>
                 </ul>
             </div>
         </div>

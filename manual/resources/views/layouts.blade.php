@@ -37,6 +37,12 @@
     <div class='content-container'>
       @yield('content')
     </div>
-
+    <footer>
+        <div>
+            <div>
+                <p>Created by Team 21. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

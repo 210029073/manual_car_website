@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
@@ -52,12 +53,12 @@ class OrderController extends Controller
                     $isStatus
                 ));
 //            array_push($orderResult, $order);
-//            dd($order);
             }
-//        dd($orderResult);
             return view('past_orders', ['customerOrders' => $result]);
         }
         else {
+            session_start();
+            $_SESSION["manualPrevPage"] = url()->previous();
             return abort(401, "You are not logged.\nPlease login.", ["error"=>"unauthorised"]);
         }
     }

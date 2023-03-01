@@ -33,7 +33,6 @@
     </div>
 </div>
 <div class="browseCars"><h3><a href="{{route("products")}}">Browse Cars</a></h3></div>
-</div>
 </body>
 </html>
 
