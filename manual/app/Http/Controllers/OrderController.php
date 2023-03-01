@@ -58,7 +58,7 @@ class OrderController extends Controller
             return view('past_orders', ['customerOrders' => $result]);
         }
         else {
-            return redirect()->back();
+            return abort(401, "You are not logged.\nPlease login.", ["error"=>"unauthorised"]);
         }
     }
 }
