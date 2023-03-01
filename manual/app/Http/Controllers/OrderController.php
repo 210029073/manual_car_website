@@ -22,8 +22,8 @@ class OrderController extends Controller
                 'userID' => Auth::id(),
                 'productsId' => $basket->getId(),
                 'price' => $basket->getPrice(),
-                'deliveryDate' => date("d/m/y H:i:s"),
-                'orderDate' => date("d/m/y H:i:s"),
+                'deliveryDate' => now(),
+                'orderDate' => now(),
                 'isProcessed' => false
             ];
             DB::update('UPDATE products SET stock = ? WHERE productsId = ?', [$basket->getQuantity()-1, $basket->getId()]);
