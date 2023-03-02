@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
 
 
 /**
@@ -47,7 +48,7 @@ class RegisterController extends Controller
             [
                 'firstName' => 'required|min:1|max:33',
                 'lastName' => 'required|min:1|max:33',
-                'email' => 'required|email',
+                'email' => 'required|email|unique:App\Models\User,email',
                 'password' => 'required|min:8',
                 'address' => 'required',
                 'mobile' => 'required'
