@@ -39,12 +39,15 @@ class ProductsController extends Controller
         $img = $request->input('img');
         $stock = 0;
         $likes = 0;
+        $engine = $request->input('engine');
         $data=array(
             'model'=>$model,
             'description'=>$descrip,
             'brand'=>$brand,
             'price'=>$price,
             'stock'=>$stock,
+            'engine_capacity'=>$engine,
+            'transmission'=>$transmission,
             'image'=>$img,
             'likes'=>$likes);
         // $DB = new

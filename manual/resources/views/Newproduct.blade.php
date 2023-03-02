@@ -17,6 +17,8 @@
                         <option value='Manual'>Manual</option>
                         <option value='Automatic'>Automatic</option>
                     </select></br>
+                    <label>Engine Capacity</label>
+                    <input type='text' class='form-control' placeholder='Engine' name='engine'>
                     <label>Brand</label>
                     <input type='text' class='form-control' placeholder='Brand' name='brand'>
                     <label>Price: £</label>
