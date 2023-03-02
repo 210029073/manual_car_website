@@ -1,66 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Team 21 - Manual E-Commerce Website
+This E-Commerce platform has been created for as part of a team project.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Car FrontEnd website using Laravel (A PHP Framework)
+<hr/>
 
-## About Laravel
+## Setup
+Once you cloned the repository for the Laravel project, it does not provide all the libraries and dependencies as it involves you preparing your system before making changes to the code.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Please follow the steps before proceeding the actual manipulation to the code:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. Please make sure that you have downloaded and installed Xampp. Here is the link: https://www.apachefriends.org/download.html
+2. Open Git bash, if you have not installed Git bash then here is the link to download and install git bash: https://gitforwindows.org/
+3. Then clone the repository using the git command: `git clone git@github.com:210029073/manual_car_website.git`
+4. Move the folder that was created by GitHub when cloning repository to the `c:\xampp\htdocs\`. That will be the folder **manual_car_website**.
+5. If you are using Windows, please set the php directory in xampp from `c:\xampp\php` to the user environment variable.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Select **This PC** and Right click to select **Properties**
+![Image](https://user-images.githubusercontent.com/93045145/199501241-b263a45b-3b29-41b0-9343-a00c722372de.png)
 
-## Learning Laravel
+Locate the **Advanced System Settings Option**. **Note** My current version of Windows is 11, so it might be different to those using Windows 10. 
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![Image](https://user-images.githubusercontent.com/93045145/199502403-9435ab7e-1761-4a43-a697-d8981566101f.png)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Go to Environment Variable
 
-## Laravel Sponsors
+![Image](https://user-images.githubusercontent.com/93045145/199502552-cbe4d8c5-1976-487b-8fab-aef4bdf5d749.png)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+_From this step and onwards be careful as you can potentially damage your system. I am not responsible for the cause
+of system failures. Please take your risks._
 
-### Premium Partners
+From the **user** environment select **Path** and click the **Edit** button.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+![Image](https://user-images.githubusercontent.com/93045145/199503290-dd457ba7-9f0a-4875-8e5f-a275c121d151.png)
 
-## Contributing
+Click the **new** button and then type the php directory as follows: `c:\xampp\php`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![Image](https://user-images.githubusercontent.com/93045145/199503715-19eb4b0f-298f-4fd0-93cf-c217aa0b98b0.png)
 
-## Code of Conduct
+6. Once you have set the environment variables, Run the command `git checkout develop` in the working directory of **manual_car_website/manual**.
+7. Then install the dependencies using `php composer.phar install` to install the dependencies.
+**Once you have followed the instructions on installing the dependencies required for laravel using Composer then follow Step 8.**
+8. Inside the working directory of **manual_car_website/manual** run `php artisan migrate`.
+11. For accessing the pages via the web browser simply access it via either running on terminal in the websites working directory `php artisan serve` or `localhost/manual_car_website/public/` when running XAMPP. Where the **the_page** is the page you wish to visit.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## **Contributors**
+### <img src="https://avatars.githubusercontent.com/u/93045145?v=4" width="65" height="60" style="border-radius: 50%"> Ibrahim Ahmad 
+### <img src="https://avatars.githubusercontent.com/u/108061867?v=4" width="65" height="60" style="border-radius: 50%"> Ahsaan Kumar
+### <img src="https://avatars.githubusercontent.com/u/44678273?v=4" width="65" height="60" style="border-radius: 50%"> Victory Mpokosa
+### <img src="https://avatars.githubusercontent.com/u/116158678?v=4" width="65" height="60" style="border-radius: 50%"> Mohammed Ali
+### <img src="https://avatars.githubusercontent.com/u/115076818?v=4" width="65" height="60" style="border-radius: 50%"> Jacques Winmill
+### <img src="https://avatars.githubusercontent.com/u/116573741?v=4" width="65" height="60" style="border-radius: 50%"> Amir Khan
+### <img src="https://avatars.githubusercontent.com/u/116155890?v=4" width="65" height="60" style="border-radius: 50%"> Sydul Bari
 
-## Security Vulnerabilities
+## FAQs
+### *I am having trouble retrieving git repository*
+If you get this error message whilst cloning the respository.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![image](https://user-images.githubusercontent.com/93045145/201076089-9e87bcdb-e723-4049-850f-99710c82458c.png)
 
-## License
+Then follow the instructions provided by tutorials sheet provided by workshop session, or via the links below:
+For generating ssh key:
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+For adding ssh key to github repository:
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
