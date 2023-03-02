@@ -1,5 +1,5 @@
 body {
-    /* background-image: url('/images/contactus.gif'); */
+    background-image: url('/images/contactus.gif');
     margin: 0;
     background-size: cover;
     overflow: hidden;
@@ -75,15 +75,18 @@ body {
 
 .imagebox {
     /* top:15%; */
-    height: 460px;
+    height: max-content;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
     background-image: url('/images/contactus.jpg');
     /* margin:0; */
-    background-size: contain;
+    /* background-size: contain; */
     background-repeat: no-repeat;
 }
 
 .contactContainer {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/4812/4812397.png');
+    /* background-image: url('https://cdn-icons-png.flaticon.com/512/4812/4812397.png'); */
     color: black;
     text-align: center;
     position: absolute;
@@ -91,8 +94,8 @@ body {
     left: 0%;
     width: 500px;
     height: 36vh;
-    border: 20px solid gainsboro;
-    background: whitesmoke;
+    /* border: 20px solid g ainsboro; */
+    /* background: whitesmoke; */
 }
 
 .contactContainer1 {
@@ -104,8 +107,8 @@ body {
     left: 34%;
     width: 500px;
     height: 36vh;
-    border: 20px solid gainsboro;
-    background: whitesmoke;
+    /* border: 20px solid gainsboro; */
+    /* background: whitesmoke; */
 }
 
 .contactContainer2 {
@@ -117,6 +120,6 @@ body {
     left: 67.68%;
     width: 500px;
     height: 36vh;
-    border: 20px solid gainsboro;
-    background: whitesmoke;
+    /* border: 20px solid gainsboro; */
+    /* background: whitesmoke; */
 }
