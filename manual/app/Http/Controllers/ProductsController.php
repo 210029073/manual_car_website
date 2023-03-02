@@ -54,4 +54,10 @@ class ProductsController extends Controller
         Products::insert($data);
         return view('Home');
     }
+
+    public function drop(Request $request) {
+        $productsId = $request->input('productsId');
+        $product = Products::where('productsId',$productsId)->delete();
+        return view('Home');
+    }
 }
