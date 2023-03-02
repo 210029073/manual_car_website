@@ -1,5 +1,14 @@
 @extends('layouts')
 @section('content')
+
+<html>
+    <head>
+        <title>Basket</title>
+        <!-- mobile view -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/css/Basket.css" rel="stylesheet" type="text/css"/>
+    </head>
+
 <body>
     <h1> Basket </h1>
     <?php
@@ -22,17 +31,18 @@
             <input type="hidden" name="transmission" value="{{$item->getTransmission()}}"/>
             <input type="hidden" name="quantity" value="{{$item->getQuantity()}}"/>
 
-            <div>
-                <p>Product No. {{$item->getId()}}</p>
-                <p>Car Brand: {{$item->getBrand()}}</p>
-                <p>Car Model: {{$item->getModel()}}</p>
-                <p>Description: {{$item->getDescription()}}</p>
-                <p>Price: £{{number_format($item->getPrice(), 2)}}</p>
-                <p>Engine Capacity: {{number_format($item->getEngineCapacity(), 1)}}</p>
-                <p>Transmission Type: {{$item->getTransmission()}}</p>
-                <p>Stock remaining: {{$item->getQuantity()}}</p>
-                <?php $total += $item->getPrice() ?>
-                <button type="submit">Remove</button>
+            <div class ="panel">
+                <div class ="basket">
+                    <p>Product No. {{$item->getId()}}</p>
+                    <p>Car Brand: {{$item->getBrand()}}</p>
+                    <p>Car Model: {{$item->getModel()}}</p>
+                    <p>Price: £{{number_format($item->getPrice(), 2)}}</p>
+                    <p>Engine Capacity: {{number_format($item->getEngineCapacity(), 1)}}</p>
+                    <p>Transmission Type: {{$item->getTransmission()}}</p>
+                    <p>Stock remaining: {{$item->getQuantity()}}</p>
+                    <?php $total += $item->getPrice() ?>
+                    <button type="submit">Remove</button>
+                </div>
             </div>
             <br/>
         </form>
