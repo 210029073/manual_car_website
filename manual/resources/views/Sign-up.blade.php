@@ -32,21 +32,21 @@
                             <div>
                                 <label>First name</label>
                                 <br/>
-                                <input type="text" name="firstName" placeholder="Enter your first name"/>
+                                <input type="text" name="firstName" value="{{old('firstName')}}" placeholder="Enter your first name"/>
                                 <br/>
                             </div>
 
                             <div>
                                 <label>Last name</label>
                                 <br/>
-                                <input type="text" name="lastName" placeholder="Enter your last name"/>
+                                <input type="text" name="lastName" value="{{old('lastName')}}" placeholder="Enter your last name"/>
                                 <br/>
                             </div>
 
                             <div>
                                 <label>Email:</label>
                                 <br>
-                                <input type="text" name="email" placeholder="Enter your email"/>
+                                <input type="text" name="email"  value="{{old('email')}}" placeholder="Enter your email"/>
                                 <br/>
                             </div>
 
@@ -60,13 +60,13 @@
                             <div>
                                 <label>Address</label>
                                 <br/>
-                                <input type="text" name="address" placeholder="Enter your address"/>
+                                <input type="text" name="address"  value="{{old('address')}}" placeholder="Enter your address"/>
                                 <br/>
                             </div>
                             <div>
                                 <label>Mobile Number</label>
                                 <br/>
-                                <input type="text" name="mobile" placeholder="Enter your mobile number"/>
+                                <input type="text" name="mobile"  value="{{old('mobile')}}" placeholder="Enter your mobile number"/>
                                 <br/>
                                 <br/>
                             </div>
