@@ -27,26 +27,28 @@
         @endif
     </div>
 </div>
-<div class="aboutus2">
-    <div class="boxer2"></div>
+
+<div class="topbackimage">
+    <img src="/images/R.png" position="left:50px;">
 </div>
-
-<div class="AboutUsText">
-    <h1>About Us</h1></div>
-
-<div class="AboutUs">
-
+<div class="AboutUsTEST">
     <div class="boxer">
-        <h1>Introduction</h1>
-        <h2>Manual is a digital business which is built to help customers to be able to afford well functioning cars for
-            cheaper.</h2></div>
+        <div class="h4box"><h1>Introduction</h1>
+        <h4>Manual is a digital business which is built to help customers to be able to afford well functioning cars for
+            cheaper.</h4></div>
+        <div class="img-container">
+            <img src="/images/WPGif1.gif">
 </div>
 </div>
 
 <div class="AboutUs1">
-    <div class="boxer1"><h1>How to Buy</h1>
-        <h2>In order to buy from Manual, you will have to create an Account. After creating the Account, you will then
-            log into that Account and browse Cars that we have available for you to buy.</h2></div>
+    <div class="boxer1">
+        <img src="/images/WPGif1.gif">
+        <div class="img-container">
+            <div class="h4box"><h1>How to Buy</h1>
+            <h4>In order to buy from Manual, you will have to create an Account. After creating the Account, you will then
+                
+                log into that Account and browse Cars that we have available for you to buy.</h4></div>
 </div>
 </div>
 </body>

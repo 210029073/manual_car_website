@@ -1,10 +1,18 @@
 body {
-    background-color: gray;
-    /* background-color: rgb(0,0,0); */
     margin: 0;
     background-size: cover;
     overflow-x: hidden;
     height: 100vh;
+    background-color:black;
+    /* position:absolute; */
+    
+}
+
+
+.topbackimage{
+
+    right:550%;
+
 }
 
 
@@ -28,7 +36,7 @@ body {
     padding-left: 15%;
     padding-right: 15%;
     width: 50%;
-
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -68,103 +76,70 @@ body {
     float: right;
 }
 
-.AboutUsText {
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.2em;
-    position: absolute;
-    top: 90%;
-    left: 45.5%;
-    /* color: gray; */
-    /* font-family: cursive; */
-}
 
-.AboutUs {
 
-    position: absolute;
-    top: 124.65%;
-    text-align: center;
-    left: 25%;
-    color: rgb(0, 0, 0);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-family: "Gill Sans Extrabold", sans-serif;
+/* .img-container{
+    
+    display:contents;
+    width: 100%;
+    justify-content: space-evenly;
+} */
+
+.AboutUsTEST {
+    justify-content:space-between;
+    padding: 200px;
+    border: 8px solid rgb(0,0,0);
+    background-color: rgb(0,0,0);
+    color:white;
 }
 
 .boxer {
-    text-decoration: none;
-    width: 500px;
-    height: 200px;
-    border: 15px solid rgb(200,200,200);
-    background-color: rgb(150,150,150);
-    /* color: #ffffff38; */
-    /* color: rgb(215, 215, 215); */
-       color: black;
-    padding: 50px;
-    /* margin: 20px; */
+    color:white;
+    font-weight: 600;
+    font-size: 30px;
+    text-align:center;
+    display:flex;
+    padding: 8px;
+    margin: 15px;
+    border: 10px;   
 }
 
 .boxer1 {
+    transform: translate(0%, 50%);
     text-decoration: none;
-    width: 500px;
-    height: 200px;
-    border: 15px solid rgb(58, 58, 58);
-    background-color: rgb(120, 120, 120);
-    /* color: #ffffff38; */
-    /* color: rgb(215, 215, 215); */
     color: black;
-    padding: 50px;
+    display:flex;
 }
 
 .AboutUs1 {
-
-    position: absolute;
-    top: 124.65%;
-    text-align: center;
-    left: 75%;
-    color: rgb(0, 0, 0);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-family: "Gill Sans Extrabold", sans-serif;
+    justify-content:space-between;
+    padding: 5px;
+    margin: 100px;
+    border: 8px solid rgb(0,0,0);
+    background-color: rgb(0,0,0);
+    color:white;
 }
 
 .boxer1 {
-    text-decoration: none;
-    width: 500px;
-    height: 200px;
-    border: 15px solid rgb(200, 200, 200);
-    background-color: rgb(150, 150, 150);
-    /* color: #ffffff38; */
-    /* color: rgb(215, 215, 215); */
-    color: black;
-    padding: 50px;
-    /* margin: 20px; */
+    
+    color:white;
+    font-weight: 600;
+    font-size: 30px;
+    text-align:center;
+    display:flex;
+    padding: 8px;
+    margin: 15px;
+    border: 10px;   
 }
 
 
-.AboutUs2 {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    font-family: "Gill Sans Extrabold", sans-serif;
+.h4box{
+    height: 50px;
+    text-size-adjust: 500px;
+        text-align:center;
+    
+    
 }
 
-.boxer2 {
-    text-decoration: none;
-    background-image: url('/images/OfficeGray.jpg');
-    background-size: cover;
-    box-sizing: border-box;
-    width: 100vw;
-    height: 70vh;
-    margin: 0;
-    padding: 50px;
-    /* margin: 20px; */
-}
 
-.bothBoxes {
 
-}
