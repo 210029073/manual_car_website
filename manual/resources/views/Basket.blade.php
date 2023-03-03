@@ -35,7 +35,7 @@
             <section class ="basket">
 
                 <div class ="item-basket">
-                    <h2>Order summary</h>
+                    <h2>Item summary</h>
                     <div class = "item-profile">
                         <div class = "item-image"></div>
 
