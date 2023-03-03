@@ -26,7 +26,7 @@ class OrderController extends Controller
                 'orderDate' => now(),
                 'isProcessed' => false
             ];
-            DB::update('UPDATE products SET stock = ? WHERE productsId = ?', [$basket->getQuantity()-1, $basket->getId()]);
+            DB::update('UPDATE products SET stock = ? WHERE productsId = ?', [$basket->getQuantity(), $basket->getId()]);
             DB::table('orders')->insert($product);
         }
         //empty the basket!
