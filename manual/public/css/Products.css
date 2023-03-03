@@ -13,14 +13,16 @@ h1{
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    background-color: white;
+    /* padding-bottom: 20%; */
+    /* background-color: white; */
     width: 100%;
 }
 
 .product-card {
     border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    /*margin: 20px;*/
+    background-color: white;
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
+    margin: 1.2%;
     padding: 2.5%;
     width: 50%;
     text-align: left;
@@ -104,7 +106,7 @@ h1{
 }
 
 button{
-    background-color: #7a7835;
+    background-color: black;
     border: none;
     border-radius: 10px;
     color: beige;
@@ -115,6 +117,22 @@ button{
 }
 
 button:hover {
+    background-color: #010320;
+}
+
+button1{
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-size: 16px;
+    margin: 20px 0;
+    padding-top: 30%;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+button1:hover {
     background-color: #010320;
 }
 
