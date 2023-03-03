@@ -7,11 +7,11 @@
     <body>
     <h1>Cars for sale</h1>
 
-    <div class="filter-container">
-        <button id="filter-all" class="filter-button active">All Products</button>
-        <button id="filter-sedan" class="filter-button">Sedans</button>
-        <button id="filter-suv" class="filter-button">SUVs</button>
-        <button id="filter-truck" class="filter-button">Trucks</button>
+    <div class="filter-container" style="position: relative;margin-top:2%;margin-bottom: 2%">
+        <button1 id="filter-all" class="filter-button active">All Products</button1>
+        <button1 id="filter-sedan" class="filter-button">Sedans</button1>
+        <button1 id="filter-suv" class="filter-button">SUVs</button1>
+        <button1 id="filter-truck" class="filter-button">Trucks</button1>
     </div>
 
     <div class="product-container">
