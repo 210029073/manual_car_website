@@ -1,0 +1,27 @@
+.pastOrdersContainer {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    background-color: white;
+    border-radius: 1.5%;
+}
+
+.pastOrder {
+    display: flex;
+    flex-direction: row;
+    color: black;
+}
+
+.pastOrder .orderDetails {
+    padding: 1.25%;
+    border-top: 1px #cbd5e0 solid;
+    border-right: 1px #cbd5e0 solid;
+    width: 75%;
+}
+
+.pastOrder > .orderStatus {
+    width: 25%;
+    border-top: 1px #cbd5e0 solid;
+    padding-right: 1.25%;
+    text-align: right;
+}

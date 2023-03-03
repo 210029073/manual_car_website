@@ -1,17 +1,26 @@
 @extends('layouts')
 @section('content')
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/pastorders.css"/>
+    </head>
     <body>
-<div>
+<div class="pastOrdersContainer">
     @foreach($customerOrders as $orders)
-            <p>Order Ref No.: {{$orders->ordersId}}</p>
-            <p>Product No.: {{$orders->productsId}}</p>
-            <p>Product No.: {{$orders->price}}</p>
-            <p>Order Date: {{$orders->orderDate}}</p>
-            @if($orders->isProcessed)
-                <p>Status: Order is processed</p>
-            @else
-                <p>Status: Order is pending</p>
-           @endif
+        <div class="pastOrder">
+            <div class="orderDetails">
+                <p><strong>Order Ref No.:</strong> {{$orders->ordersId}}</p>
+                <p><strong>Product No.:</strong> {{$orders->productsId}}</p>
+                <p><strong>Product Price:</strong> {{$orders->price}}</p>
+                <p><strong>Order Date:</strong> {{$orders->orderDate}}</p>
+            </div>
+            <div class="orderStatus">
+                @if($orders->isProcessed)
+                    <p><strong>Status:</strong> Order is processed</p>
+                @else
+                    <p><strong>Status:</strong> Order is pending</p>
+                @endif
+            </div>
+        </div>
     @endforeach
 </div>
     </body>
