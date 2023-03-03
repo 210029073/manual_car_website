@@ -34,8 +34,8 @@
 <div class="AboutUsTEST">
     <div class="boxer">
         <div class="h4box"><h1>Introduction</h1>
-        <h4>Manual is a digital business which is built to help customers to be able to afford well functioning cars for
-            cheaper.</h4></div>
+        <h3>Manual is a digital business which is built to help customers to be able to afford well functioning cars for
+            cheaper.</h3></div>
         <div class="img-container">
             <img src="/images/WPGif1.gif">
 </div>
@@ -43,12 +43,10 @@
 
 <div class="AboutUs1">
     <div class="boxer1">
-        <img src="/images/WPGif1.gif">
+        <img src="/images/logos.png">
         <div class="img-container">
-            <div class="h4box"><h1>How to Buy</h1>
-            <h4>In order to buy from Manual, you will have to create an Account. After creating the Account, you will then
-                
-                log into that Account and browse Cars that we have available for you to buy.</h4></div>
+            <div class="h4box"><h1>Why Manual?</h1>
+            <h3>We source cars from all kinds of brands, on sale for cheaper than the market value! </h3></div></div>
 </div>
 </div>
 </body>
