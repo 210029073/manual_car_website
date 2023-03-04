@@ -11,14 +11,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: white;
-    border-radius: 1.25%;
     color: black;
 }
 
 .item-basket{
     display: flex;
     flex-direction: row;
+    background-color: white;
+    border-radius: 25px;
     width: 100%;
     margin-bottom: auto;
 }
@@ -51,6 +51,9 @@
 }
 
 .basket-total {
+    background-color: white;
+    border-radius: 25px;
+    height: fit-content;
     width: 20%;
 }
 
