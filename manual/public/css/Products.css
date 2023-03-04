@@ -157,7 +157,9 @@ button1:hover {
 }
 
 .product-card .product-card-img {
-    width: 30%;
+    display: flex;
+    width: 20rem;
+    align-items: center;
 }
 
 .product-card .product-card-img img {

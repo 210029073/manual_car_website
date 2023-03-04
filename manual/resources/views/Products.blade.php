@@ -177,8 +177,10 @@
         @foreach($products as $product)
             <div class="product-card">
                 <div class="product-card-img">
-                    <img width="640" height="300" src="{{asset("/images/cars/")}}/{{$product->image}}"
+                    <div>
+                        <img width="640" height="240" src="{{asset("/images/cars/")}}/{{$product->image}}"
                          alt="Car Image of {{$product->brand}} {{$product->model}}">
+                    </div>
                 </div>
                 <div class="product-card-desc">
                     <form action="/products/add" method="post">
