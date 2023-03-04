@@ -20,7 +20,7 @@
         ?>
         @if($basket->count() == 0)
             <p>No items to show.</p>
-        @endif
+        @else
         <h2>Item summary</h2>
         <section class="basket">
             <div class="basket-details">
@@ -77,7 +77,7 @@
                 @endif
             </div>
         </section>
-
+        @endif
     </main>
     </body>
 @endsection
