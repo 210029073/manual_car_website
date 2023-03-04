@@ -136,4 +136,12 @@ class Product
     {
         $this->imagePath = $imagePath;
     }
+
+    /**
+     * @return string
+     */
+    public function getImagePath(): string
+    {
+        return $this->imagePath;
+    }
 }
