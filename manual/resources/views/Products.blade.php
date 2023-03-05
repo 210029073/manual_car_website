@@ -5,6 +5,11 @@
 @section('title','Products')
 @section('content')
     <body>
+    @if(session()->has('itemAlreadyExists'))
+        <div class="error-popup">
+            <h4>{{session()->get('itemAlreadyExists')}}</h4>
+        </div>
+    @endif
     @if(session()->has('successAddProduct'))
         <div class="success-popup">
             <h4>{{session()->get('successAddProduct')}}</h4>

@@ -241,3 +241,10 @@ footer div div {
     padding: 1rem;
     border-radius: 25px;
 }
+
+.error-popup {
+    color: red;
+    background-color: lightpink;
+    padding: 1rem;
+    border-radius: 25px;
+}

@@ -49,7 +49,8 @@ class BasketController extends Controller
         $this->basket->put($product->getModel(), $product);
     }
 
-    public function test() {
+    public function test()
+    {
         $brand = $_POST['brand'];
         $model = $_POST['model'];
         $description = $_POST['description'];
@@ -64,11 +65,14 @@ class BasketController extends Controller
         //construct product object
         $createdProduct = new Product($id, $model, $brand, $description, $price, $engine_capacity, $transmission, $stock);
         $createdProduct->setImagePath($_POST['image']);
-        //add to basket
-        $this->addProductToBasket($createdProduct);
-        setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
-
-        return redirect()->intended('/products')->with('successAddProduct', "Successfully added product to basket!");
+        if ($this->basket->hasKey($createdProduct->getModel())) {
+            return redirect()->intended('/products')->with('itemAlreadyExists', "Item is already added to basket.");
+        } else {
+            //add to basket
+            $this->addProductToBasket($createdProduct);
+            setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
+            return redirect()->intended('/products')->with('successAddProduct', "Successfully added product to basket!");
+        }
     }
 
     /**
