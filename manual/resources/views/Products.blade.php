@@ -5,8 +5,12 @@
 @section('title','Products')
 @section('content')
     <body>
+    @if(session()->has('successAddProduct'))
+        <div class="success-popup">
+            <h4>{{session()->get('successAddProduct')}}</h4>
+        </div>
+    @endif
     <h1>Cars for sale</h1>
-
     <div class="filter-container" style="position: relative;margin-top:2%;margin-bottom: 2%">
 {{--        <button1 id="filter-all" class="filter-button active">All Products</button1>--}}
 {{--        <button1 id="filter-sedan" class="filter-button">Sedans</button1>--}}

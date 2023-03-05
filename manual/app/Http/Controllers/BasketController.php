@@ -126,8 +126,8 @@ class BasketController extends Controller
 
         $this->basket->remove($model);
         setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
-
-        return redirect()->intended('/basket')->with('deleteItemFromBasket', "Successfully deleted an item from basket");
+        $msg = "Successfully removed " . $brand . " " . $model . " from basket";
+        return redirect()->back()->with('deleteItemFromBasket', $msg);
     }
 
 //learn how to use cookies

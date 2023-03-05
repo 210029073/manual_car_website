@@ -11,6 +11,11 @@
 
     <body>
     <main class="container">
+        @if(session()->has('deleteItemFromBasket'))
+            <div class="success-popup">
+                <h4>{{session()->get('deleteItemFromBasket')}}</h4>
+            </div>
+        @endif
         <h1> Basket </h1>
         <?php
         use App\Http\Controllers\BasketController;
