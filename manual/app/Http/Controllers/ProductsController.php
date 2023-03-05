@@ -18,6 +18,10 @@ class ProductsController extends Controller
         return view('Products', ['products'=>Products::all()]);
     }
 
+    public function filterProduct() {
+        return "test";
+    }
+
     /**
      * This is responsible for viewing a single product according to the id.
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>

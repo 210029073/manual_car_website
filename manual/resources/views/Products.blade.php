@@ -8,10 +8,17 @@
     <h1>Cars for sale</h1>
 
     <div class="filter-container" style="position: relative;margin-top:2%;margin-bottom: 2%">
-        <button1 id="filter-all" class="filter-button active">All Products</button1>
-        <button1 id="filter-sedan" class="filter-button">Sedans</button1>
-        <button1 id="filter-suv" class="filter-button">SUVs</button1>
-        <button1 id="filter-truck" class="filter-button">Trucks</button1>
+{{--        <button1 id="filter-all" class="filter-button active">All Products</button1>--}}
+{{--        <button1 id="filter-sedan" class="filter-button">Sedans</button1>--}}
+{{--        <button1 id="filter-suv" class="filter-button">SUVs</button1>--}}
+{{--        <button1 id="filter-truck" class="filter-button">Trucks</button1>--}}
+        <form action="{{route("browse_products")}}" method="get">
+            <input type="radio" value="Manual" name="filter_transmission">
+            <label>Manual</label>
+            <input type="radio" value="Automatic" name="filter_transmission">
+            <label>Automatic</label>
+            <button type="submit">Confirm</button>
+        </form>
     </div>
 
     <div class="product-container">
@@ -214,6 +221,9 @@
                         <a>
                             <button>Add review</button>
                         </a>
+                    </form>
+                    <form action="{{route('product', $product->productsId)}}" method="get">
+                        <button type="submit">Go to Product</button>
                     </form>
                 </div>
             </div>

@@ -8,6 +8,7 @@ use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductFilterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,6 +56,7 @@ Route::get('/aboutus', function () {
 });
 
 Route::get('/products', [ProductsController::class, 'products'])->name("products");
+Route::get('/product/browse', [ProductFilterController::class, 'filterProduct'])->name("browse_products");
 
 Route::get('/product/{id}', [ProductsController::class, 'singleProduct'])->name("product");
 
