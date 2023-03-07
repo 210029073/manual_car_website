@@ -87,10 +87,5 @@ class ProductFilterController
                     ->get()]
             );
         }
-
-
-
-            return abort("404", "Could not find the item that you are searching for.");
-
     }
 }
