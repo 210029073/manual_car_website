@@ -22,7 +22,7 @@ class ProductFilterController
      * with the results based on their filter options.
      *
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
-     * @version 2.2
+     * @version 2.2.3
      * @since 05-03-2023
     */
     public function filterProduct(Request $request) {
@@ -30,49 +30,67 @@ class ProductFilterController
         if($request->get('cars') != null) {
             if($request->get('cars') == "All Cars") {
                 if($request->get('filter_transmission') != "Both") {
-                    return view('Products', ['products' => Products
+                    if(intval($request->get('fromNum')) >= 0 && intval($request->get('toNum')) != 0) {
+                        return view('Products', ['products' => Products
                             ::where('transmission', $request->get('filter_transmission'))
-                            ->orwhere('price', '<=', intval($request->get('toNum')))
-                            ->orwhere('price', '>=', intval($request->get('fromNum')))
-                            ->get()]
-                    );
-                }
-                if($request->get('filter_transmission') == "Both") {
-                    return view('Products', ['products' => Products
-                            ::where('price', '<=', intval($request->get('toNum')))
+                            ->where('price', '<=', intval($request->get('toNum')))
                             ->where('price', '>=', intval($request->get('fromNum')))
                             ->get()]
+                        );
+                    }
+                    return view('Products', ['products' => Products
+                            ::where('transmission', $request->get('filter_transmission'))
+                            ->get()]
                     );
                 }
-
-                return view('Products', ['products' => Products::all()]);
-
+                else {
+                    if(intval($request->get('fromNum')) >= 0 && intval($request->get('toNum')) != 0) {
+                        return view('Products', ['products' => Products
+                                ::where('transmission', $request->get('filter_transmission'))
+                                ->where('price', '<=', intval($request->get('toNum')))
+                                ->where('price', '>=', intval($request->get('fromNum')))
+                                ->get()]
+                        );
+                    }
+                    return view('Products', ['products' => Products::all()]);
+                }
             }
         }
 //
         if($request->get('filter_transmission') == "Both") {
+            if(intval($request->get('fromNum')) >= 0 && intval($request->get('toNum')) != 0) {
+                return view('Products', ['products' => Products
+                        ::where('price', '<=', intval($request->get('toNum')))
+                        ->where('price', '>=', intval($request->get('fromNum')))
+                        ->get()]
+                );
+            }
             return view('Products', ['products' => Products
                     ::where('brand', $request->get('cars'))
                     ->where('likes', ">=", intval($request->get('popularity')))
-                    ->where('price', '<=', intval($request->get('toNum')))
-                    ->where('price', '>=', intval($request->get('fromNum')))
                     ->get()]
             );
         }
 
-        if($request->get('filter_transmission') == "Manual" || $request->get('filter_transmission') == "Automatic") {
+        if($request->get('filter_transmission') != "Both") {
+            if(intval($request->get('fromNum')) >= 0 && intval($request->get('toNum')) != 0) {
+                return view('Products', ['products' => Products
+                        ::where('transmission', $request->get('filter_transmission'))
+                        ->where('price', '<=', intval($request->get('toNum')))
+                        ->where('price', '>=', intval($request->get('fromNum')))
+                        ->get()]
+                );
+            }
             return view('Products', ['products' => Products
                     ::where('brand', $request->get('cars'))
                     ->where('transmission', $request->get('filter_transmission'))
-                    ->where('price', '<=', intval($request->get('toNum')))
-                    ->where('price', '>=', intval($request->get('fromNum')))
                     ->get()]
             );
         }
 
 
-        else{
+
             return abort("404", "Could not find the item that you are searching for.");
-        }
+
     }
 }
