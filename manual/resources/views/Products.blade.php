@@ -22,6 +22,13 @@
 {{--        <button1 id="filter-suv" class="filter-button">SUVs</button1>--}}
 {{--        <button1 id="filter-truck" class="filter-button">Trucks</button1>--}}
         <form action="{{route("browse_products")}}" method="get">
+            <label>Select by Car Brand: </label>
+            <select name="cars">
+                @foreach($products as $item)
+                    <option>{{$item->brand}}</option>
+                @endforeach
+                <option>All Cars</option>
+            </select>
             <input type="radio" value="Manual" name="filter_transmission">
             <label>Manual</label>
             <input type="radio" value="Automatic" name="filter_transmission">

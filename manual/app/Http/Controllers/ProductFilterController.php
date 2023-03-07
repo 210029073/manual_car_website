@@ -29,6 +29,21 @@ class ProductFilterController
             return view('Products', ['products' => Products::where('transmission', $_GET['filter_transmission'])->get()]);
         }
 
+        if(isset($_GET["cars"])) {
+            if($_GET["cars"] == "All Cars") {
+                return view('Products', ['products' => Products::all()]);
+            }
+
+            $result = Products::where('brand', $_GET["cars"])->get();
+
+            if($result->isEmpty()) {
+                return abort("404", "Could not find the item that you are searching for.");
+            }
+            return view("Products", ['products'=> $result]);
+        }
+
+
+
         return view('Products', ['products' => Products::all()]);
     }
 }
