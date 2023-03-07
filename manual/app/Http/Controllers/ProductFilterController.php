@@ -42,7 +42,9 @@ class ProductFilterController
             return view("Products", ['products'=> $result]);
         }
 
-
+        if(isset($_GET['fromNum']) && isset($_GET['toNum'])) {
+            return view("Products", ['products' => Products::where('price', 'price' < intValue($_GET['toNum']))->get()]);
+        }
 
         return view('Products', ['products' => Products::all()]);
     }

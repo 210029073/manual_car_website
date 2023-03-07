@@ -75,6 +75,11 @@ h1{
     align-items: center;
 }
 
+.products-ui-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
 .review-rating {
     margin-right: 10px;
     height: 20px;
@@ -175,4 +180,39 @@ button1:hover {
 .productTitle a {
     text-decoration-line: none;
     color: black;
+}
+
+.filter-container {
+    width: 15%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 1rem;
+    color: black;
+}
+
+.filter-container form .product-filter-form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-container form .product-filter-form-wrapper div {
+    padding: 0.5rem;
+}
+
+.filter-container form .product-filter-form-wrapper div div select {
+    padding: 0.5rem;
+    background-color: #cbd5e0;
+    border: none;
+    width: 100%;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.price-range .price-range-from-to {
+    padding: 0.5rem;
+}
+
+.price-range .price-range-likes {
+    padding: 0.5rem;
 }
