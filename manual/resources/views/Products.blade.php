@@ -31,19 +31,11 @@
                         </div>
                         <div>
                             <select name="cars">
+                                <option>All Cars</option>
                                 @foreach($products as $item)
                                     <option>{{$item->brand}}</option>
                                 @endforeach
-                                <option>All Cars</option>
                             </select>
-                        </div>
-                    </div>
-                    <div class="price-range-likes">
-                        <div>
-                            <label>Popularity</label>
-                        </div>
-                        <div>
-                            <input min="0" value="0" type="number" name="popularity"/>
                         </div>
                     </div>
                     <div class="price-range">
@@ -58,7 +50,7 @@
                             <div>
                                 <label>To</label>
                                 <br/>
-                                <input min="0" type="number" name="toNum">
+                                <input min="0"  value="0" type="number" name="toNum">
                             </div>
                         </div>
                     </div>
@@ -70,6 +62,10 @@
                         <div>
                             <label>Automatic</label>
                             <input type="radio" value="Automatic" name="filter_transmission">
+                        </div>
+                        <div>
+                            <label>Both</label>
+                            <input checked type="radio" value="Both" name="filter_transmission">
                         </div>
                     </div>
                     <div>
