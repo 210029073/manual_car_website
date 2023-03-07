@@ -32,8 +32,12 @@
                         <div>
                             <select name="cars">
                                 <option>All Cars</option>
-                                @foreach($products as $item)
-                                    <option>{{$item->brand}}</option>
+                                <?php
+                                    use \App\Http\Controllers\ProductFilterController;
+                                    $productFilter = new ProductFilterController();
+                                ?>
+                                @foreach($productFilter->getCarBrand() as $item)
+                                    <option>{{$item}}</option>
                                 @endforeach
                             </select>
                         </div>

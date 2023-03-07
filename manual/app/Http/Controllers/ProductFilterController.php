@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
+use Ds\Set;
 use Illuminate\Http\Request;
 
 /**
@@ -25,6 +26,37 @@ class ProductFilterController
      * @version 2.2.3
      * @since 05-03-2023
     */
+
+    private Set $carBrand;
+
+    public function __construct() {
+        $this->carBrand = new Set();
+        $this->populateSetOfCarBrands();
+    }
+
+    /**
+     * This will populate the car brands in a set of strings
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+    */
+    private function populateSetOfCarBrands(): void
+    {
+        foreach(Products::all() as $product) {
+            if(!$this->carBrand->contains($product->brand)) {
+                $this->carBrand->add($product->brand);
+            }
+        }
+    }
+
+    /**
+     * This should return a set of unique car brands
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @return Set
+     */
+    public function getCarBrand(): Set
+    {
+        return $this->carBrand;
+    }
+
     public function filterProduct(Request $request) {
 
         if($request->get('cars') != null) {
