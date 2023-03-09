@@ -9,6 +9,7 @@ use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductFilterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,19 +26,19 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //Route::get('/', [PageController::class, 'Home'])->name('home');
 
-Route::get('/home', function(){
+Route::get('/home', function () {
     return view('Home');
 });
 
 Route::get('/layouts', [PageController::class, 'Layouts']);
 
-Route::post('/drop1',[ProductsController::class,'drop']);
+Route::post('/drop1', [ProductsController::class, 'drop']);
 
-Route::get('/drop', function(){
+Route::get('/drop', function () {
     return view('drop');
 });
 
-Route::get('/car', function(){
+Route::get('/car', function () {
     return view('Newproduct');
 });
 
@@ -47,7 +48,7 @@ Route::get('/homepage', function () {
     return view('homepage');
 });
 #Route for Contact Us page
-Route::get('/contactus', function() {
+Route::get('/contactus', function () {
     return view('contactus');
 });
 #Route for About Us page
