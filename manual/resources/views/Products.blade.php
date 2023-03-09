@@ -18,6 +18,7 @@
     <h1>Cars for sale</h1>
     <div class="products-ui-wrapper">
 
+<<<<<<< Updated upstream
         <div class="filter-container" style="position: relative;margin-top:2%;margin-bottom: 2%">
             {{--        <button1 id="filter-all" class="filter-button active">All Products</button1>--}}
             {{--        <button1 id="filter-sedan" class="filter-button">Sedans</button1>--}}
@@ -78,6 +79,16 @@
                 </div>
             </form>
         </div>
+=======
+    <div class="filter-container" style="position: relative;margin-top:2%;margin-bottom: 2%">
+    <form method='post'>
+        <button1 id="filter-all" class="filter-button active">All Products</button1>
+        <button1 id="filter-sedan" class="filter-button">Sedans</button1>
+        <button1 id="filter-suv" class="filter-button" onclick="changeProd()">SUVs</button1>
+        <button1 id="filter-truck" class="filter-button">Trucks</button1>
+    </form>
+    </div>
+>>>>>>> Stashed changes
 
         <div class="product-container">
             {{--        <div class="product-card">--}}
@@ -238,6 +249,7 @@
             {{--            </a>--}}
             {{--        </div>--}}
 
+<<<<<<< Updated upstream
             <script src="product.js"></script>
             @foreach($products as $product)
                 <div class="product-card">
@@ -265,6 +277,35 @@
                             <h2 class="productTitle"><a
                                     href="{{route('product',$product->productsId)}}">{{$product->brand}} {{$product->model}}</a>
                             </h2>
+=======
+        <script>
+            var passed =  <?php echo json_encode($products); ?>;            
+        </script>
+
+        @foreach($products as $product)
+            <div class="product-card">
+                <div class="product-card-img">
+                    <img width="640" height="300" src="{{asset("/images/cars/")}}/{{$product->image}}"
+                         alt="Car Image of {{$product->brand}} {{$product->model}}">
+                </div>
+                <div class="product-card-desc">
+                        <p id='display'></p>
+                    <form action="/products/add" method="post">
+                        @csrf
+                        <input type="hidden" name="brand" value="{{$product->brand}}"/>
+                        <input type="hidden" name="model" value="{{$product->model}}"/>
+                        <input type="hidden" name="description" value="{{$product->description}}"/>
+                        <input type="hidden" name="engineCapacity" value="{{$product->engine_capacity}}"/>
+                        <input type="hidden" name="transmission" value="{{$product->transmission}}"/>
+                        <input type="hidden" name="price" value="{{$product->price}}"/>
+                        <input type="hidden" name="stock" value="{{$product->stock}}"/>
+                        <input type="hidden" name="likes" value="{{$product->likes}}"/>
+                        <input type="hidden" name="image" value="{{$product->image}}"/>
+                        {{-- Try not to remove the following lines below, holds backend (Ibrahim)--}}
+                        {{-- Will attach to a HTML Form --}}
+                        {{-- This should enumerate all product details here... --}}
+                        <h2 class="productTitle"><a href="{{route('product',$product->productsId)}}">{{$product->brand}} {{$product->model}}</a></h2>
+>>>>>>> Stashed changes
 
                             <h3>{{ $product->description }}</h3>
                             <p><strong>Engine Capacity:</strong> {{$product->engine_capacity}} litres</p>
