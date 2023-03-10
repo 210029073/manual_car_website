@@ -75,6 +75,11 @@ h1{
     align-items: center;
 }
 
+.products-ui-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
 .review-rating {
     margin-right: 10px;
     height: 20px;
@@ -157,7 +162,9 @@ button1:hover {
 }
 
 .product-card .product-card-img {
-    width: 30%;
+    display: flex;
+    width: fit-content;
+    align-items: center;
 }
 
 .product-card .product-card-img img {
@@ -173,4 +180,74 @@ button1:hover {
 .productTitle a {
     text-decoration-line: none;
     color: black;
+}
+
+.filter-container {
+    width: 15%;
+    height: fit-content;
+    background-color: white;
+    border-radius: 1rem;
+    color: black;
+}
+
+.filter-container form .product-filter-form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-container form .product-filter-form-wrapper div {
+    padding: 0.5rem;
+}
+
+.filter-container form .product-filter-form-wrapper div div select {
+    padding: 0.5rem;
+    background-color: #cbd5e0;
+    border: none;
+    width: 100%;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.price-range .price-range-from-to {
+    padding: 0.5rem;
+}
+
+.price-range .price-range-likes {
+    padding: 0.5rem;
+}
+
+.single-product-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.single-product-wrapper .single-product-card {
+    background-color: white;
+    color: black;
+    padding: 1.75rem;
+    border-radius: 1rem;
+}
+
+.single-product-wrapper .single-product-header {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+.single-product-wrapper .single-product-header a {
+    color: black;
+    font-size: large;
+}
+
+.single-product-wrapper .single-product-header a:hover {
+    text-decoration: underline black solid;
+}
+
+.single-product-wrapper .single-product-image {
+    padding: 1rem 1rem 0 0;
+    width: 100%;
+}
+
+.single-product-wrapper .single-product-image img {
+    border-radius: 1rem;
 }

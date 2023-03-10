@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * OrderController is responsible for managing orders, in terms of processing products in basket
+ * to check out, as well as viewing past orders for corresponding customer.
+ *
+ * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+*/
 class OrderController extends Controller
 {
     /**
@@ -26,7 +32,7 @@ class OrderController extends Controller
                 'orderDate' => now(),
                 'isProcessed' => false
             ];
-            DB::update('UPDATE products SET stock = ? WHERE productsId = ?', [$basket->getQuantity()-1, $basket->getId()]);
+            DB::update('UPDATE products SET stock = ? WHERE productsId = ?', [$basket->getQuantity(), $basket->getId()]);
             DB::table('orders')->insert($product);
         }
         //empty the basket!

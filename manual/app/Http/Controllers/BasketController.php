@@ -49,7 +49,15 @@ class BasketController extends Controller
         $this->basket->put($product->getModel(), $product);
     }
 
-    public function test() {
+    /**
+     * This is responsible for adding items to basket, which should provide a success popup,
+     * if an item exists it should show a popup stating that the item already exists.
+     *
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @version 3.0
+    */
+    public function addProductsToBasket()
+    {
         $brand = $_POST['brand'];
         $model = $_POST['model'];
         $description = $_POST['description'];
@@ -64,11 +72,14 @@ class BasketController extends Controller
         //construct product object
         $createdProduct = new Product($id, $model, $brand, $description, $price, $engine_capacity, $transmission, $stock);
         $createdProduct->setImagePath($_POST['image']);
-        //add to basket
-        $this->addProductToBasket($createdProduct);
-        setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
-
-        return redirect()->intended('/products')->with('successAddProduct', "Successfully added product to basket!");
+        if ($this->basket->hasKey($createdProduct->getModel())) {
+            return redirect()->intended('/products')->with('itemAlreadyExists', "Item is already added to basket.");
+        } else {
+            //add to basket
+            $this->addProductToBasket($createdProduct);
+            setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
+            return redirect()->intended('/products')->with('successAddProduct', "Successfully added product to basket!");
+        }
     }
 
     /**
@@ -101,6 +112,15 @@ class BasketController extends Controller
         unset($_COOKIE['manualBasket']);
     }
 
+    /**
+     * This will provide the mechanism for emptying items in basket.
+     * It will also provide a success message that all items have been successfully removed
+     * once orders has been checked out.
+     *
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @since 05-03-2023
+     * @version 1.0
+    */
     public function emptyBasket() {
         if(isset($_COOKIE['manualBasket'])) {
             //clear all items in basket
@@ -116,6 +136,13 @@ class BasketController extends Controller
         return $this->basket;
     }
 
+    /**
+     * This will simply delete an item from basket, should a success message that a specific
+     * item has been removed from basket.
+     *
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @since 05-03-2023
+    */
     public function deleteItemFromBasket() {
         $id = intval($_GET['id']);
         $brand = $_GET['brand'];
@@ -126,8 +153,8 @@ class BasketController extends Controller
 
         $this->basket->remove($model);
         setcookie("manualBasket", serialize($this->basket), time() + 2592000, "/");
-
-        return redirect()->intended('/basket')->with('deleteItemFromBasket', "Successfully deleted an item from basket");
+        $msg = "Successfully removed " . $brand . " " . $model . " from basket";
+        return redirect()->back()->with('deleteItemFromBasket', $msg);
     }
 
 //learn how to use cookies

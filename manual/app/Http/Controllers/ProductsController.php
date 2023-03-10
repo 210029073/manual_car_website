@@ -5,6 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Products;
 
+/**
+ * ProductsController is responsible for enumerating the products within the products page.
+ *
+ * @author Ibrahim Ahmad
+ * @since 05-03-2021
+ * @version 3.0
+ */
 class ProductsController extends Controller
 {
 /**
@@ -16,6 +23,10 @@ class ProductsController extends Controller
 */
     public function products(){
         return view('Products', ['products'=>Products::all()]);
+    }
+
+    public function filterProduct() {
+        return "test";
     }
 
     /**
@@ -30,6 +41,16 @@ class ProductsController extends Controller
         return view('singleProduct', ['products' => $product]);
     }
 
+    /**
+     * Store is responsible for adding products to the data from a dedicated webpage
+     * for DEVELOPMENT purposes.
+     *
+     * This will be set as deprecated, and will be removed in a future release.
+     *
+     * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @author Victory Mpokposa
+     * @version 1.0
+    */
     public function store(Request $request){
         $model = $request->input('model');
         $descrip = $request->input('description');

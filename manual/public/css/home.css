@@ -234,3 +234,17 @@ footer div div {
     padding-right: 10%;
     padding-left: 10%;
 }
+
+.success-popup {
+    color: green;
+    background-color: lightgreen;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+.error-popup {
+    color: red;
+    background-color: lightpink;
+    padding: 1rem;
+    border-radius: 25px;
+}

@@ -30,9 +30,11 @@
 <div class="body1">
     <div class="WelcomeandBrowse">
         <h1>Welcome to Manual</h1>
+        <div class="browseCarsBtn">
+            <div><a href="{{route("products")}}">Browse Cars</a></div>
+        </div>
     </div>
 </div>
-<div class="browseCars"><h3><a href="{{route("products")}}">Browse Cars</a></h3></div>
 </body>
 </html>
 

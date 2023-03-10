@@ -8,6 +8,8 @@ use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
 use App\Http\Controllers\BasketController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductFilterController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,19 +26,19 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //Route::get('/', [PageController::class, 'Home'])->name('home');
 
-Route::get('/home', function(){
+Route::get('/home', function () {
     return view('Home');
 });
 
 Route::get('/layouts', [PageController::class, 'Layouts']);
 
-Route::post('/drop1',[ProductsController::class,'drop']);
+Route::post('/drop1', [ProductsController::class, 'drop']);
 
-Route::get('/drop', function(){
+Route::get('/drop', function () {
     return view('drop');
 });
 
-Route::get('/car', function(){
+Route::get('/car', function () {
     return view('Newproduct');
 });
 
@@ -46,7 +48,7 @@ Route::get('/homepage', function () {
     return view('homepage');
 });
 #Route for Contact Us page
-Route::get('/contactus', function() {
+Route::get('/contactus', function () {
     return view('contactus');
 });
 #Route for About Us page
@@ -55,6 +57,7 @@ Route::get('/aboutus', function () {
 });
 
 Route::get('/products', [ProductsController::class, 'products'])->name("products");
+Route::get('/product/browse', [ProductFilterController::class, 'filterProduct'])->name("browse_products");
 
 Route::get('/product/{id}', [ProductsController::class, 'singleProduct'])->name("product");
 
@@ -69,7 +72,7 @@ Route::get("logout", function () {
 Route::get("/basket", [BasketController::class, 'viewBasket'])->name("basket");
 Route::get("/basket/delete", [BasketController::class, 'deleteItemFromBasket']);
 
-Route::post("/products/add", [BasketController::class, 'test']);
+Route::post("/products/add", [BasketController::class, 'addProductsToBasket']);
 Route::get('/register', [RegisterController::class, 'signupPage'])->name('signup');
 Route::post('/register/user', [RegisterController::class, 'register'])->name("register");
 
