@@ -24,7 +24,10 @@ body{
         /*transform: translate(-50%, -50%);*/
         }
 
-
+.WelcomeandBrowse h1 {
+    font-size: xxx-large;
+    font-weight: bolder;
+}
 
 /*.Navigation {*/
 /*  */
@@ -160,6 +163,7 @@ body{
 /*}*/
 
 .browseCarsBtn {
+    transition: all 1s;
     width: fit-content;
     border-radius: 3rem;
     background-color: white;
@@ -170,6 +174,7 @@ body{
 }
 
 .browseCarsBtn div a {
+    transition: all 0.05s;
     border-radius: 3rem;
     width: max-content;
     padding: inherit;
