@@ -163,7 +163,7 @@ button1:hover {
 
 .product-card .product-card-img {
     display: flex;
-    width: 20rem;
+    width: fit-content;
     align-items: center;
 }
 
@@ -215,4 +215,39 @@ button1:hover {
 
 .price-range .price-range-likes {
     padding: 0.5rem;
+}
+
+.single-product-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.single-product-wrapper .single-product-card {
+    background-color: white;
+    color: black;
+    padding: 1.75rem;
+    border-radius: 1rem;
+}
+
+.single-product-wrapper .single-product-header {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+.single-product-wrapper .single-product-header a {
+    color: black;
+    font-size: large;
+}
+
+.single-product-wrapper .single-product-header a:hover {
+    text-decoration: underline black solid;
+}
+
+.single-product-wrapper .single-product-image {
+    padding: 1rem 1rem 0 0;
+    width: 100%;
+}
+
+.single-product-wrapper .single-product-image img {
+    border-radius: 1rem;
 }

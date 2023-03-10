@@ -1,17 +1,22 @@
 @extends('layouts')
 @section('content')
-<div>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/css/Products.css">
+    </head>
+<div class="single-product-wrapper">
     @foreach($products as $product)
-    <div>
+    <div class="single-product-card">
 {{--        title --}}
-        <a class="singleProductBack" href="{{$_SESSION['prevLinkProductPage']}}">&larr; Go Back</a>
-        <div>
+        <div class="single-product-header"><a class="singleProductBack" href="{{$_SESSION['prevLinkProductPage']}}">&larr; Go Back</a></div>
+        <div class="single-product-title">
             <h1>{{$product->brand}} {{$product->model}}</h1>
         </div>
 {{--        image --}}
+        <div class="single-product-wrapper single-product-image">
             <img width="640" height="426" src="{{asset("/images/cars/")}}/{{$product->image}}"
              alt="Car Image of {{$product->brand}} {{$product->model}}">
-        <div>
+        </div>
+        <div class="single-product-description">
             <form action="/products/add" method="post">
                 @csrf
                 <input type="hidden" name="brand" value="{{$product->brand}}"/>
