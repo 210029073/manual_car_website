@@ -13,8 +13,48 @@
         </div>
 {{--        image --}}
         <div class="single-product-wrapper single-product-image">
-            <img width="640" height="426" src="{{asset("/images/cars/")}}/{{$product->image}}"
+            <img id="slideshow" width="640" height="426" src="{{asset("/images/cars/")}}/{{$product->image}}"
              alt="Car Image of {{$product->brand}} {{$product->model}}">
+            <div class="slideNumber" id="buttons"></div>
+            <script>
+                let imageIndex = 0;
+                let data = '{{$product->image}}';
+                let splitData = data.slice(0,data.length-4);
+                let images = [data, splitData+"_1"+".jpg", splitData+"_2"+".jpg", splitData+"_3"+".jpg"]
+
+                let slideshow = document.querySelector('#slideshow');
+                console.log(slideshow);
+                console.log(data.length);
+                console.log(images[1]);
+                slideshowShifter = document.querySelector('#buttons');
+                function onNextImage() {
+                    if (imageIndex == images.length) {
+                        imageIndex = 0;
+                    } else {
+                        imageIndex++;
+                    }
+                    slideshow.setAttribute('src', '{{asset('/images/cars')}}/'+images[imageIndex]);
+                }
+
+                function getImage(i) {
+                    slideshow.setAttribute('src', '{{asset('/images/cars')}}/'+images[i]);
+                }
+
+                for(i = 0; i < images.length; i++) {
+                    slideshowShifter.innerHTML += '<div><button onClick="getImage('+i+')">'+i+'</button></div>';
+                }
+            </script>
+{{--            <script>--}}
+{{--                data = '{{$product->image}}';--}}
+{{--                splitData = data.slice(0,data.length-4);--}}
+{{--                images = [data, splitData+"_1"+".jpg", splitData+"_2"+".jpg", splitData+"_3"+".jpg"]--}}
+
+{{--                let slideshow = document.querySelector('#slideshow');--}}
+{{--                slideshow.setAttribute('src', '{{asset('/images/cars')}}/'+images[0]);--}}
+{{--                console.log(slideshow);--}}
+{{--                console.log(data.length);--}}
+{{--                console.log(images[1]);--}}
+{{--            </script>--}}
         </div>
         <div class="single-product-description">
             <form action="/products/add" method="post">
