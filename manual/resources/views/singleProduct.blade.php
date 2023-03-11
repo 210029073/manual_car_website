@@ -41,7 +41,7 @@
                 }
 
                 for(i = 0; i < images.length; i++) {
-                    slideshowShifter.innerHTML += '<div><button onClick="getImage('+i+')">'+i+'</button></div>';
+                    slideshowShifter.innerHTML += '<div><button id="slide"+i onClick="getImage('+i+')">'+(i+1)+'</button></div>';
                 }
             </script>
 {{--            <script>--}}
