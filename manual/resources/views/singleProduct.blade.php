@@ -24,9 +24,9 @@
                 let images = [data, splitData+"_1"+".jpg", splitData+"_2"+".jpg", splitData+"_3"+".jpg"]
                 let slideshow = document.querySelector('#slideshow');
 
-                slideshowShifter = document.querySelector('#buttons');
+                let slideshowShifter = document.querySelector('#buttons');
 
-                var slideShow = new imageSlideShow(data, splitData,'{{asset("/images/cars")}}', slideshowShifter, slideshow)
+                let slideShow = new imageSlideShow(data, splitData,'{{asset("/images/cars")}}', slideshowShifter, slideshow)
                 slideShow.showSlideButtons();
             </script>
         </div>
