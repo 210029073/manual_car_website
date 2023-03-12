@@ -2,7 +2,11 @@
  * The image slide show object is responsible for rendering an image slide show, such that when
  * the user changes the slides, it will result the image to change.
  *
+ * It allows the user to be able to visit the previous image and next image from the slideshow
+ * via the previous and next button.
+ *
  * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+*  @version 1.0.1
  * */
 imageSlideShow = function(firstImage, imageNameWithNoExtensions, imagePath, slideShowShifter, slideShow) {
     const imageFilePath = imagePath; //this will set the image file path
@@ -37,12 +41,13 @@ imageSlideShow = function(firstImage, imageNameWithNoExtensions, imagePath, slid
      * Where n is the total number of images represented in a slideshow.
      *
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @version 1.1
      * */
     this.onNextImage = function() {
-        if (imageIndex == images.length) {
-            imageIndex = 0;
-        } else {
+        if (imageIndex < images.length - 1) {
             imageIndex++;
+        } else {
+            imageIndex = 0;
         }
         slideShowContainer.setAttribute('src', imageFilePath+"/"+images[imageIndex]);
     }
@@ -52,12 +57,13 @@ imageSlideShow = function(firstImage, imageNameWithNoExtensions, imagePath, slid
      * end of the slideshow once reaches zero.
      *
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @version 1.1
      * */
     this.onPrevImage = function() {
-        if (imageIndex == 0) {
-            imageIndex = this.getImageLength();
-        } else {
+        if (imageIndex > 0) {
             imageIndex--;
+        } else {
+            imageIndex = this.getImageLength() - 1;
         }
         slideShowContainer.setAttribute('src', imageFilePath+"/"+images[imageIndex]);
     }
@@ -68,6 +74,7 @@ imageSlideShow = function(firstImage, imageNameWithNoExtensions, imagePath, slid
      * in order to change between images in the slideshow.
      *
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @version 1.0
      * */
     this.getImage = function(i) {
         slideShowContainer.setAttribute('src', imageFilePath+"/"+images[i]);
@@ -78,6 +85,7 @@ imageSlideShow = function(firstImage, imageNameWithNoExtensions, imagePath, slid
      * the quantity of images.
      *
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @version 1.0
      * */
     this.getImageLength = function() {
         return images.length;
@@ -87,10 +95,13 @@ imageSlideShow = function(firstImage, imageNameWithNoExtensions, imagePath, slid
      * This will therefore draw the slide show buttons on screen.
      *
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
+     * @version 1.0
      * */
     this.showSlideButtons = function() {
+        slideShowShift.innerHTML += '<div><button id="slide'+5+'" onClick="slideShow.onPrevImage()">Previous</button></div>';
         for(i = 0; i < images.length; i++) {
             slideShowShift.innerHTML += '<div><button id="slide'+i+'" onClick="slideShow.getImage('+i+')">'+(i+1)+'</button></div>';
         }
+        slideShowShift.innerHTML += '<div><button id="slide'+4+'" onClick="slideShow.onNextImage()">Next</button></div>';
     }
 }
