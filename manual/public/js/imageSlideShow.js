@@ -4,11 +4,12 @@
  *
  * @author Ibrahim Ahmad <210029073@aston.ac.uk>
  * */
-imageSlideShow = function(imagePath, slideShowShifter, slideShow) {
+imageSlideShow = function(firstImage, imageNameWithNoExtensions, imagePath, slideShowShifter, slideShow) {
     const imageFilePath = imagePath; //this will set the image file path
     var slideShowShift = slideShowShifter; //this is used to access the buttons will be removed in future release
     var slideShowContainer = slideShow; //slideshow container
-
+    var data = firstImage;
+    var splitData = imageNameWithNoExtensions;
     //images array
     /**
      * Representing different views of the car

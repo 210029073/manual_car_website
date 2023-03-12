@@ -26,7 +26,7 @@
 
                 slideshowShifter = document.querySelector('#buttons');
 
-                var slideShow = new imageSlideShow('{{asset("/images/cars")}}', slideshowShifter, slideshow)
+                var slideShow = new imageSlideShow(data, splitData,'{{asset("/images/cars")}}', slideshowShifter, slideshow)
                 slideShow.showSlideButtons();
             </script>
         </div>
