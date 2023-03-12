@@ -1,3 +1,9 @@
+body{
+
+    background-image: url('/images/background.JPG');
+    background-size:cover;
+}
+
 .container{
     max-width: 1440px;
     min-height: 100vh;
@@ -17,7 +23,7 @@
 .item-basket{
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: rgb(219, 219, 219);
     border-radius: 25px;
     width: 100%;
     margin-bottom: auto;
