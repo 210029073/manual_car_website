@@ -1,6 +1,7 @@
 body {
+    background-image: url('/images/background.JPG');
     font-family: "Gill Sans Extrabold", sans-serif;
-    background-color: #0b0a0a;
+    /* background-color: #0b0a0a; */
     justify-content: center;
     align-items: center;
 }
