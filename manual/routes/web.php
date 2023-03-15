@@ -34,14 +34,6 @@ Route::get('/layouts', [PageController::class, 'Layouts']);
 
 Route::post('/drop1', [ProductsController::class, 'drop']);
 
-Route::get('/drop', function () {
-    return view('drop');
-});
-
-Route::get('/car', function () {
-    return view('Newproduct');
-});
-
 Route::post('/store', [ProductsController::class, 'store']);
 
 Route::get('/homepage', function () {
