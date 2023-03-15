@@ -249,8 +249,21 @@ button1:hover {
 .single-product-wrapper .single-product-image {
     padding: 1rem 1rem 0 0;
     width: 100%;
+    flex-direction: column;
 }
 
 .single-product-wrapper .single-product-image img {
     border-radius: 1rem;
 }
+
+.single-product-wrapper .single-product-image .slideNumber {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.single-product-wrapper .single-product-image .slideNumber div {
+    margin: 0.5rem;
+}
+
+
