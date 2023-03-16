@@ -17,18 +17,6 @@
             <img id="slideshow" width="640" height="426" src="{{asset("/images/cars/")}}/{{$product->image}}"
              alt="Car Image of {{$product->brand}} {{$product->model}}">
             <div class="slideNumber" id="buttons"></div>
-            <script>
-                let imageIndex = 0;
-                let data = '{{$product->image}}';
-                let splitData = data.slice(0,data.length-4);
-                let images = [data, splitData+"_1"+".jpg", splitData+"_2"+".jpg", splitData+"_3"+".jpg"]
-                let slideshow = document.querySelector('#slideshow');
-
-                let slideshowShifter = document.querySelector('#buttons');
-
-                let slideShow = new imageSlideShow(data, splitData,'{{asset("/images/cars")}}', slideshowShifter, slideshow)
-                slideShow.showSlideButtons();
-            </script>
         </div>
         <div class="single-product-description">
             <form action="/products/add" method="post">
@@ -68,4 +56,16 @@
     </div>
     @endforeach
 </div>
+<script>
+    let imageIndex = 0;
+    let data = '{{$product->image}}';
+    let splitData = data.slice(0,data.length-4);
+    let images = [data, splitData+"_1"+".jpg", splitData+"_2"+".jpg", splitData+"_3"+".jpg"]
+    let slideshow = document.querySelector('#slideshow');
+
+    let slideshowShifter = document.querySelector('#buttons');
+
+    let slideShow = new imageSlideShow(data, splitData,'{{asset("/images/cars")}}', slideshowShifter, slideshow)
+    slideShow.showSlideButtons();
+</script>
 @endsection
