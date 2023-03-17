@@ -33,6 +33,9 @@ class ProductsSeeder extends Seeder
         $product4 = new Product(3, "535i", "BMW", "A luxury 2010 BMW 535i petrol car.", 9000, 3.5, "Manual", 12);
         $product4->setImagePath("2010_bmw_f10_535i.jpg");
 
+        $product5 = new Product(4, "535i", "BMW", "A luxury 2010 BMW 535i petrol car.", 9000, 3.5, "Manual", 12);
+        $product5->setImagePath("2010_bmw_f10_535i.jpg");
+
         $carSeeds = array();
         array_push($carSeeds, $product1);
         array_push($carSeeds, $product2);
