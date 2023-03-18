@@ -96,7 +96,7 @@
 
             <div class="product-card">
                 <div class="product-card-img">
-                    <a href="{{route('product',$product->productsId)}}"><img width="640" height="300" src="{{asset("/images/cars/")}}/{{$product->image}}"
+                    <a href="{{route('product',$product->productsId)}}"><img width="640" height="300" src="{{asset('/images/cars/')}}/{{$product->image}}"
                          alt="Car Image of {{$product->brand}} {{$product->model}}"></a>
                 </div>
                 <div class="product-card-desc">

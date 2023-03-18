@@ -1,7 +1,7 @@
 @extends('layouts')
 <head>
     <link rel="stylesheet" type="text/css" href="/css/Products.css">
-    <script src="{{asset("/js/")}}/imageSlideShow.js" async></script>
+    <script src="{{asset('/js/')}}/imageSlideShow.js" async></script>
 </head>
 @section('content')
 <div class="single-product-wrapper">
@@ -14,7 +14,7 @@
         </div>
 {{--        image --}}
         <div class="single-product-wrapper single-product-image">
-            <img id="slideshow" width="640" height="426" src="{{asset("/images/cars/")}}/{{$product->image}}"
+            <img id="slideshow" width="640" height="426" src="{{asset('/images/cars')}}/{{$product->image}}"
              alt="Car Image of {{$product->brand}} {{$product->model}}">
             <div class="slideNumber" id="buttons"></div>
         </div>
