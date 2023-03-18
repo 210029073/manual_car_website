@@ -50,7 +50,14 @@
                         <button>Add review</button>
                     </a>
                 </div>
-                <script>
+
+            </form>
+        </div>
+{{--        details --}}
+    </div>
+    @endforeach
+</div>
+<script>
     let imageIndex = 0;
     let data = '{{$product->image}}';
     let splitData = data.slice(0,data.length-4);
@@ -62,10 +69,4 @@
     let slideShow = new imageSlideShow(data, splitData,'{{asset("/images/cars")}}', slideshowShifter, slideshow)
     slideShow.showSlideButtons();
 </script>
-            </form>
-        </div>
-{{--        details --}}
-    </div>
-    @endforeach
-</div>
 @endsection
