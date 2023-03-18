@@ -213,12 +213,11 @@ color: white;
 }
 
 footer {
-    /*position: absolute;*/
     color: #edf2f7;
     width: 100%;
     background-color: #4a5568;
     bottom: 0;
-    padding: 1.25%;
+
 }
 
 footer div {
