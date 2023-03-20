@@ -247,3 +247,30 @@ footer div div {
     padding: 1rem;
     border-radius: 25px;
 }
+
+
+@media screen and ( max-width: 500px){
+    
+    .login-ui {
+        width: 70%;
+    }
+   
+    
+}
+
+@media screen and ( min-width: 600px){
+    
+    .login-ui {
+        width: 40%;
+    }
+
+    
+}
+
+@media screen and ( min-width: 1000px){
+    
+    .login-ui {
+        width: 40%;
+    }
+    
+}
