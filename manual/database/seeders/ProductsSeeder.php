@@ -48,7 +48,8 @@ class ProductsSeeder extends Seeder
         $product9 = new Product(8, "Golf-GTI-Auto", "Volkswagen", "2022 Volkswagen Golf GTI 2.0 Litre Engine Automatic Transmission", 36800.00, 2.00, "Automatic", 20);
         $product9->setImagePath("vw_golf_2022_gti_auto.jpg");
 
-        $product10 = new Product(9, "Mercedes");
+        $product10 = new Product(9, "Urus", "Lamborghini","The 2022 Lamborghini Urus is a high-performance SUV and as quick as a Lamborghini.", 260000, 4.0 ,"Automatic", 10);
+        $product10->setImagePath("lamborghini_urus.jpg");
 
         
 
