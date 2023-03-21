@@ -63,6 +63,7 @@ class ProductsSeeder extends Seeder
         array_push($carSeeds, $product7);
         array_push($carSeeds, $product8);
         array_push($carSeeds, $product9);
+        array_push($carSeeds, $product10);
 
         foreach ($carSeeds as $carSeed) {
             DB::table('products')->insert([
