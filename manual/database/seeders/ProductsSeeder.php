@@ -48,6 +48,10 @@ class ProductsSeeder extends Seeder
         $product9 = new Product(8, "Golf-GTI-Auto", "Volkswagen", "2022 Volkswagen Golf GTI 2.0 Litre Engine Automatic Transmission", 36800.00, 2.00, "Automatic", 20);
         $product9->setImagePath("vw_golf_2022_gti_auto.jpg");
 
+        $product10 = new Product(9, "");
+
+        
+
         $carSeeds = array();
         array_push($carSeeds, $product1);
         array_push($carSeeds, $product2);
