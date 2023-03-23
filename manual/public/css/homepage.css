@@ -2,26 +2,39 @@ body{
   background-image: url('/images/WPGif1.gif');
   margin:0;
   background-size: cover;
-  overflow:hidden;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* overflow:hidden; */
     font-family: "Gill Sans Extrabold", sans-serif;
+  
 }
 
 .body1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15%;
+    /* padding-top: 18%; */
+    /* height:27vh; */
+    height:100%;
+    vertical-align: middle;
+    
+    max-width:100%;
+    max-height:100%;
+
 }
+
 
 .WelcomeandBrowse{
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content:center;
     flex-direction: column;
         text-align: center;
         color:white;
-        /*-ms-transform: translate(-50%, -50%);*/
-        /*transform: translate(-50%, -50%);*/
+        height:100%;
+
         }
 
 .WelcomeandBrowse h1 {
@@ -29,13 +42,7 @@ body{
     font-weight: bolder;
 }
 
-/*.Navigation {*/
-/*  */
-/*  font-family: "Goudy Bookletter 1911", sans-serif;*/
-/*  font-weight:500;*/
-/*  margin:-50px;*/
-/*  border:50px solid rgb(0, 0, 0);*/
-/*}*/
+
 
 .Navigation {
     font-family: "Goudy Bookletter 1911", sans-serif;
@@ -95,24 +102,8 @@ body{
   } */
 
 
-  .navpadding{
-    /*position:relative;*/
-    /*left:30.9%;*/
-  }
-  .browseCars {
-    width: 165px;
-    transition: all 2.5s;
-    background-color: white;
-    color:black;
-    border:0;
-    border-radius: 50px;
-    top: 55%;
-    left: 46.6%;
-    position: absolute;
-    text-align: center;
-    cursor:pointer;
-    font-family:  "Gill Sans Extrabold", sans-serif ;
-  }
+
+
 
   .browseCars h3 a {
       text-decoration: none;
@@ -196,3 +187,29 @@ body{
     color: white;
     text-decoration: none;
 }
+
+@media (max-width: 1372px){
+  .Navigation {
+  display:block;
+}
+
+.Navigation .Navigation-left {
+  display:block;
+}
+
+.Navigation .Navigation-center {
+  display:block;
+}
+
+.Navigation .Navigation-right {
+  display:none;
+}
+
+.Navigation a {
+  display:none;
+  }
+
+  .Navigation a:hover {
+    display:none;
+  }
+} 
