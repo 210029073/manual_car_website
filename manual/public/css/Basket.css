@@ -3,7 +3,41 @@ body{
     background-image: url('/images/background.JPG');
     background-size:cover;
 }
+.submitCSS {
+    transition: all 1s;
+    width: fit-content;
+    border-radius: 3rem;
+    background-color: black;
+    text-decoration:solid;
+}
 
+.submitCSS div {
+    padding: 1rem 1rem 1rem;
+}
+
+.submitCSS div a {
+    transition: all 0.05s;
+    border-radius: 3rem;
+    width: max-content;
+    padding: inherit;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+}
+
+.submitCSS:hover {
+    transition: all 2s;
+    background-color: white;
+    color: white;
+    text-decoration: white;
+}
+
+.submitCSS div a:hover {
+    transition: all 0.25s;
+    color: white;
+    text-decoration: none;
+}
 .container{
     max-width: 1440px;
     min-height: 100vh;
@@ -18,6 +52,10 @@ body{
     flex-direction: row;
     justify-content: space-evenly;
     color: black;
+}
+
+.item-info{
+    
 }
 
 .item-basket{
@@ -77,8 +115,26 @@ body{
 }
 
 
-@media( max-width: 1200px) {
+@media( max-width: 680px) {
+    .item-basket{
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        flex-direction: column;
+        min-width: 320px;
+        background-color: rgb(219, 219, 219);
+        border-radius: 25px;
+        /* width: 100%; */
+        margin-bottom: auto;
+    }
 
+    .item-details .wrapper{
+        display: flex;
+        width: 100%;
+        padding-left: 15.25%;
+        float:none;
+        gap: 10px;
+    }
 
     .basket {
         display: grid;
@@ -91,6 +147,7 @@ body{
         margin-top: auto;
     }
 
+    
     .cart .item-basket {
         border-right: 1px;
         margin-bottom: 0;

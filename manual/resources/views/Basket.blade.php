@@ -60,7 +60,7 @@
                                         <p>Transmission Type: {{$item->getTransmission()}}</p>
                                         <p>Stock remaining: {{$item->getQuantity()}}</p>
                                         <?php $total += $item->getPrice() ?>
-                                        <button type="submit">Remove</button>
+                                        <button type="submit" class="submitCSS">Remove</button>
                                     </div>
                                 </div>
                             </div>
