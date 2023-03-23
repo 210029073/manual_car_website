@@ -12,8 +12,8 @@
     <div class="Sign-up">
         @if($errors->any())
             <div class="errors">
-                <h2>Could not register</h2>
-                <p>One or two fields have not been filled correctly.
+                <h2 class="centred">Could not register</h2>
+                <p class="textpadding23">One or two fields have not been filled correctly.
                 Please amend the following:</p>
                 <ul>
                     @foreach ($errors->all() as $error)

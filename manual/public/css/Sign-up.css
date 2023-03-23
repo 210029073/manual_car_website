@@ -12,12 +12,10 @@ body {
 }
 
 .Sign-up{
-    width: 30%;
-    /*background-color: #fffcfc;*/
-    /*border-radius: 20px;*/
-    /*padding: 20px 25px;*/
-    border-radius: 8px;
+    width:65%;
+    border-radius: 3px;
 }
+
 
 .Sign-up .Title{
     font-size: 30px;
@@ -60,6 +58,16 @@ body {
     text-align: left;
 }
 
+.centred{
+
+    text-align:center;
+}
+
+.textpadding23{
+    padding-left: 10%;
+}
+
+
 .errors {
     display: flex;
     flex-direction: column;
@@ -71,32 +79,10 @@ body {
     margin-bottom: 1.25%;
 }
 
-
-/* @media screen and ( max-width: 500px){
-    
+@media (min-width: 1000px){
     .Sign-up{
-        width: 90%;
-        border-radius: 8px;
+        width:30%;
+        border-radius: 3px;
     }
-    
-} */
-
-@media screen and ( max-width: 2000px){
-    
-    .Sign-up{
-        width: 80%;
-        border-radius: 8px;
-    }
-
     
 }
-
-/* @media screen and ( min-width: 1000px){
-    
-    .Sign-up{
-        width: 80%;
-        border-radius: 8px;
-    }
-   
-    
-} */

@@ -137,7 +137,7 @@ color: white;
 }
 
 .ui-prompt-box .login-container {
-    padding: 10% 2.5%;
+    /* padding: 10% 2.5%; */
     background-color: white;
     border-radius: 0.75%;
 
@@ -156,7 +156,7 @@ color: white;
 .signupForm div {
     display: flex;
     flex-direction: column;
-    padding: 2.5%;
+    /* padding: 2.5%; */
     justify-content: space-evenly;
 }
 
