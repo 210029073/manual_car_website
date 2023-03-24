@@ -5,6 +5,13 @@
     background-color: white;
 }
 
+.content-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 8%;
+}
+
 .pastOrder {
     display: flex;
     flex-direction: row;

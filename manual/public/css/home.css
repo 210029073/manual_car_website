@@ -115,12 +115,9 @@ color: white;
     float:right;
 }
 
-.content-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 2%;
-    margin-bottom: 8%;
-}
+/* .content-container {
+    padding: 2.5%;
+} */
 
 .product-list .product-item {
     flex-direction: row;
