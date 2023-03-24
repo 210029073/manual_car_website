@@ -74,7 +74,7 @@
                     <div class="amount">
                         <p>Total: £{{number_format($total, 2)}}</p>
                         <form action="/basket/checkout" method="get">
-                            <button type="submit">Checkout</button>
+                            <button type="submit" class="submitCSS">Checkout</button>
                         </form>
                     </div>
                 </div>
