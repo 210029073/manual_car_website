@@ -1,130 +1,203 @@
 body {
     margin: 0;
-    background-size: cover;
-    overflow-x: hidden;
-    height: 100vh;
-    font-family: Arial;
-    background-color:black;
-    /* position:absolute; */
-    
-}
-
-
-.topbackimage{
-
-    display: flex;
-    justify-content: center;
-
-}
-
-
-.Navigation {
-
-    font-family: "Goudy Bookletter 1911", sans-serif;
-    font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    background: black;
-}
-
-.Navigation .Navigation-left {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 25%;
-}
-
-.Navigation .Navigation-center {
-    padding-left: 15%;
-    padding-right: 15%;
-    width: 50%;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.Navigation .Navigation-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    width: 25%;
-
-}
-
-.Navigation a {
-    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
     color: white;
-    padding: 16px 30px;
-    border-radius: 5px;
-    float: left;
-    font-size: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+header{
+    background-color: #101010;
+}
+
+a{
+    color: white;
     text-decoration: none;
 }
 
-.Navigation a:hover {
-    color: rgb(169, 169, 169);
-    transition: all 2.5s;
-}
-
-
-.navpadding {
-    /*position: relative;*/
-    /*left: 30.9%;*/
-}
-
-.signup {
-    position: relative;
-    float: right;
-}
-
-.AboutUsTEST {
-    justify-content:space-between;
-    padding: 200px;
-    border: 8px solid rgb(0,0,0);
-    background-color: rgb(0,0,0);
-    color:white;
-}
-
-.boxer {
-    color:white;
-    font-weight: 600;
-    font-size: 30px;
-    text-align:center;
+.NavigationBar{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-height: 70px;
     display:flex;
-
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 0 24px;
 }
 
-.boxer1 {
-
-    color:white; 
-    text-align:center;
+.Navigations{
     display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:60px;
 }
 
-.AboutUs1 {
-    justify-content:space-between;
-    padding-top: 30%;
-    border: 8px solid rgb(0,0,0);
-    background-color: rgb(0,0,0);
-    color:white;
+.nav-branding{
+    font-size: 2rem;
 }
 
-.boxer1 {
-    color:white;
-    font-weight: 600;
-    font-size: 30px;
-    text-align:center;
-    display:flex;
-    padding: 8px;
-    margin: 15px;
-    border: 10px;   
+.navigationLinks{
+    transition:0.7s;
 }
 
-
-.h4box{
-    height: 50px;
+.navigationLinks:hover{
+    color: #707070;
+    transition-duration:1.2s;
 }
 
+.responsiveNav{
+    display:none;
+    cursor:pointer;
+}
 
+.burgerIcon{
+    display:block;
+    width:25px;
+    height:3px;
+    margin:5px auto;
+    background-color:white;
+}
 
+.sectionone {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 8%;
+}
+
+.undersectionone {
+    margin-left: 2%;
+    text-align: center;
+}
+
+.firstsection {
+    display: flex;
+    justify-content: center;
+}
+
+.secondsection {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image1 {
+    margin-right: 5%;
+}
+
+.im1 {
+    padding-left: 10%;
+    text-align: center;
+}
+
+@media(max-width:768px){
+    .responsiveNav{
+        display:block;
+    }
+
+    .responsiveNav.active .burgerIcon:nth-child(1){
+        transform: translateY(-2px) rotate(-25deg);
+        transition-duration: 0.57s;
+    }
+    
+
+    .Navigations{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        position:fixed;
+        Left: -100%;
+        top: 65px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #101010;
+        width: 100%;
+    }
+
+    .marginSpacing{
+        margin: 12px;
+    }
+    .navigationLinks{
+        margin:12px;
+        transition:0.7s;
+        
+    }
+
+    .Navigations.active{
+        Left:0;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .undersectionone {
+        margin-left: 11%;
+        margin-right: 1%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .sectionone {
+        margin-bottom: 4%;
+    }
+}
+
+@media only screen and (max-width: 805px) {
+    .sectionone {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2%;
+        margin-bottom: 8%;
+        /* margin-right: 3%; */
+    }
+
+    .im1 {
+        /* padding-left: 10%; */
+        text-align: center;
+    }
+
+    .firstsection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .secondsectionX {
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 3%;
+    }
+
+    .image1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .secondsection {
+        display: none;
+    }
+
+    .image2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 806px) {
+    .secondsectionX {
+        display: none;
+    }
+}
