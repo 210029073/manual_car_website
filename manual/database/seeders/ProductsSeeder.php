@@ -54,6 +54,9 @@ class ProductsSeeder extends Seeder
         $product11 = new Product(10,"Ibiza","Seat","2018 Seat Hatchback", 20000,1.5,"Manual",12);
         $product11->setImagePath("seat_ibiza_2018.jpg");
 
+        $product12 = new Product(11, "Fiesta", "Ford", "2018 Ford Fiesta Hatchback", 18000,1.6, "Manual", 25);
+        $product12->setImagePath("ford_fiesta_2018.jpg");
+
         
 
         $carSeeds = array();
@@ -68,6 +71,7 @@ class ProductsSeeder extends Seeder
         array_push($carSeeds, $product9);
         array_push($carSeeds, $product10);
         array_push($carSeeds, $product11);
+        array_push($carSeeds, $product12);
 
         foreach ($carSeeds as $carSeed) {
             DB::table('products')->insert([
