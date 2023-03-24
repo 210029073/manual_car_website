@@ -51,6 +51,9 @@ class ProductsSeeder extends Seeder
         $product10 = new Product(9, "Urus", "Lamborghini","The 2022 Lamborghini Urus is a high-performance SUV and as quick as a Lamborghini.", 260000, 4.0 ,"Automatic", 10);
         $product10->setImagePath("lamborghini_urus.jpg");
 
+        $product11 = new Product(10,"Ibiza","Seat","2018 Seat Hatchback", 20000,1.5,"Manual",12);
+        $product11->setImagePath("seat_ibiza_2018.jpg");
+
         
 
         $carSeeds = array();
@@ -64,6 +67,7 @@ class ProductsSeeder extends Seeder
         array_push($carSeeds, $product8);
         array_push($carSeeds, $product9);
         array_push($carSeeds, $product10);
+        array_push($carSeeds, $product11);
 
         foreach ($carSeeds as $carSeed) {
             DB::table('products')->insert([
