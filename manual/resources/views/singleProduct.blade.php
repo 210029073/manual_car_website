@@ -34,8 +34,7 @@
                     {{-- Try not to remove the following lines below, holds backend (Ibrahim)--}}
                     {{-- Will attach to a HTML Form --}}
                     {{-- This should enumerate all product details here... --}}
-                    <p><strong>Product Description:</strong></p>
-                    <p>{{ $product->description }}</p>
+                    <h2>{{ $product->description }}</h2>
                     <p><strong>Engine Capacity:</strong> {{$product->engine_capacity}} litres</p>
                     <p><strong>Transmission:</strong> {{$product->transmission}}</p>
                     {{-- Parse price --}}
