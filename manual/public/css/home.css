@@ -10,17 +10,17 @@ body{
     font-family: "Gill Sans Extrabold", sans-serif;
 }
 
-.header{
+/* .header{
     background-image: url('/images/WPGif2.gif');
     background-size:cover;
     position: absolute;
     height: 351px;
     top: 49px;
     width: 100%;
-}
+} */
 
 
-.WelcomeandBrowse{
+/* .WelcomeandBrowse{
     position: absolute;
     top: 50%;
     text-align: center;
@@ -28,68 +28,70 @@ body{
     color:white;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+} */
+
+
+li{
+    list-style: none;
 }
 
-
-
-.Navigation {
-    font-family: "Goudy Bookletter 1911", sans-serif;
-    font-weight:500;
-    /*margin:-50px;*/
-    /*border:50px solid rgb(0, 0, 0);*/
-    display: flex;
-    flex-direction: row;
-    background: black;
+header{
+    background-color: #101010;
 }
 
-.Navigation .Navigation-left {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 25%;
-}
-
-.Navigation .Navigation-center {
-    padding-left: 15%;
-    padding-right: 15%;
-    width: 50%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.Navigation .Navigation-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    width: 25%;
-
-}
-
-.Navigation a {
-    text-align: center;
+a{
     color: white;
-    padding: 16px 30px;
-    border-radius: 5px;
-    float: left;
-    font-size: 20px;
     text-decoration: none;
 }
 
-.Navigation a:hover {
-/* background-color: #c7c7c7; */
-    color: rgb(169, 169, 169);
-    transition: all 2.5s;
+.NavigationBar{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-height: 70px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 0 24px;
 }
 
+.Navigations{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:60px;
+}
+
+
+.navigationLinks{
+    transition:0.7s;
+}
+
+.navigationLinks:hover{
+    color: #707070;
+    transition-duration:1.2s;
+}
+
+.responsiveNav{
+    display:none;
+    cursor:pointer;
+}
+
+.burgerIcon{
+    display:block;
+    width:25px;
+    height:3px;
+    margin:5px auto;
+    background-color:white;
+}
 
 /* .Navigation a.current {
 background-color: #828282;
 color: white;
 } */
 
-.browseCars {
+/* .browseCars {
     width: 165px;
     transition: all 2.5s;
     background-color: white;
@@ -102,12 +104,12 @@ color: white;
     text-align: center;
     cursor:pointer;
     font-family:  "Gill Sans Extrabold", sans-serif ;
-}
+} */
 
-.browseCars:hover{
+/* .browseCars:hover{
     background-color: black;
     color: rgb(255,255,255);
-}
+} */
 .signup{
     position:relative;
     float:right;
@@ -246,6 +248,44 @@ footer div div {
     background-color: lightpink;
     padding: 1rem;
     border-radius: 25px;
+}
+
+@media(max-width:768px){
+    .responsiveNav{
+        display:block;
+    }
+
+    .responsiveNav.active .burgerIcon:nth-child(1){
+        transform: translateY(-2px) rotate(-25deg);
+        transition-duration: 0.57s;
+    }
+    
+
+    .Navigations{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        position:fixed;
+        Left: -100%;
+        top: 65px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #101010;
+        width: 100%;
+    }
+
+    .marginSpacing{
+        margin: 12px;
+    }
+    .navigationLinks{
+        margin:12px;
+        transition:0.7s;
+        
+    }
+
+    .Navigations.active{
+        Left:0;
+    }
 }
 
 

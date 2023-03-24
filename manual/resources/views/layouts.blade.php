@@ -12,28 +12,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
   <body>
-    <div class="Navigation">
-        <div class="Navigation Navigation-left">
-            <a class="current" href="/homepage">Home</a>
-        </div>
-        <div class="Navigation Navigation-center">
-            <div class="navpadding" ><a href="/products">Cars</a></div>
-            <div class="navpadding"><a href="/aboutus">About Us</a></div>
-            <div class="navpadding"> <a href="/contactus">Contact Us</a></div>
-            <div class="signup"><a href="{{route('basket')}}">Basket</a></div>
-        </div>
-        <div class="Navigation Navigation-right">
-            @if(\Illuminate\Support\Facades\Auth::check())
-                <div class="signup"><a href="{{route('pastOrder')}}">Past Order</a></div>
-                <div class="signup"><a href="{{route('logout')}}">Logout</a></div>
+  <header>
+        <nav class="NavigationBar">
+            <li class="marginSpacing">
+                <a href="/homepage" class="navigationLinks">Home</a></div>
+            </li>
+            <ul class="Navigations">
+            <li class="marginSpacing">
+                    <a href="/products" class="navigationLinks">Cars</a></div>
+                </li>
+                <li class="marginSpacing">
+                    <a href="/aboutus" class="navigationLinks">About Us</a></div>
+                </li>
+                <li class="marginSpacing">
+                    <a href="/contactus" class="navigationLinks">Contact Us</a>
+                </li>
+                <li class="marginSpacing">
+                <a href="{{route('basket')}}" class="navigationLinks">Basket</a>
+                </li>
+                @if(\Illuminate\Support\Facades\Auth::check())
+                <li class="marginSpacing">
+                <a href="{{route('pastOrder')}}"  class="navigationLinks">Past Order</a>
+            </li>
+            <li class="marginSpacing">
+                <a href="{{route('logout')}}"  class="navigationLinks">Logout</a>
+            </li>
             @else
-                <div class="signup"> <a href="{{route('signup')}}">Sign Up</a>
-                    <a href="{{route('loginPage')}}">Login</a>
-                </div>
+            <li class="marginSpacing">
+                <a href="{{route('signup')}}" class="navigationLinks">Sign Up</a>
+            </li>
+            <li class="marginSpacing">
+                    <a href="{{route('loginPage')}}" class="navigationLinks">Login</a>
+</li>
+                
             @endif
-        </div>
-    </div>
+        </a>
+                
 
+            </ul>
+            <div class="responsiveNav">
+                <span class="burgerIcon"></span>
+                <span class="burgerIcon"></span>
+                <span class="burgerIcon"></span>
+                <span class="burgerIcon"></span>
+            </div>
+        </nav>
+    </header>
+    <script src="/js/nav.js"></script>
     <div class='content-container'>
       @yield('content')
     </div>

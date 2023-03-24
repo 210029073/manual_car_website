@@ -8,61 +8,6 @@ body {
 }
 
 
-.Navigation {
-
-    font-family: "Goudy Bookletter 1911", sans-serif;
-    font-weight: 500;
-    display: flex;
-    flex-direction: row;
-    background: black;
-}
-
-.Navigation .Navigation-left {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 25%;
-}
-
-.Navigation .Navigation-center {
-    padding-left: 15%;
-    padding-right: 15%;
-    width: 50%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.Navigation .Navigation-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    width: 25%;
-
-}
-
-.Navigation a {
-    text-align: center;
-    color: white;
-    padding: 16px 30px;
-    border-radius: 5px;
-    float: left;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.Navigation a:hover {
-    color: rgb(169, 169, 169);
-    transition: all 2.5s;
-}
-
-
-.navpadding {
-    /*position: relative;*/
-    /*left: 30.9%;*/
-}
-
 .signup {
     position: relative;
     float: right;

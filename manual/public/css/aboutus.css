@@ -18,47 +18,7 @@ a{
     text-decoration: none;
 }
 
-.NavigationBar{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    min-height: 70px;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    
-    padding: 0 24px;
-}
 
-.Navigations{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    gap:60px;
-}
-
-
-.navigationLinks{
-    transition:0.7s;
-}
-
-.navigationLinks:hover{
-    color: #707070;
-    transition-duration:1.2s;
-}
-
-.responsiveNav{
-    display:none;
-    cursor:pointer;
-}
-
-.burgerIcon{
-    display:block;
-    width:25px;
-    height:3px;
-    margin:5px auto;
-    background-color:white;
-}
 
 .sectionone {
     display: flex;
@@ -96,44 +56,6 @@ img {
 .im1 {
     padding-left: 10%;
     text-align: center;
-}
-
-@media(max-width:768px){
-    .responsiveNav{
-        display:block;
-    }
-
-    .responsiveNav.active .burgerIcon:nth-child(1){
-        transform: translateY(-2px) rotate(-25deg);
-        transition-duration: 0.57s;
-    }
-    
-
-    .Navigations{
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        position:fixed;
-        Left: -100%;
-        top: 65px;
-        gap: 0;
-        flex-direction: column;
-        background-color: #101010;
-        width: 100%;
-    }
-
-    .marginSpacing{
-        margin: 12px;
-    }
-    .navigationLinks{
-        margin:12px;
-        transition:0.7s;
-        
-    }
-
-    .Navigations.active{
-        Left:0;
-    }
 }
 
 @media only screen and (min-width: 1280px) {
