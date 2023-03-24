@@ -70,16 +70,14 @@
                 @endforeach
             </div>
             <div class="basket-total">
-                @if(\Illuminate\Support\Facades\Auth::check())
-                    <div class="wrapper">
-                        <div class="amount">
-                            <p>Total: £{{number_format($total, 2)}}</p>
-                            <form action="/basket/checkout" method="get">
-                                <button type="submit">Checkout</button>
-                            </form>
-                        </div>
+                <div class="wrapper">
+                    <div class="amount">
+                        <p>Total: £{{number_format($total, 2)}}</p>
+                        <form action="/basket/checkout" method="get">
+                            <button type="submit">Checkout</button>
+                        </form>
                     </div>
-                @endif
+                </div>
             </div>
         </section>
         @endif

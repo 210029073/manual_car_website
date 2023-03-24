@@ -21,25 +21,28 @@ class OrderController extends Controller
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
     */
     public function proceedCheckout() {
-        $basket = new BasketController();
-        $basketCollection = $basket->basket();
-        foreach ($basketCollection as $basket) {
-            $product = [
-                'userID' => Auth::id(),
-                'productsId' => $basket->getId(),
-                'price' => $basket->getPrice(),
-                'deliveryDate' => now(),
-                'orderDate' => now(),
-                'isProcessed' => false
-            ];
-            DB::update('UPDATE products SET stock = ? WHERE productsId = ?', [$basket->getQuantity(), $basket->getId()]);
-            DB::table('orders')->insert($product);
-        }
-        //empty the basket!
-        $cart = new BasketController();
-        $cart->emptyBasket();
+        if(Auth::check()) {
+            $basket = new BasketController();
+            $basketCollection = $basket->basket();
+            foreach ($basketCollection as $basket) {
+                $product = [
+                    'userID' => Auth::id(),
+                    'productsId' => $basket->getId(),
+                    'price' => $basket->getPrice(),
+                    'deliveryDate' => now(),
+                    'orderDate' => now(),
+                    'isProcessed' => false
+                ];
+                DB::update('UPDATE products SET stock = ? WHERE productsId = ?', [$basket->getQuantity(), $basket->getId()]);
+                DB::table('orders')->insert($product);
+            }
+            //empty the basket!
+            $cart = new BasketController();
+            $cart->emptyBasket();
 
-        return redirect()->intended("homepage")->with('successCheckout', "Successfully processed item in checkout");
+            return redirect()->intended("homepage")->with('successCheckout', "Successfully processed item in checkout");
+        }
+        return redirect()->to('login');
     }
 
     public function viewPastOrders() {
