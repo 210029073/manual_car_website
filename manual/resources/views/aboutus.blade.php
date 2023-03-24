@@ -14,6 +14,9 @@
                 <a href="/homepage" class="navigationLinks">Home</a></div>
             </li>
             <ul class="Navigations">
+            <li class="marginSpacing">
+                    <a href="/products" class="navigationLinks">Cars</a></div>
+                </li>
                 <li class="marginSpacing">
                     <a href="/aboutus" class="navigationLinks">About Us</a></div>
                 </li>
@@ -25,14 +28,14 @@
                 </li>
                 @if(\Illuminate\Support\Facades\Auth::check())
                 <li class="marginSpacing">
-                <a href="{{route('pastOrder')}}"  class="navigationLinks" >Past Order</a>
+                <a href="{{route('pastOrder')}}"  class="navigationLinks">Past Order</a>
             </li>
             <li class="marginSpacing">
                 <a href="{{route('logout')}}"  class="navigationLinks">Logout</a>
             </li>
             @else
             <li class="marginSpacing">
-                <a href="{{route('signup')}}" class="navigationLinks">WAU</a>
+                <a href="{{route('signup')}}" class="navigationLinks">Sign Up</a>
             </li>
             <li class="marginSpacing">
                     <a href="{{route('loginPage')}}" class="navigationLinks">Login</a>
