@@ -101,7 +101,10 @@ body{
     background-color: rgb(219, 219, 219);
     border-radius: 25px;
     height: fit-content;
-    width: 9%;
+    width:fit-content;
+    
+    justify-content: center;
+    text-align: center;
 }
 
 .amount{
@@ -111,12 +114,10 @@ body{
 .ts{
     font-size:1.3rem;
     font-weight:600;
-    padding-left:15%;
 }
 .tsp{
     font-size:1rem;
     font-weight:bold;
-    /* padding-left:20%; */
 }
 
 .amount > div {
@@ -129,12 +130,13 @@ body{
 }
 
 
-@media( max-width: 680px) {
+
+@media( max-width:898px) {
     .item-basket{
         display: flex;
-        vertical-align: middle;
-        align-items: center;
-        flex-direction: column;
+        /* vertical-align: middle; */
+        /* align-items: center; */
+        /* flex-direction: column; */
         min-width: 320px;
         background-color: rgb(219, 219, 219);
         border-radius: 25px;
@@ -154,12 +156,6 @@ body{
         grid-template-columns: auto;
         width: 100%;
         border-bottom: 1px;
-    }
-    .basket-total{
-            background-color: rgb(219, 219, 219);
-            border-radius: 25px;
-            height: fit-content;
-            width: 40%;
     }
 
     .cart .wrapper {
