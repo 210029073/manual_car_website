@@ -16,7 +16,7 @@
         </div>
     @endif
     <h1>Cars for sale</h1>
-    <div class="filter-container" style="position: relative;margin-top:2%;margin-bottom: 2%">
+    <div class="filter-container" style="">
     {{--        <form method='post'>--}}
     {{--            <button1 id="filter-all" class="filter-button active">All Products</button1>--}}
     {{--            <button1 id="filter-sedan" class="filter-button">Sedans</button1>--}}
@@ -25,7 +25,7 @@
     {{--        </form>--}}
     </div>
     <div class="products-ui-wrapper">
-        <div class="filter-container" style="position: relative;margin-top:2%;margin-bottom: 2%">
+        <div class="filter-container" style="">
             {{--        <button1 id="filter-all" class="filter-button active">All Products</button1>--}}
             {{--        <button1 id="filter-sedan" class="filter-button">Sedans</button1>--}}
             {{--        <button1 id="filter-suv" class="filter-button">SUVs</button1>--}}
@@ -56,20 +56,25 @@
                         <div class="price-range-from-to">
                             <div>
                                 <label>From</label>
+                                <br/> 
                                 <input min="0" value="0" type="number" name="fromNum"/>
                             </div>
                             <div>
                                 <label>To</label>
-                                <br/>
+                            <br/> 
                                 <input min="0"  value="0" type="number" name="toNum">
                             </div>
                         </div>
                     </div>
                     <div>
-                        <div><label>Select a car transmission:</label>
+                        <div>
+                            <label>Select a car transmission:</label>
+                        </div>
+                        <div>
                             <label>Manual</label>
                             <input type="radio" value="Manual" name="filter_transmission">
                         </div>
+                        
                         <div>
                             <label>Automatic</label>
                             <input type="radio" value="Automatic" name="filter_transmission">
@@ -84,15 +89,15 @@
                     </div>
                 </div>
             </form>
-        </div>
-
+</div>
+    </div>
         <div class="product-container">
 
             <script src="product.js"></script>
             @foreach($products as $product)
-            <script>
-                var passed =  <?php echo json_encode($products); ?>;
-            </script>
+            <!--<script>
+                var passed =  <<?php echo json_encode($products); ?>
+            </script>-->
 
             <div class="product-card">
                 <div class="product-card-img">
@@ -115,10 +120,12 @@
                         {{-- Try not to remove the following lines below, holds backend (Ibrahim)--}}
                         {{-- Will attach to a HTML Form --}}
                         {{-- This should enumerate all product details here... --}}
-                        <h2 class="productTitle"><a href="{{route('product',$product->productsId)}}">{{$product->brand}} {{$product->model}}</a></h2>
-                        {{-- Parse price --}}
-                        <p><strong>Price:</strong> £{{ number_format($product->price, 2, '.') }}</p>
-                        <p><strong>Popularity:</strong> {{$product-> likes}}</p>
+                        <div class="productDesc">
+                            <h2 class="productTitle"><a href="{{route('product',$product->productsId)}}">{{$product->brand}} {{$product->model}}</a></h2>
+                            {{-- Parse price --}}
+                            <p class="first"><strong>Price:</strong> £{{ number_format($product->price, 2, '.') }}</p>
+                            <p class="first"><strong>Popularity:</strong> {{$product-> likes}}</p>
+                        </div>
                         <div class="product-btn">
                             @if($product->stock > 0)
                                 <button type="submit">Add to cart</button>

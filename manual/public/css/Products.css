@@ -146,21 +146,40 @@ button1:hover {
 
 @media (max-width: 768px) {
     .product-container {
+        flex-direction: row;
+        
+    }
+    .product-card {
         flex-direction: column;
     }
+    .filter-container{
+        font-size:medium;
+        min-width:55%;  
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input{
+            width:50%;
+    }
+
 }
 
 .product-container {
     height: fit-content;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    grid: auto / auto auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    /* grid-template-columns: auto auto auto auto; */
+    /* gap: 10px; */
+    /* grid: auto / auto auto auto; */
     text-align: center;
+    
 }
 
 .product-card {
     height: 95%;
+    display: flex;
     width: auto;
 }
 
@@ -170,7 +189,6 @@ button1:hover {
 }
 
 .product-card .product-card-img {
-    display: flex;
     width: fit-content;
     align-items: center;
 }
@@ -187,9 +205,22 @@ button1:hover {
     text-decoration-line: none;
     color: black;
 }
+p.first{
+    padding-right:1022%;
+}
+.productDesc{
+    /* width: min-content; */
+    justify-content: start;
+    padding: 2.5rem;
+    align-items: center;
+} 
 
 .filter-container {
-    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
     height: fit-content;
     background-color: rgb(219, 219, 219);
     border-radius: 1rem;
@@ -197,8 +228,8 @@ button1:hover {
 }
 
 .filter-container form .product-filter-form-wrapper {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .filter-container form .product-filter-form-wrapper div {
