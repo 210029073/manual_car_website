@@ -16,8 +16,8 @@
     </div>
     <div class="firstsection">
         <div class="undersectionone">
-            <h1>Introduction</h1>
-            <p>Manual is a digital business which is built to help customers to be able to afford well functioning cars
+            <h1 class="center-text">Introduction</h1>
+            <p class="center-text">Manual is a digital business which is built to help customers to be able to afford well functioning cars
                 for
                 cheaper.</p>
         </div>
@@ -29,8 +29,8 @@
     <div class="secondsection">
         <div class="image2"><img src="/images/logos.png" alt=""></div>
         <div class="im1">
-            <h1>Why Manual?</h1>
-            <p>We source cars from all kinds of brands, on sale for cheaper than the market value! </p>
+            <h1 class="center-text">Why Manual?</h1>
+            <p class="center-text">We source cars from all kinds of brands, on sale for cheaper than the market value! </p>
         </div>
 
 
@@ -38,8 +38,8 @@
 
     <div class="secondsectionX">
         <div class="im1">
-            <h1>Why Manual?</h1>
-            <p>We source cars from all kinds of brands, on sale for cheaper than the market value! </p>
+            <h1 class="center-text">Why Manual?</h1>
+            <p class="center-text">We source cars from all kinds of brands, on sale for cheaper than the market value! </p>
         </div>
         <div class="image2"><img src="/images/logos.png" alt=""></div>
 

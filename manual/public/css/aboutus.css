@@ -33,11 +33,14 @@ a{
 }
 
 .firstsection {
+    font-size:20px;
     display: flex;
     justify-content: center;
+    padding-bottom: 20%;
 }
 
 .secondsection {
+    font-size:20px;
     margin-top: 5%;
     display: flex;
     justify-content: center;
@@ -53,8 +56,15 @@ img {
     margin-right: 5%;
 }
 
+.center-text{
+    padding-top:4%;
+    max-width:600px;
+    
+}
+
 .im1 {
-    padding-left: 10%;
+    padding-bottom:10%;
+    /* padding-left: 10%; */
     text-align: center;
 }
 
@@ -62,6 +72,7 @@ img {
     .undersectionone {
         margin-left: 11%;
         margin-right: 1%;
+        
     }
 }
 
@@ -71,7 +82,7 @@ img {
     }
 }
 
-@media only screen and (max-width: 805px) {
+@media only screen and (max-width: 642px) {
     .sectionone {
         display: flex;
         flex-direction: column;
@@ -79,25 +90,30 @@ img {
         margin-top: 2%;
         margin-bottom: 8%;
         /* margin-right: 3%; */
+        
     }
 
     .im1 {
-        /* padding-left: 10%; */
+        /* padding-right:10%; */
         text-align: center;
+        
     }
 
     .firstsection {
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
 
     .secondsectionX {
-        margin-top: 5%;
+        font-size:125%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-bottom: 3%;
+        margin-top: 18%;
+        margin-bottom: 8%;
+        /* margin-right: 3%; */
     }
 
     .image1 {
@@ -115,8 +131,45 @@ img {
     }
 }
 
-@media only screen and (min-width: 806px) {
+@media only screen and (min-width: 642px) {
     .secondsectionX {
         display: none;
     }
+
+}
+@media only screen and (min-width: 642px) and (max-width: 768px){
+.firstsection {
+    font-size:16.8px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20%;
+}
+
+.secondsection {
+    font-size:16.8px;
+   
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.center-text{
+    padding-bottom:0%;
+}
+
+}
+
+@media only screen and (min-width:630px) and (max-width:642px){
+    .secondsectionX {
+        font-size:125%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 2%;
+        margin-bottom: 8%;
+        padding-left:3%;
+        /* margin-right: 3%; */
+    }
+
 }

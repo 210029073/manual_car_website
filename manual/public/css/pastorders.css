@@ -1,3 +1,9 @@
+body{
+
+    background-image: url('/images/background.JPG');
+    background-size:cover;
+}
+
 .pastOrdersContainer {
     display: flex;
     flex-direction: column;
