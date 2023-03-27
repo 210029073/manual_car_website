@@ -54,22 +54,35 @@
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="filter-transmission-mobile">
                         <div>
                             <label>Select a car transmission:</label>
                         </div>
-                        <div>
-                            <label>Manual</label>
-                            <input type="radio" value="Manual" name="filter_transmission">
-                        </div>
-
-                        <div>
-                            <label>Automatic</label>
-                            <input type="radio" value="Automatic" name="filter_transmission">
-                        </div>
-                        <div>
-                            <label>Both</label>
-                            <input checked type="radio" value="Both" name="filter_transmission">
+                        <div class="filter-transmission-mobile-types">
+                            <div>
+                                <div>
+                                    <label>Manual</label>
+                                </div>
+                                <div>
+                                    <input type="radio" value="Manual" name="filter_transmission">
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label>Automatic</label>
+                                </div>
+                                <div>
+                                    <input type="radio" value="Automatic" name="filter_transmission">
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <label>Both</label>
+                                </div>
+                                <div>
+                                    <input checked type="radio" value="Both" name="filter_transmission">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div>
