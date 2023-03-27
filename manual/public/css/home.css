@@ -295,7 +295,22 @@ footer div div {
         width: 70%;
     }
    
+    footer {
+        color: #edf2f7;
+        width: 100%;
+        background-color: #4a5568;
+        position: fixed;
+        bottom: 0;
     
+    }
+
+    footer div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 90%;
+        font-size: small;
+    }
 }
 
 @media screen and ( min-width: 600px){
@@ -304,6 +319,14 @@ footer div div {
         width: 40%;
     }
 
+    footer {
+        color: #edf2f7;
+        width: 100%;
+        background-color: #4a5568;
+        position: fixed;
+        bottom: 0;
+    
+    }
     
 }
 
@@ -311,6 +334,15 @@ footer div div {
     
     .login-ui {
         width: 40%;
+    }
+
+    footer {
+        color: #edf2f7;
+        width: 100%;
+        background-color: #4a5568;
+        position: fixed;
+        bottom: 0;
+    
     }
     
 }
