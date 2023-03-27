@@ -19,60 +19,62 @@
     <div class="filter-container-mobile">
         <div class="filter-container-mobile-form">
             <form action="{{route("browse_products")}}" method="get">
-                <div>
+                <div class="filter-container-mobile-form-groups">
                     <div>
-                        <label>Select by Car Brand:</label>
-                    </div>
-                    <div>
-                        <select name="cars">
-                            <option>All Cars</option>
-                            <?php
-                                use \App\Http\Controllers\ProductFilterController;
-                                $productFilterMob = new ProductFilterController();
-                            ?>
-                            @foreach($productFilterMob->getCarBrand() as $item)
-                                <option>{{$item}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                </div>
-                <div class="price-range">
-                    <div class="price-range-title">
-                        <label>Price Range</label>
-                    </div>
-                    <div class="price-range-from-to">
                         <div>
-                            <label>From</label>
-                            <br/>
-                            <input min="0" value="0" type="number" name="fromNum"/>
+                            <label>Select by Car Brand:</label>
                         </div>
                         <div>
-                            <label>To</label>
-                            <br/>
-                            <input min="0"  value="0" type="number" name="toNum">
+                            <select name="cars">
+                                <option>All Cars</option>
+                                <?php
+                                    use \App\Http\Controllers\ProductFilterController;
+                                    $productFilterMob = new ProductFilterController();
+                                ?>
+                                @foreach($productFilterMob->getCarBrand() as $item)
+                                    <option>{{$item}}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <div>
-                        <label>Select a car transmission:</label>
+                    <div class="price-range">
+                        <div class="price-range-title">
+                            <label>Price Range</label>
+                        </div>
+                        <div class="price-range-from-to">
+                            <div>
+                                <label>From</label>
+                                <br/>
+                                <input min="0" value="0" type="number" name="fromNum"/>
+                            </div>
+                            <div>
+                                <label>To</label>
+                                <br/>
+                                <input min="0"  value="0" type="number" name="toNum">
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <label>Manual</label>
-                        <input type="radio" value="Manual" name="filter_transmission">
-                    </div>
+                        <div>
+                            <label>Select a car transmission:</label>
+                        </div>
+                        <div>
+                            <label>Manual</label>
+                            <input type="radio" value="Manual" name="filter_transmission">
+                        </div>
 
-                    <div>
-                        <label>Automatic</label>
-                        <input type="radio" value="Automatic" name="filter_transmission">
+                        <div>
+                            <label>Automatic</label>
+                            <input type="radio" value="Automatic" name="filter_transmission">
+                        </div>
+                        <div>
+                            <label>Both</label>
+                            <input checked type="radio" value="Both" name="filter_transmission">
+                        </div>
                     </div>
                     <div>
-                        <label>Both</label>
-                        <input checked type="radio" value="Both" name="filter_transmission">
+                        <button type="submit">Confirm</button>
                     </div>
-                </div>
-                <div>
-                    <button type="submit">Confirm</button>
                 </div>
             </form>
         </div>

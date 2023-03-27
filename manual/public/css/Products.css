@@ -175,12 +175,20 @@ button1:hover {
     .filter-container-mobile {
         display: flex;
         justify-content: center;
+        align-items: center;
         color: black;
     }
 
     .filter-container-mobile .filter-container-mobile-form {
         background-color: rgb(219, 219, 219);
-        width: max-content;
+        width: 80%;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .filter-container-mobile .filter-container-mobile-form .filter-container-mobile-form-groups {
+        display: flex;
+        justify-content: center;
     }
 
     input{
