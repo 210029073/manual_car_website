@@ -81,6 +81,7 @@ h1{
 .products-ui-wrapper {
     display: flex;
     flex-direction: row;
+    padding: 1.5rem;
 }
 
 .review-rating {
@@ -146,18 +147,30 @@ button1:hover {
 
 @media (max-width: 768px) {
     .product-container {
-        flex-direction: row;
-        
+        flex-direction: column;
+
     }
     .product-card {
         flex-direction: column;
     }
-    .filter-container{
-        font-size:medium;
-        min-width:55%;  
+    .filter-container {
+        display: flex;
         flex-direction: column;
-        width: 100%;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+        background-color: rgb(219, 219, 219);
+        border-radius: 1rem;
+        color: black;
     }
+    /*.filter-container{*/
+    /*    font-size:medium;*/
+    /*    !*min-width:55%;*!*/
+    /*    width: auto;*/
+    /*    flex-direction: column;*/
+    /*    !*width: 100%;*!*/
+    /*}*/
 
     input{
             width:50%;
@@ -174,7 +187,7 @@ button1:hover {
     /* gap: 10px; */
     /* grid: auto / auto auto auto; */
     text-align: center;
-    
+
 }
 
 .product-card {
@@ -213,14 +226,14 @@ p.first{
     justify-content: start;
     padding: 2.5rem;
     align-items: center;
-} 
+}
 
 .filter-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: fit-content;
     height: fit-content;
     background-color: rgb(219, 219, 219);
     border-radius: 1rem;
