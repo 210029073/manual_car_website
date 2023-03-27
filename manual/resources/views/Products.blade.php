@@ -15,7 +15,9 @@
             <h4>{{session()->get('successAddProduct')}}</h4>
         </div>
     @endif
-    <h1>Cars for sale</h1>
+    <div style="display: flex; justify-content: space-around; padding: 1rem">
+        <h1>Cars for sale</h1>
+    </div>
     <div class="filter-container-mobile">
         <div class="filter-container-mobile-form">
             <form action="{{route("browse_products")}}" method="get">
