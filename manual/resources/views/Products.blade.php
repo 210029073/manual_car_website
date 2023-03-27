@@ -16,6 +16,9 @@
         </div>
     @endif
     <h1>Cars for sale</h1>
+    <div class="filter-container-mobile">
+            <h1>This is mobile version</h1>
+    </div>
     <div class="products-ui-wrapper">
         <div class="filter-container">
             <form action="{{route("browse_products")}}" method="get">

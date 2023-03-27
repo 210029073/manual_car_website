@@ -144,7 +144,9 @@ button1{
 button1:hover {
     background-color: #010320;
 }
-
+.filter-container-mobile {
+    display: none;
+}
 @media (max-width: 768px) {
     .product-container {
         flex-direction: column;
@@ -153,24 +155,26 @@ button1:hover {
     .product-card {
         flex-direction: column;
     }
-    .filter-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-        height: fit-content;
-        background-color: rgb(219, 219, 219);
-        border-radius: 1rem;
-        color: black;
+
+    .filter-container{
+        display: none;
     }
-    /*.filter-container{*/
-    /*    font-size:medium;*/
-    /*    !*min-width:55%;*!*/
-    /*    width: auto;*/
-    /*    flex-direction: column;*/
-    /*    !*width: 100%;*!*/
-    /*}*/
+
+    .filter-container form .product-filter-form-wrapper {
+        display: none;
+    }
+
+    .filter-container form .product-filter-form-wrapper div {
+        display: none;
+    }
+
+    .filter-container form .product-filter-form-wrapper div div select {
+        display: none;
+    }
+
+    .filter-container-mobile {
+        display: block;
+    }
 
     input{
             width:50%;
