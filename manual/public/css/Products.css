@@ -173,7 +173,14 @@ button1:hover {
     }
 
     .filter-container-mobile {
-        display: block;
+        display: flex;
+        justify-content: center;
+        color: black;
+    }
+
+    .filter-container-mobile .filter-container-mobile-form {
+        background-color: rgb(219, 219, 219);
+        width: max-content;
     }
 
     input{
