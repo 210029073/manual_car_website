@@ -192,11 +192,21 @@
                                @else
                                    <p>Out of stock!</p>
                                @endif
-                               <a>
-                                   <button>Add review</button>
-                               </a>
                            </div>
                        </form>
+                       <form action="/products/rating" method="post">
+                            @csrf
+                            <div class="rate">
+                                <button name="dislike" value="-1">
+                                    <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                                </button>
+                                <button name="like" value="1">
+                                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                </button>
+                                <input hidden value="{{$product->productsId}}" name="prdId"/>
+                                <input hidden value="{{$product->likes}}" name="currentLike"/>
+                            </div>
+                        </form>
                    </div>
                </div>
             @endforeach
