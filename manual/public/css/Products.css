@@ -147,7 +147,7 @@ button1:hover {
 .filter-container-mobile {
     display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .product-container {
         flex-direction: column;
 
