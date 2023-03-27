@@ -24,6 +24,24 @@ class ProductsController extends Controller
     public function products(){
         return view('Products', ['products'=>Products::all()]);
     }
+/**
+ * This is the method which contolls the like and dislike button
+ * @author Victory Mpokosa <200174572@aston.ac.uk>
+ * @since 27/03/2023
+ * @version 1.0
+ */
+    public function rating(Request $rq){
+        $rating = $rq->input('like');
+        if ($rating == null){
+            $rating = $rq->input('dislike');;
+        }
+        $likes = $rq->input('currentLike');
+        $updateLike = $likes + $rating;
+        Products::where('productsId',$rq->input("prdId"))
+            ->update(['likes'=>$updateLike]);
+        
+        return redirect()->intended('/products')->with('successAddProduct', "Successfully rated product!");
+    }
 
     public function filterProduct() {
         return "test";

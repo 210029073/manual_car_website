@@ -26,9 +26,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //Route::get('/', [PageController::class, 'Home'])->name('home');
 
-Route::get('/home', function () {
-    return view('Home');
-});
+/** 
+*Route::get('/review/{id}', function () {
+*    return view('Home');});
+    */
 
 Route::get('/layouts', [PageController::class, 'Layouts']);
 
@@ -65,6 +66,7 @@ Route::get("/basket", [BasketController::class, 'viewBasket'])->name("basket");
 Route::get("/basket/delete", [BasketController::class, 'deleteItemFromBasket']);
 
 Route::post("/products/add", [BasketController::class, 'addProductsToBasket']);
+Route::post("/products/rating", [ProductsController::class, 'rating']);
 Route::get('/register', [RegisterController::class, 'signupPage'])->name('signup');
 Route::post('/register/user', [RegisterController::class, 'register'])->name("register");
 
