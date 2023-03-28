@@ -234,18 +234,34 @@ footer {
     margin-left: auto;
     font-size: 16px;
     overflow-x: hidden;
+    overflow-y: hidden;
     vertical-align: baseline;
-}
 
-footer div {
-    display: inline-block;
 }
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
 
-footer div div {
-    padding-top: 1%;
-    padding-right: 10%;
-    padding-left: 10%;
-}
+  .footer-box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-boxer {
+    flex: 0 1 25%;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+
+    .footer-boxer {
+      width: 350px;
+    }
+  } 
 
 .success-popup {
     color: green;
@@ -306,19 +322,6 @@ footer div div {
         width: 70%;
     }
    
-    footer {
-        color: #edf2f7;
-        width: 100%;
-        background-color: #4a5568;
-    }
-
-    footer div {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 90%;
-        font-size: small;
-    }
 }
 
 @media screen and ( min-width: 600px){
@@ -341,10 +344,5 @@ footer div div {
         width: 40%;
     }
 
-    footer {
-        color: #edf2f7;
-        width: 100%;
-        background-color: #4a5568;
-    }
     
 }

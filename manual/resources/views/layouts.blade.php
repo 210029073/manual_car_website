@@ -16,7 +16,7 @@
   <header>
         <nav class="NavigationBar">
             <li class="marginSpacing">
-
+                
 
                 <div class="CS">
                     <a href="/homepage" class="navigationLinks"><img  class="nav" src="/images/ManualNav.png"  ></a></div>
@@ -49,10 +49,10 @@
             <li class="marginSpacing">
                     <a href="{{route('loginPage')}}" class="navigationLinks">Login</a>
 </li>
-
+                
             @endif
         </a>
-
+                
 
             </ul>
             <div class="responsiveNav">
@@ -70,6 +70,29 @@
     <footer>
         <div>
             <p>Created by Team 21. All Rights Reserved.</p>
+            <div class="footer-box-container">
+                <div class="footer-boxer" >
+                    <h2>Reach out to us:</h2>
+                    <h3>E-Mail: 200070104@aston.ac.uk</h3>
+                    <h3></h3>
+                    <h3>GitHub Repository: <a href="https://github.com/210029073/manual_car_website/"> Click Here!</a></h3>
+                </div>
+                <div class="footer-boxer" >
+                    <h2>Come And Visit Us:</h2>
+                    <h3>Aston St, Birmingham B4 7ET</h3>
+                </div>
+                <div class="footer-boxer">
+                    <h2>Contributors</h2>
+                    <h3>Ibrahim Ahmad (210029073)</h3>
+                    <h3>Ahsaan Kumar (200070104)</h3>
+                    <h3>Sydul Bari (210180190)</h3>
+                    <h3>Amir Khan (210056172)</h3>
+                    <h3>Jacques Winmill (210063170)</h3>
+                    <h3>Victory Mpokosa (200174572)</h3>
+                    <h3>Sachin Kumar (220253114)</h3>
+                    <h3>Mohammed Ali (210132948)</h3>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
