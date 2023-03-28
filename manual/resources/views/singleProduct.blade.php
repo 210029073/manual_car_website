@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layouts.main')
 <head>
     <link rel="stylesheet" type="text/css" href="/css/Products.css">
     <script src="{{asset('/js/')}}/imageSlideShow.js" async></script>

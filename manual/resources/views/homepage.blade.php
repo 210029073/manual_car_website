@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layouts.second')
 @section('content')
 
 <html lang="en">

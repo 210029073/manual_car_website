@@ -73,24 +73,24 @@
             <div class="footer-box-container">
                 <div class="footer-boxer" >
                     <h2>Reach out to us:</h2>
-                    <h3>E-Mail: 200070104@aston.ac.uk</h3>
+                    <p>E-Mail: 200070104@aston.ac.uk</p>
                     <h3></h3>
-                    <h3>GitHub Repository: <a href="https://github.com/210029073/manual_car_website/"> Click Here!</a></h3>
+                    <p>GitHub Repository: <a href="https://github.com/210029073/manual_car_website/"> Click Here!</a></p>
                 </div>
                 <div class="footer-boxer" >
                     <h2>Come And Visit Us:</h2>
-                    <h3>Aston St, Birmingham B4 7ET</h3>
+                    <p>Aston St, Birmingham B4 7ET</p>
                 </div>
                 <div class="footer-boxer">
                     <h2>Contributors</h2>
-                    <h3>Ibrahim Ahmad (210029073)</h3>
-                    <h3>Ahsaan Kumar (200070104)</h3>
-                    <h3>Sydul Bari (210180190)</h3>
-                    <h3>Amir Khan (210056172)</h3>
-                    <h3>Jacques Winmill (210063170)</h3>
-                    <h3>Victory Mpokosa (200174572)</h3>
-                    <h3>Sachin Kumar (220253114)</h3>
-                    <h3>Mohammed Ali (210132948)</h3>
+                    <p>Ibrahim Ahmad (210029073)</p>
+                    <p>Ahsaan Kumar (200070104)</p>
+                    <p>Sydul Bari (210180190)</p>
+                    <p>Amir Khan (210056172)</p>
+                    <p>Jacques Winmill (210063170)</p>
+                    <p>Victory Mpokosa (200174572)</p>
+                    <p>Sachin Kumar (220253114)</p>
+                    <p>Mohammed Ali (210132948)</p>
                 </div>
             </div>
         </div>

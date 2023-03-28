@@ -221,6 +221,22 @@ img.nav{
     font-weight: bold;
 }
 
+.second-footer {
+    position: relative;
+    color: #edf2f7;
+    width: 100%;
+    background-color: #4a5568;
+    bottom: 0;
+    padding: 1.25%;
+    height: 2rem;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 12px;
+    vertical-align: baseline;
+    padding-bottom: 5px;
+}
+
 footer {
     position: relative;
     color: #edf2f7;
@@ -228,11 +244,11 @@ footer {
     background-color: #4a5568;
     bottom: 0;
     padding: 1.25%;
-    height: 21rem;
+    height: 15rem;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    font-size: 16px;
+    font-size: 12px;
     overflow-x: hidden;
     overflow-y: hidden;
     vertical-align: baseline;
