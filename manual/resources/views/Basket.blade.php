@@ -16,7 +16,7 @@
                 <h4>{{session()->get('deleteItemFromBasket')}}</h4>
             </div>
         @endif
-        <h1> Basket </h1>
+        <h1 class="centering"> Basket </h1>
         <?php
         use App\Http\Controllers\BasketController;
         $controller = new BasketController();
@@ -26,7 +26,7 @@
         @if($basket->count() == 0)
             <p>No items to show.</p>
         @else
-        <h2>Item summary</h2>
+        <h2 class="centering">Item summary</h2>
         <section class="basket">
             <div class="basket-details">
                 @foreach($basket as $item)
