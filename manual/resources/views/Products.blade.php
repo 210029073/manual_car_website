@@ -196,7 +196,7 @@
                        </form>
                        <form action="/products/rating" method="post">
                             @csrf
-                            <div class="rate">
+                            <div class="product-btn">
                                 <button name="dislike" value="-1">
                                     <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
                                 </button>

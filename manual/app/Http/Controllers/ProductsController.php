@@ -8,6 +8,7 @@ use App\Models\Products;
 /**
  * ProductsController is responsible for enumerating the products within the products page.
  *
+ * @author @Victorymp <200174572@aston.ac.uk>
  * @author Ibrahim Ahmad
  * @since 05-03-2021
  * @version 3.0
@@ -43,10 +44,6 @@ class ProductsController extends Controller
         return redirect()->intended('/products')->with('successAddProduct', "Successfully rated product!");
     }
 
-    public function filterProduct() {
-        return "test";
-    }
-
     /**
      * This is responsible for viewing a single product according to the id.
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
@@ -66,7 +63,7 @@ class ProductsController extends Controller
      * This will be set as deprecated, and will be removed in a future release.
      *
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
-     * @author Victory Mpokposa
+     * @author Victory Mpokposa <200174572@aston.ac.uk>
      * @version 1.0
     */
     public function store(Request $request){
