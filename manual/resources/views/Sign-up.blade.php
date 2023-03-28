@@ -71,7 +71,7 @@
                                 <br/>
                             </div>
                             <div>
-                                <input type="submit" name="btnSubmit" value="Register">
+                                <input class="Button"type="submit" name="btnSubmit" value="Register">
                             </div>
                         </div>
                     </form>

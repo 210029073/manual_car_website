@@ -17,6 +17,47 @@ body {
 }
 
 
+.Button {
+    transition: all 1s;
+    width: fit-content;
+    border-width: 0.25rem;
+    border-radius: 15px;
+    background-color: white;
+    color:black;
+    text-decoration:solid;
+    width:100px;    
+    font-size: 1rem;
+}
+
+.Button div {
+    padding: 1rem 1rem 1rem;
+}
+
+.Button div a {
+    transition: all 0.05s;
+    border-radius: 3rem;
+    width: max-content;
+    padding: inherit;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+}
+
+.Button:hover {
+    transition: all 0.5s;
+    background-color: black;
+    color: white;
+    text-decoration: white;
+}
+
+.Button div a:hover {
+    transition: all 0.25s;
+    color: black;
+    text-decoration: none;
+}
+
+
 .Sign-up .Title{
     font-size: 30px;
     /*font-weight: 600px;*/
@@ -66,6 +107,8 @@ body {
 .textpadding23{
     padding-left: 10%;
 }
+
+
 
 
 .errors {
