@@ -1,6 +1,5 @@
 body{
   margin:0;
-  margin:0;
   background-image: url(/images/contactusBig.png);
   background-size:cover;
   background-repeat:no-repeat;
@@ -21,8 +20,8 @@ a{
   /* border-radius:15px; */
   background-color: #202020;
   padding: 50px;
-  border: 15px solid #202020;
-  /* border: 15px solid rgb(200,200,200); */
+  border: 20px solid #202020;
+
   color: rgb(220,220,220);
 }
 

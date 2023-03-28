@@ -1,6 +1,7 @@
 body{
   background-image: url('/images/WPGif1.gif');
   margin:0;
+  padding:0;
   background-size: cover;
   background-position:center;
   background-repeat: no-repeat;

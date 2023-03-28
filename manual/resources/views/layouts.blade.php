@@ -16,7 +16,11 @@
   <header>
         <nav class="NavigationBar">
             <li class="marginSpacing">
-                <a href="/homepage" class="navigationLinks">Home</a></div>
+                
+
+                <div class="CS">
+                    <a href="/homepage" class="navigationLinks"><img  class="nav" src="/images/ManualNav.png"  ></a></div>
+                </div>
             </li>
             <ul class="Navigations">
             <li class="marginSpacing">
