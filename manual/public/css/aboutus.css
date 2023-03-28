@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin:0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     color: white;
@@ -18,12 +18,25 @@ a{
     text-decoration: none;
 }
 
+@media (min-width: 605px) and (max-width: 850px){
+    p{
+        font-size:13px;
+    }
+}
+
+
 
 
 .sectionone {
     display: flex;
     justify-content: center;
     margin-top: 2%;
+    margin-bottom: 8%;
+}
+.sectionthree {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
     margin-bottom: 8%;
 }
 
@@ -62,11 +75,16 @@ img {
     
 }
 
+
+
 .im1 {
     padding-bottom:10%;
     /* padding-left: 10%; */
     text-align: center;
 }
+
+
+
 
 @media only screen and (min-width: 1280px) {
     .undersectionone {
@@ -81,6 +99,7 @@ img {
         margin-bottom: 4%;
     }
 }
+
 
 @media only screen and (max-width: 642px) {
     .sectionone {
