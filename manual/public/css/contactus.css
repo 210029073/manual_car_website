@@ -23,7 +23,7 @@ a{
   padding: 50px;
   border: 15px solid #202020;
   /* border: 15px solid rgb(200,200,200); */
-  color: rgb(150,150,150);
+  color: rgb(220,220,220);
 }
 
 .box-container{
@@ -82,7 +82,7 @@ a{
         background-color: #202020;
         padding: 50px;
         /* border: 15px solid rgb(200,200,200); */
-        color: rgb(150,150,150);
+        color: rgb(220,220,220); 
       }
     }
 
@@ -108,7 +108,7 @@ a{
         background-color: #202020;
         padding: 50px;
         /* border: 15px solid rgb(200,200,200); */
-        color: rgb(150,150,150);
+        color: rgb(220,220,220);
       }
     }
 
