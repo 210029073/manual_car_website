@@ -65,8 +65,17 @@
     </div>
     <footer>
         <div>
-            <div>
-                <p>Created by Team 21. All Rights Reserved.</p>
+            <p>Created by Team 21. All Rights Reserved.</p>
+            <div class="footer-box-container">
+                <div class="footer-boxer" >
+                    <h2>Reach out to us:</h2>
+                    <h3>E-Mail: 200070104@aston.ac.uk</h3>
+                    <h3>GitHub Repository: <a href="https://github.com/210029073/manual_car_website/"> Click Here!</a></h3>
+                </div>
+                <div class="footer-boxer" >
+                    <h2>Come And Visit Us:</h2>
+                    <h3>Aston St, Birmingham B4 7ET</h3>
+                </div>
             </div>
         </div>
     </footer>

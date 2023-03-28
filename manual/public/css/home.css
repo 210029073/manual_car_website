@@ -221,14 +221,17 @@ footer {
     background-color: #4a5568;
     bottom: 0;
     padding: 1.25%;
-    height: 2.5rem;
+    height: 21rem;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+    overflow-x: hidden;
+    vertical-align: baseline;
 }
 
 footer div {
-    justify-content: center;
-    flex-direction: column;
-    width: 90%;
-    font-size: small;
+    display: inline-block;
 }
 
 footer div div {
