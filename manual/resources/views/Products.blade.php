@@ -15,6 +15,11 @@
             <h4>{{session()->get('successAddProduct')}}</h4>
         </div>
     @endif
+    @if(session()->has('successCheckout'))
+        <div class="success-popup">
+            <h4>{{session()->get('successCheckout')}}</h4>
+        </div>
+    @endif
     <div style="display: flex; justify-content: space-around; padding: 1rem">
         <h1>Cars for sale</h1>
     </div>

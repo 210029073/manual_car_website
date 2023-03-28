@@ -40,7 +40,7 @@ class OrderController extends Controller
             $cart = new BasketController();
             $cart->emptyBasket();
 
-            return redirect()->intended("homepage")->with('successCheckout', "Successfully processed item in checkout");
+            return redirect()->intended("products")->with('successCheckout', "Successfully processed item in checkout");
         }
         return redirect()->to('login');
     }
