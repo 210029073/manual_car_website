@@ -9,6 +9,14 @@ body{
     scroll-behavior: smooth;
 }
 
+.CS{
+    width:10%;
+    margin-left: 500%;
+     /* height:10px; */
+     /* max-width:0%; */
+}
+
+
 .header{
     background-image: url('/images/WPGif2.gif');
     background-size:cover;

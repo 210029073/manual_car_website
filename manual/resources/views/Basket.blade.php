@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layouts.main')
 @section('content')
 
     <html>
@@ -16,7 +16,7 @@
                 <h4>{{session()->get('deleteItemFromBasket')}}</h4>
             </div>
         @endif
-        <h1> Basket </h1>
+        <h1 class="centering"> Basket </h1>
         <?php
         use App\Http\Controllers\BasketController;
         $controller = new BasketController();
@@ -26,7 +26,7 @@
         @if($basket->count() == 0)
             <p>No items to show.</p>
         @else
-        <h2>Item summary</h2>
+        <h2 class="centering">Item summary</h2>
         <section class="basket">
             <div class="basket-details">
                 @foreach($basket as $item)
@@ -60,7 +60,7 @@
                                         <p>Transmission Type: {{$item->getTransmission()}}</p>
                                         <p>Stock remaining: {{$item->getQuantity()}}</p>
                                         <?php $total += $item->getPrice() ?>
-                                        <button type="submit">Remove</button>
+                                        <button type="submit" class="submitCSS">Remove</button>
                                     </div>
                                 </div>
                             </div>
@@ -70,16 +70,15 @@
                 @endforeach
             </div>
             <div class="basket-total">
-                @if(\Illuminate\Support\Facades\Auth::check())
-                    <div class="wrapper">
-                        <div class="amount">
-                            <p>Total: £{{number_format($total, 2)}}</p>
-                            <form action="/basket/checkout" method="get">
-                                <button type="submit">Checkout</button>
-                            </form>
-                        </div>
+                <div class="wrapper">
+                    <div class="amount">
+                        <p class="ts">Total:</p>
+                        <p class="tsp">£{{number_format($total, 2)}}</p>
+                        <form action="/basket/checkout" method="get">
+                            <button type="submit" class="submitCSS">Checkout</button>
+                        </form>
                     </div>
-                @endif
+                </div>
             </div>
         </section>
         @endif

@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layouts.main')
 @section('content')
     <head>
         <link rel="stylesheet" type="text/css" href="/css/pastorders.css"/>

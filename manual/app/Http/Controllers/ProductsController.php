@@ -8,6 +8,7 @@ use App\Models\Products;
 /**
  * ProductsController is responsible for enumerating the products within the products page.
  *
+ * @author @Victorymp <200174572@aston.ac.uk>
  * @author Ibrahim Ahmad
  * @since 05-03-2021
  * @version 3.0
@@ -24,9 +25,23 @@ class ProductsController extends Controller
     public function products(){
         return view('Products', ['products'=>Products::all()]);
     }
-
-    public function filterProduct() {
-        return "test";
+/**
+ * This is the method which contolls the like and dislike button
+ * @author Victory Mpokosa <200174572@aston.ac.uk>
+ * @since 27/03/2023
+ * @version 1.0
+ */
+    public function rating(Request $rq){
+        $rating = $rq->input('like');
+        if ($rating == null){
+            $rating = $rq->input('dislike');;
+        }
+        $likes = $rq->input('currentLike');
+        $updateLike = $likes + $rating;
+        Products::where('productsId',$rq->input("prdId"))
+            ->update(['likes'=>$updateLike]);
+        
+        return redirect()->intended('/products')->with('successAddProduct', "Successfully rated product!");
     }
 
     /**
@@ -48,7 +63,7 @@ class ProductsController extends Controller
      * This will be set as deprecated, and will be removed in a future release.
      *
      * @author Ibrahim Ahmad <210029073@aston.ac.uk>
-     * @author Victory Mpokposa
+     * @author Victory Mpokposa <200174572@aston.ac.uk>
      * @version 1.0
     */
     public function store(Request $request){

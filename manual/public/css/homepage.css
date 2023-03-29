@@ -1,8 +1,11 @@
 body{
   background-image: url('/images/WPGif1.gif');
   margin:0;
+  padding:0;
   background-size: cover;
-  overflow:hidden;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
     font-family: "Gill Sans Extrabold", sans-serif;
 }
 
@@ -10,18 +13,25 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15%;
+    height:90%;
+    vertical-align: middle;
+    
+    max-width:100%;
+    max-height:100%;
+
 }
+
 
 .WelcomeandBrowse{
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content:center;
     flex-direction: column;
         text-align: center;
         color:white;
-        /*-ms-transform: translate(-50%, -50%);*/
-        /*transform: translate(-50%, -50%);*/
+        height:100%;
+
         }
 
 .WelcomeandBrowse h1 {
@@ -29,90 +39,8 @@ body{
     font-weight: bolder;
 }
 
-/*.Navigation {*/
-/*  */
-/*  font-family: "Goudy Bookletter 1911", sans-serif;*/
-/*  font-weight:500;*/
-/*  margin:-50px;*/
-/*  border:50px solid rgb(0, 0, 0);*/
-/*}*/
-
-.Navigation {
-    font-family: "Goudy Bookletter 1911", sans-serif;
-    font-weight:500;
-    /*margin:-50px;*/
-    /*border:50px solid rgb(0, 0, 0);*/
-    display: flex;
-    flex-direction: row;
-    background: black;
-}
-
-.Navigation .Navigation-left {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 25%;
-}
-
-.Navigation .Navigation-center {
-    padding-left: 15%;
-    padding-right: 15%;
-    width: 50%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.Navigation .Navigation-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    width: 25%;
-
-}
-
-.Navigation a {
-    text-align: center;
-    color: white;
-    padding: 16px 30px;
-    border-radius: 5px;
-    float: left;
-    font-size: 20px;
-    text-decoration: none;
-  }
-
-  .Navigation a:hover {
-    /* background-color: #c7c7c7; */
-    color: rgb(169, 169, 169);
-    transition: all 2.5s;
-  }
 
 
-  /* .Navigation a.current {
-    background-color: #828282;
-    color: white;
-  } */
-
-
-  .navpadding{
-    /*position:relative;*/
-    /*left:30.9%;*/
-  }
-  .browseCars {
-    width: 165px;
-    transition: all 2.5s;
-    background-color: white;
-    color:black;
-    border:0;
-    border-radius: 50px;
-    top: 55%;
-    left: 46.6%;
-    position: absolute;
-    text-align: center;
-    cursor:pointer;
-    font-family:  "Gill Sans Extrabold", sans-serif ;
-  }
 
   .browseCars h3 a {
       text-decoration: none;
@@ -139,30 +67,8 @@ body{
     float:right;
   }
 
-/*footer {*/
-/*    !*position: fixed;*!*/
-/*    color: #edf2f7;*/
-/*    width: 100%;*/
-/*    background-color: #4a5568;*/
-/*    !*bottom: 0;*!*/
-/*    padding: 1.25%;*/
-/*}*/
-
-/*footer div {*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    flex-direction: column;*/
-/*    width: 90%;*/
-/*    font-size: small;*/
-/*}*/
-
-/*footer div div {*/
-/*    padding-top: 1%;*/
-/*    padding-right: 10%;*/
-/*    padding-left: 10%;*/
-/*}*/
-
 .browseCarsBtn {
+
     transition: all 1s;
     width: fit-content;
     border-radius: 3rem;

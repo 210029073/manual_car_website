@@ -1,8 +1,21 @@
+body{
+
+    background-image: url('/images/background.JPG');
+    background-size:cover;
+}
+
 .pastOrdersContainer {
     display: flex;
     flex-direction: column;
     width: 75%;
     background-color: white;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    margin-bottom: 8%;
 }
 
 .pastOrder {

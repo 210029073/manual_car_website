@@ -1,3 +1,5 @@
+@extends('layouts.main')
+@section('content')
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,50 +7,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/aboutus.css" type="text/css">
 </head>
+
 <body>
-<div class="Navigation">
-    <div class="Navigation Navigation-left">
-        <a class="current" href="/homepage">Home</a>
-    </div>
-    <div class="Navigation Navigation-center">
-        <div class="navpadding" ><a href="/products">Cars</a></div>
-        <div class="navpadding"><a href="/aboutus">About Us</a></div>
-        <div class="navpadding"> <a href="/contactus">Contact Us</a></div>
-        <div class="signup"><a href="{{route('basket')}}">Basket</a></div>
-    </div>
-    <div class="Navigation Navigation-right">
-        @if(\Illuminate\Support\Facades\Auth::check())
-            <div class="signup"><a href="{{route('pastOrder')}}">Past Order</a></div>
-            <div class="signup"><a href="{{route('logout')}}">Logout</a></div>
-        @else
-            <div class="signup"> <a href="{{route('signup')}}">Sign Up</a>
-                <a href="{{route('loginPage')}}">Login</a>
-            </div>
-        @endif
-    </div>
-</div>
 
-<div class="topbackimage">
-    <img src="/images/R.png" position="left:50px;">
-</div>
-<div class="AboutUsTEST">
-    <div class="boxer">
-        <div class="h4box"><h1>Introduction</h1>
-        <h3>Manual is a digital business which is built to help customers to be able to afford well functioning cars for
-            cheaper.</h3></div>
-        <div class="img-container">
-            <img src="/images/WPGif1.gif">
-</div>
-</div>
 
-<div class="AboutUs1">
-    <div class="boxer1">
-        <img src="/images/logos.png">
-        <div class="img-container">
-            <div class="h4box"><h1>Why Manual?</h1>
-            <h3>We source cars from all kinds of brands, on sale for cheaper than the market value! </h3></div></div>
-</div>
-</div>
+    <div class="sectionone">
+        <img src="R.png" alt="">
+    </div>
+    <div class="firstsection">
+        <div class="undersectionone">
+            <h2 class="center-text">Our History</h2>
+            <p class="center-text">Since 1991, Manual a car Trading has been strong with customer expectations in terms of selling quality cars that will not
+let you down in whatever journey that you commute.
+                </p>
+        </div>
+
+        <div class="image1"><img src="/images/contactusBig.png"  width="800px" alt=""></div>
+
+    </div>
+
+    <div class="secondsection">
+        <div class="image2"><img src="/images/WPGif1.gif" alt=""></div>
+        <div class="im1">
+            <h2 class="center-text">Introduction</h2>
+            <p class="center-text">Manual, sees used cars as potential, by giving life to used Automobiles
+that are a potential for any journey and then selling used automobiles that are safe
+to new customers whether they are new drivers or drivers who are enthusiast drivers that wish to buy a car of their dream. </p>
+        </div>
+
+
+    </div>
+
+    <div class="secondsectionX">
+        <div class="im1">
+            <h1 class="center-text">Our History</h1>
+            <p class="center-text">Manual, sees used cars as potential, by giving life to used Automobiles
+that are a potential for any journey and then selling used automobiles that are safe
+to new customers whether they are new drivers or drivers who are enthusiast drivers that wish to buy a car of their dream.</p>
+        </div>
+        <div class="image2"><img src="/images/WPGif1.gif" width="800px" alt=""></div>
+
+
+
+
+    </div>
+
+
+
+    <div class="sectionthree">
+        <img src="R.png" alt="">
+    </div>
+    <div class="firstsection">
+        <div class="undersectionone">
+            <h2 class="center-text">Our Values</h2>
+            <p class="center-text">Manual ensures that quality attributes such as Reliability, Safety, Performance to meet the needs of customers.</p>
+        </div>
+
+        <div class="image1" ><img src="/images/tess.png" width="800px" alt=""></div>
+
+    </div>
+
+    <div class="secondsection">
+        <div class="image2" ><img src="/images/logos.png"  alt=""></div>
+        <div class="im1">
+            <h2 class="center-text">Why Manual?</h2>
+            <p class="center-text">We source cars from all kinds of brands, on sale for cheaper than the market value! </p>
+        </div>
+
+
+    </div>
+
+    <div class="secondsectionX">
+        <div class="im1">
+            <h2 class="center-text">Why Manual?</h2>
+            <p class="center-text">We source cars from all kinds of brands, on sale for cheaper than the market value! </p>
+        </div>
+        <div class="image2"><img  src="/images/logos.png" alt=""></div>
+
+
+    </div>
 </body>
-</html>
 
+</html>
+@endsection

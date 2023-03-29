@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layouts.main')
 @section('content')
     <html>
     <head>
@@ -12,8 +12,8 @@
     <div class="Sign-up">
         @if($errors->any())
             <div class="errors">
-                <h2>Could not register</h2>
-                <p>One or two fields have not been filled correctly.
+                <h2 class="centred">Could not register</h2>
+                <p class="textpadding23">One or two fields have not been filled correctly.
                 Please amend the following:</p>
                 <ul>
                     @foreach ($errors->all() as $error)
@@ -28,7 +28,11 @@
                     <form method="post" action="{{route("register")}}">
                         @csrf
                         <div class="signupForm">
-                            <div class="Title">Sign-up</div>
+                            <div class="Title">
+                                <span>
+                                    <h1>Sign-up</h1>
+                                </span>
+                            </div>
                             <div>
                                 <label>First name</label>
                                 <br/>
@@ -71,7 +75,7 @@
                                 <br/>
                             </div>
                             <div>
-                                <input type="submit" name="btnSubmit" value="Register">
+                                <input class="Button"type="submit" name="btnSubmit" value="Register">
                             </div>
                         </div>
                     </form>

@@ -1,4 +1,4 @@
-@extends('layouts')
+@extends('layouts.main')
 @section('title','Login')
 @section('content')
     <head>
@@ -9,8 +9,8 @@
     <div class="login-ui">
         @if($errors->any())
             <div class="errors">
-                <h2>Could not register</h2>
-                <p>One or two fields have not been filled correctly.
+            <h2 class="centred">Could not register</h2>
+            <p class="textpadding23">One or two fields have not been filled correctly.
                     Please amend the following:</p>
                 <ul>
                     @foreach ($errors->all() as $error)
@@ -27,7 +27,7 @@
                             @csrf
                             <div class="signupForm">
                                 <div>
-                                    <i class="fa-regular fa-user" style="font-size:50px;margin-bottom:25px;"></i>
+                                    <h1>Sign In</h1>
                                 </div>
                                 <div>
                                     <p>Username: </p>
@@ -39,10 +39,10 @@
                                 </div>
                                 <br/>
                                 <div>
-                                    <input type="submit" name="btnSubmit" value="Login">
+                                    <input type="submit" class="Button" width="500px" name="btnSubmit" value="Login">
                                 </div>
                                 <div>
-                                    <p>Dont have an account ? <a href='/register'>CLICK HERE! </a></p>
+                                    <p>Dont have an account ? <a href='/register'>CLICK HERE!</a></p>
                                 </div>
                             </div>
                         </form>
