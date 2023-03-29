@@ -1,7 +1,7 @@
 @extends('layouts.main')
 <head>
     <link rel="stylesheet" type="text/css" href="/css/Products.css">
-    <script src="{{asset('/js/')}}/imageSlideShow.js" async></script>
+    <script src="{{asset('/js/')}}/imageSlideShow.js"></script>
 </head>
 @section('content')
 <div class="single-product-wrapper">
@@ -47,7 +47,7 @@
                         <p>Out of stock!</p>
                     @endif
                 </div>
-            </form>  
+            </form>
             <form action="/products/rating" method="post">
                 @csrf
                 <div class="rate">
