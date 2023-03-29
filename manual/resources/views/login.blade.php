@@ -27,7 +27,7 @@
                             @csrf
                             <div class="signupForm">
                                 <div>
-                                    <i class="fa-regular fa-user" style="font-size:50px;margin-bottom:25px;"></i>
+                                    <h1>Sign In</h1>
                                 </div>
                                 <div>
                                     <p>Username: </p>
@@ -42,7 +42,7 @@
                                     <input type="submit" class="Button" width="500px" name="btnSubmit" value="Login">
                                 </div>
                                 <div>
-                                    <p>Dont have an account ? <a href='/register'>CLICK HERE! </a></p>
+                                    <p>Dont have an account ? <a href='/register'>CLICK HERE!</a></p>
                                 </div>
                             </div>
                         </form>

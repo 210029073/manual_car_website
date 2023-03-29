@@ -28,7 +28,11 @@
                     <form method="post" action="{{route("register")}}">
                         @csrf
                         <div class="signupForm">
-                            <div class="Title">Sign-up</div>
+                            <div class="Title">
+                                <span>
+                                    <h1>Sign-up</h1>
+                                </span>
+                            </div>
                             <div>
                                 <label>First name</label>
                                 <br/>
