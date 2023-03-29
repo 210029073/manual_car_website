@@ -16,8 +16,8 @@
     </div>
     <div class="firstsection">
         <div class="undersectionone">
-            <h2 class="center-text">Introduction</h2>
-            <p class="center-text">Since 1991, Manual a car Trading has been strong with customer expectations in terms of selling quality cars that will not 
+            <h2 class="center-text">Our History</h2>
+            <p class="center-text">Since 1991, Manual a car Trading has been strong with customer expectations in terms of selling quality cars that will not
 let you down in whatever journey that you commute.
                 </p>
         </div>
@@ -29,9 +29,9 @@ let you down in whatever journey that you commute.
     <div class="secondsection">
         <div class="image2"><img src="/images/WPGif1.gif" alt=""></div>
         <div class="im1">
-            <h2 class="center-text">Our History</h2>
+            <h2 class="center-text">Introduction</h2>
             <p class="center-text">Manual, sees used cars as potential, by giving life to used Automobiles
-that are a potential for any journey and then selling used automobiles that are safe 
+that are a potential for any journey and then selling used automobiles that are safe
 to new customers whether they are new drivers or drivers who are enthusiast drivers that wish to buy a car of their dream. </p>
         </div>
 
@@ -42,14 +42,14 @@ to new customers whether they are new drivers or drivers who are enthusiast driv
         <div class="im1">
             <h1 class="center-text">Our History</h1>
             <p class="center-text">Manual, sees used cars as potential, by giving life to used Automobiles
-that are a potential for any journey and then selling used automobiles that are safe 
+that are a potential for any journey and then selling used automobiles that are safe
 to new customers whether they are new drivers or drivers who are enthusiast drivers that wish to buy a car of their dream.</p>
         </div>
         <div class="image2"><img src="/images/WPGif1.gif" width="800px" alt=""></div>
 
 
 
-        
+
     </div>
 
 
@@ -79,7 +79,7 @@ to new customers whether they are new drivers or drivers who are enthusiast driv
 
     <div class="secondsectionX">
         <div class="im1">
-            <h2 class="center-text">Why Manual?</h2>    
+            <h2 class="center-text">Why Manual?</h2>
             <p class="center-text">We source cars from all kinds of brands, on sale for cheaper than the market value! </p>
         </div>
         <div class="image2"><img  src="/images/logos.png" alt=""></div>
