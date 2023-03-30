@@ -271,9 +271,7 @@ button1:hover {
     text-decoration-line: none;
     color: black;
 }
-p.first{
-    padding-right:1022%;
-}
+
 .productDesc{
     /* width: min-content; */
     justify-content: start;
@@ -388,7 +386,7 @@ p.first{
         align-items: center;
     }
     .single-product-wrapper .single-product-image .slideNumber {
-        display:flex;   
+        display:flex;
         flex-direction:column;
         justify-content:center;
         align-items: center;
@@ -414,7 +412,7 @@ p.first{
         height:100%;
     }
     .single-product-wrapper .single-product-image .slideNumber {
-        display:flex;   
+        display:flex;
         flex-direction:column;
     }
 
