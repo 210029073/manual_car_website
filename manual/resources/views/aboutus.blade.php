@@ -40,16 +40,12 @@ to new customers whether they are new drivers or drivers who are enthusiast driv
 
     <div class="secondsectionX">
         <div class="im1">
-            <h1 class="center-text">Our History</h1>
+            <h1 class="center-text">Introduction</h1>
             <p class="center-text">Manual, sees used cars as potential, by giving life to used Automobiles
 that are a potential for any journey and then selling used automobiles that are safe
 to new customers whether they are new drivers or drivers who are enthusiast drivers that wish to buy a car of their dream.</p>
         </div>
         <div class="image2"><img src="/images/WPGif1.gif" width="800px" alt=""></div>
-
-
-
-
     </div>
 
 

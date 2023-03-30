@@ -2,7 +2,6 @@
 <html>
 <!-- The dependencies for the website -->
 <head>
-    <script defer src='/js/app.js'></script>
     <link rel="stylesheet" type="text/css" href="/css/home.css">
 {{--    <script src="https://kit.fontawesome.com/de8d7543d7.js" crossorigin="anonymous"></script>--}}
     <link rel="icon" type="image/x-icon" href="/images/Logo.ico">
@@ -16,7 +15,7 @@
   <header>
         <nav class="NavigationBar">
             <li class="marginSpacing">
-                
+
 
                 <div class="CS">
                     <a href="/homepage" class="navigationLinks"><img  class="nav" src="/images/ManualNav.png"  ></a></div>
@@ -49,10 +48,10 @@
             <li class="marginSpacing">
                     <a href="{{route('loginPage')}}" class="navigationLinks">Login</a>
 </li>
-                
+
             @endif
         </a>
-                
+
 
             </ul>
             <div class="responsiveNav">
@@ -63,7 +62,6 @@
             </div>
         </nav>
     </header>
-    <script src="/js/nav.js"></script>
     <div class='content-container'>
       @yield('content')
     </div>
@@ -95,5 +93,7 @@
             </div>
         </div>
     </footer>
-</body>
+  <script src="/js/nav.js"></script>
+  <script defer src='/js/app.js'></script>
+  </body>
 </html>
