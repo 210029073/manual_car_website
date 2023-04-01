@@ -207,12 +207,19 @@ img.nav{
     flex-direction: column;
     justify-content: center;
     padding: 2.5rem;
+    color: black;
 }
 
 .unauthorised-error-container {
     color: black;
     background-color: white;
     border-radius: 1.2px;
+}
+
+.page-errors .unauthorised-error-content ul li a {
+    font-weight: bold;
+    font-size: small;
+    color: black;
 }
 
 .singleProductBack {
