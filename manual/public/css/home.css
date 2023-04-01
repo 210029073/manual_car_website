@@ -194,12 +194,16 @@ img.nav{
     justify-content: center;
 }
 
+.errors-container {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    flex-direction: row;
+    margin: 2.5% 5%;
+}
+
 .page-errors {
-    width: fit-content;
-    padding-top: .5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 2.0rem;
-    padding-right: 2.0rem;
+    width: 95%;
 }
 
 .page-errors .unauthorised-error-container {
@@ -212,7 +216,6 @@ img.nav{
 
 .unauthorised-error-container {
     color: black;
-    background-color: white;
     border-radius: 1.2px;
 }
 
@@ -234,7 +237,6 @@ img.nav{
     width: 100%;
     background-color: #4a5568;
     bottom: 0;
-    padding: 1.25%;
     height: 2rem;
     text-align: center;
     margin-right: auto;
@@ -248,10 +250,8 @@ footer {
     position: relative;
     color: #edf2f7;
     width: 100%;
-    background-color: #4a5568;
     bottom: 0;
-    padding: 1.25%;
-    height: 15rem;
+    height: 100%;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
@@ -262,6 +262,7 @@ footer {
 
 }
 .footer-container {
+    background-color: #4a5568;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -271,18 +272,21 @@ footer {
   .footer-box-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+      background-color: #4a5568;
   }
 
   .footer-boxer {
-    flex: 0 1 25%;
-    text-align: center;
+    display: flex;
+      justify-content: start;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
   }
 
   @media (min-width: 768px) {
 
     .footer-boxer {
-      width: 350px;
+      width: 100%;
     }
   }
 

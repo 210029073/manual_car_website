@@ -396,7 +396,7 @@ button1:hover {
 
 
 
-@media only screen and (max-width: 950px){
+@media only screen and (max-width: 1000px){
     .single-product-wrapper{
         min-width: 20%;
         /* padding-left: 15%; */
@@ -429,7 +429,6 @@ button1:hover {
     .product-card img{
         /*border-radius: 10px;*/
         width: 100%;
-        height: auto;
     }
 
 }
