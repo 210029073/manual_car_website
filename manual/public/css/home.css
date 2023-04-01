@@ -51,7 +51,7 @@ a{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    
+
     padding: 0 24px;
 }
 
@@ -122,7 +122,7 @@ color: white;
 
 img.nav{
     width:50%;
-    
+
 }
 
 
@@ -195,18 +195,18 @@ img.nav{
 }
 
 .page-errors {
-    width: 100%;
+    width: fit-content;
+    padding-top: .5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 2.0rem;
+    padding-right: 2.0rem;
 }
 
 .page-errors .unauthorised-error-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 75%;
-    padding-top: 2.5%;
-    padding-bottom: 5%;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    padding: 2.5rem;
 }
 
 .unauthorised-error-container {
@@ -259,25 +259,25 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  
+
 
   .footer-box-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
-  
+
   .footer-boxer {
     flex: 0 1 25%;
     text-align: center;
   }
-  
+
   @media (min-width: 768px) {
 
     .footer-boxer {
       width: 350px;
     }
-  } 
+  }
 
 .success-popup {
     color: green;
@@ -302,7 +302,7 @@ footer {
         transform: translateY(-2px) rotate(-25deg);
         transition-duration: 0.57s;
     }
-    
+
 
     .Navigations{
         padding: 0;
@@ -323,7 +323,7 @@ footer {
     .navigationLinks{
         margin:12px;
         transition:0.7s;
-        
+
     }
 
     .Navigations.active{
@@ -333,15 +333,15 @@ footer {
 
 
 @media screen and ( max-width: 500px){
-    
+
     .login-ui {
         width: 70%;
     }
-   
+
 }
 
 @media screen and ( min-width: 600px){
-    
+
     .login-ui {
         width: 40%;
     }
@@ -351,14 +351,14 @@ footer {
         width: 100%;
         background-color: #4a5568;
     }
-    
+
 }
 
 @media screen and ( min-width: 1000px){
-    
+
     .login-ui {
         width: 40%;
     }
 
-    
+
 }

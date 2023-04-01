@@ -1,6 +1,15 @@
 @extends('layouts.main')
+<head>
+    <style>
+        .errors-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+    </style>
+</head>
 @section('content')
-    <div>
+    <div class="errors-container">
         <div class="page-errors">
             <div class="page-errors unauthorised-error-container">
                 <div class="page-errors unauthorised-error-header">
