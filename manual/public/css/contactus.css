@@ -1,5 +1,6 @@
 body{
   margin:0;
+  margin:0;
   background-image: url(/images/contactusBig.png);
   background-size:cover;
   background-repeat:no-repeat;
@@ -10,19 +11,20 @@ body{
 a{
   color: rgb(190,190,190);
 }
-.boxer {
+
+.boxer{
   justify-content: center;
-  display:flex;
+  /* display:flex; */
   height: 250px;
   min-height:200px;
   min-width:200px;
-  width:700px;
+  width:500px;
   /* border-radius:15px; */
   background-color: #202020;
   padding: 50px;
-  border: 20px solid #202020;
-
-  color: rgb(220,220,220);
+  border: 15px solid #202020;
+  /* border: 15px solid rgb(200,200,200); */
+  color: rgb(150,150,150);
 }
 
 .box-container{
@@ -38,6 +40,7 @@ a{
   height:100%;
   object-fit:cover;
 }
+
 .box-container > div {
   display: flex;
   flex-direction: column;
@@ -81,7 +84,7 @@ a{
         background-color: #202020;
         padding: 50px;
         /* border: 15px solid rgb(200,200,200); */
-        color: rgb(220,220,220);
+        color: rgb(150,150,150);
       }
     }
 
@@ -94,34 +97,41 @@ a{
         flex-direction:column;
         justify-content: center;
         align-items: center;
-        /* width:20%; */
+        /* size-adjust: 0; */
+
       }
-      .boxer{
-        justify-content: center;
-        align-items: center;
-        display:flex;
-        max-height: 25px;
-        /* min-height:200px; */
-        /* min-width:200px; */
-         max-width:50px;
-        background-color: #202020;
-        padding: 50px;
-        /* border: 15px solid rgb(200,200,200); */
-        color: rgb(220,220,220);
-      }
-    }
-
-
-
-    @media only screen and (max-width: 350px){
       body{
         margin:0;
-        background-image: url("/images/contactusSmall.png");
+        margin:0;
+        background-image: url(/images/contactusSmall.png);
         background-size:cover;
         background-repeat:no-repeat;
         background-attachment:fixed;
         background-position:center;
       }
 
-    }
+      .boxer{
+        justify-content: center;
+        align-items: center;
+        /* display:flex; */
+        /* max-height: 25px; */
+        font-size:12px;
+         /* max-width:50px; */
+        background-color: #202020;
+        padding: 50px;
+        /* border: 15px solid rgb(200,200,200); */
+        color: rgb(150,150,150);
+        border: 0px solid #202020;
+        width:fit-content;
+        
+        min-width:100%;
+        min-height:100%;
+        padding:0;
+      }
+      .location{
+        max-width:80%;
+        max-height:80%;
+      }
 
+    }
+    
