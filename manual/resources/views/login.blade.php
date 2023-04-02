@@ -42,7 +42,7 @@
                                     <input type="submit" class="Button" width="500px" name="btnSubmit" value="Login">
                                 </div>
                                 <div>
-                                    <p>Dont have an account ? <a href='/register'>CLICK HERE!</a></p>
+                                    <p>Dont have an account ? <a href='/register' class="clickhere" >CLICK HERE!</a></p>
                                 </div>
                             </div>
                         </form>
