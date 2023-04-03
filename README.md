@@ -44,7 +44,8 @@ Click the **new** button and then type the php directory as follows: `c:\xampp\p
 7. Then install the dependencies using `php composer.phar install` to install the dependencies.
 **Once you have followed the instructions on installing the dependencies required for laravel using Composer then follow Step 8.**
 8. Inside the working directory of **manual_car_website/manual** run `php artisan migrate`.
-11. For accessing the pages via the web browser simply access it via either running on terminal in the websites working directory `php artisan serve` or `localhost/manual_car_website/public/` when running XAMPP. Where the **the_page** is the page you wish to visit.
+9. To populate the products table simply run `php artisan db:seed --class=ProductsSeeder`.
+10. For accessing the pages via the web browser simply access it via either running on terminal in the websites working directory `php artisan serve` or `localhost/manual_car_website/public/` when running XAMPP. Where the **the_page** is the page you wish to visit.
 
 ## **Contributors**
 ### <img src="https://avatars.githubusercontent.com/u/93045145?v=4" width="65" height="60" style="border-radius: 50%"> Ibrahim Ahmad 
